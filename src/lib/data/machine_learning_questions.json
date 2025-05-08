@@ -1,0 +1,1080 @@
+{
+  "machine_learning_basics": [
+    {
+      "index": 1,
+      "question": "What is Machine Learning?",
+      "answer": "ML is a subset of AI that enables systems to learn from data and improve without explicit programming."
+    },
+    {
+      "index": 2,
+      "question": "Difference between AI, ML, and Deep Learning?",
+      "answer": "AI is the broad field, ML is a subset of AI, and DL is a subset of ML using neural networks."
+    },
+    {
+      "index": 3,
+      "question": "Supervised vs. Unsupervised Learning?",
+      "answer": "Supervised uses labeled data; unsupervised finds patterns in unlabeled data."
+    },
+    {
+      "index": 4,
+      "question": "What is Semi-Supervised Learning?",
+      "answer": "Uses a mix of labeled and unlabeled data for training."
+    },
+    {
+      "index": 5,
+      "question": "What is Reinforcement Learning?",
+      "answer": "An agent learns by interacting with an environment and receiving rewards/penalties."
+    },
+    {
+      "index": 6,
+      "question": "What is a Feature in ML?",
+      "answer": "An input variable used to make predictions."
+    },
+    {
+      "index": 7,
+      "question": "What is a Target Variable?",
+      "answer": "The output variable being predicted."
+    },
+    {
+      "index": 8,
+      "question": "What is Overfitting?",
+      "answer": "A model performs well on training data but poorly on unseen data."
+    },
+    {
+      "index": 9,
+      "question": "How to prevent Overfitting?",
+      "answer": "Use cross-validation, regularization, pruning, or more data."
+    },
+    {
+      "index": 10,
+      "question": "What is Underfitting?",
+      "answer": "A model is too simple to capture patterns in the data."
+    },
+    {
+      "index": 11,
+      "question": "How to fix Underfitting?",
+      "answer": "Increase model complexity, add features, or reduce regularization."
+    },
+    {
+      "index": 12,
+      "question": "Bias vs. Variance Tradeoff?",
+      "answer": "Bias is error from oversimplifying; variance is error from overcomplicating."
+    },
+    {
+      "index": 13,
+      "question": "What is Cross-Validation?",
+      "answer": "Splitting data into multiple folds to evaluate model performance."
+    },
+    {
+      "index": 14,
+      "question": "Types of Cross-Validation?",
+      "answer": "K-Fold, Stratified K-Fold, Leave-One-Out, Time Series CV."
+    },
+    {
+      "index": 15,
+      "question": "What is a Holdout Dataset?",
+      "answer": "A separate dataset used for final model evaluation."
+    },
+    {
+      "index": 16,
+      "question": "What is Linear Regression?",
+      "answer": "Predicts a continuous output using a linear relationship between features and target."
+    },
+    {
+      "index": 17,
+      "question": "Assumptions of Linear Regression?",
+      "answer": "Linearity, independence, homoscedasticity, normality of residuals."
+    },
+    {
+      "index": 18,
+      "question": "What is Logistic Regression?",
+      "answer": "Used for binary classification using a sigmoid function."
+    },
+    {
+      "index": 19,
+      "question": "Why is it called 'Regression' if used for classification?",
+      "answer": "It predicts probabilities (continuous) before applying a threshold."
+    },
+    {
+      "index": 20,
+      "question": "What is the Cost Function for Linear Regression?",
+      "answer": "Mean Squared Error (MSE)."
+    },
+    {
+      "index": 21,
+      "question": "Cost Function for Logistic Regression?",
+      "answer": "Log Loss (Binary Cross-Entropy)."
+    },
+    {
+      "index": 22,
+      "question": "What is Regularization?",
+      "answer": "A technique to prevent overfitting by penalizing large coefficients."
+    },
+    {
+      "index": 23,
+      "question": "L1 vs. L2 Regularization?",
+      "answer": "L1 (Lasso) adds absolute penalty; L2 (Ridge) adds squared penalty."
+    },
+    {
+      "index": 24,
+      "question": "When to use L1 vs. L2?",
+      "answer": "L1 for feature selection, L2 to handle multicollinearity."
+    },
+    {
+      "index": 25,
+      "question": "What is Elastic Net?",
+      "answer": "Combines L1 and L2 regularization."
+    },
+    {
+      "index": 26,
+      "question": "What is Decision Tree?",
+      "answer": "A tree-like model that splits data based on feature values."
+    },
+    {
+      "index": 27,
+      "question": "Splitting Criteria in Decision Trees?",
+      "answer": "Gini Impurity or Entropy (Information Gain)."
+    },
+    {
+      "index": 28,
+      "question": "What is Random Forest?",
+      "answer": "An ensemble of decision trees using bagging."
+    },
+    {
+      "index": 29,
+      "question": "Why is Random Forest better than a single Decision Tree?",
+      "answer": "Reduces overfitting by averaging multiple trees."
+    },
+    {
+      "index": 30,
+      "question": "What is XGBoost?",
+      "answer": "A gradient-boosted decision tree algorithm optimized for speed and performance."
+    },
+    {
+      "index": 31,
+      "question": "How does Gradient Boosting work?",
+      "answer": "Sequentially builds trees to correct errors from previous trees."
+    },
+    {
+      "index": 32,
+      "question": "XGBoost vs. LightGBM vs. CatBoost?",
+      "answer": "XGBoost is robust, LightGBM is faster, CatBoost handles categorical data well."
+    },
+    {
+      "index": 33,
+      "question": "What is SVM?",
+      "answer": "Support Vector Machine finds the best hyperplane to separate classes."
+    },
+    {
+      "index": 34,
+      "question": "Kernel Trick in SVM?",
+      "answer": "Maps data to higher dimensions to make it linearly separable."
+    },
+    {
+      "index": 35,
+      "question": "Common Kernels in SVM?",
+      "answer": "Linear, Polynomial, RBF, Sigmoid."
+    },
+    {
+      "index": 36,
+      "question": "What is Clustering?",
+      "answer": "Grouping similar data points together."
+    },
+    {
+      "index": 37,
+      "question": "What is K-Means?",
+      "answer": "A clustering algorithm that partitions data into K clusters."
+    },
+    {
+      "index": 38,
+      "question": "How to choose K in K-Means?",
+      "answer": "Elbow Method or Silhouette Score."
+    },
+    {
+      "index": 39,
+      "question": "What is Hierarchical Clustering?",
+      "answer": "Builds a tree of clusters (dendrogram)."
+    },
+    {
+      "index": 40,
+      "question": "What is DBSCAN?",
+      "answer": "Density-based clustering that finds arbitrary-shaped clusters."
+    },
+    {
+      "index": 41,
+      "question": "What is PCA?",
+      "answer": "Principal Component Analysis reduces dimensionality while preserving variance."
+    },
+    {
+      "index": 42,
+      "question": "What is t-SNE?",
+      "answer": "A technique for visualizing high-dimensional data in 2D/3D."
+    },
+    {
+      "index": 43,
+      "question": "What is Anomaly Detection?",
+      "answer": "Identifying rare or unusual data points."
+    },
+    {
+      "index": 44,
+      "question": "Common Anomaly Detection Methods?",
+      "answer": "Isolation Forest, One-Class SVM, Autoencoders."
+    },
+    {
+      "index": 45,
+      "question": "What is a Neural Network?",
+      "answer": "A model inspired by the human brain with interconnected layers."
+    },
+    {
+      "index": 46,
+      "question": "What is an Activation Function?",
+      "answer": "Introduces non-linearity (e.g., ReLU, Sigmoid, Tanh)."
+    },
+    {
+      "index": 47,
+      "question": "Why ReLU over Sigmoid?",
+      "answer": "ReLU avoids vanishing gradients and is faster."
+    },
+    {
+      "index": 48,
+      "question": "What is Backpropagation?",
+      "answer": "Adjusts weights by propagating errors backward."
+    },
+    {
+      "index": 49,
+      "question": "What is a CNN?",
+      "answer": "Convolutional Neural Network for image/pattern recognition."
+    },
+    {
+      "index": 50,
+      "question": "What is an RNN?",
+      "answer": "Recurrent Neural Network for sequential data."
+    },
+    {
+      "index": 51,
+      "question": "Problem with Vanilla RNNs?",
+      "answer": "Vanishing/exploding gradients."
+    },
+    {
+      "index": 52,
+      "question": "What is LSTM?",
+      "answer": "Long Short-Term Memory, solves RNN gradient issues."
+    },
+    {
+      "index": 53,
+      "question": "What is a Transformer?",
+      "answer": "Uses self-attention for sequence modeling (e.g., BERT, GPT)."
+    },
+    {
+      "index": 54,
+      "question": "What is Dropout?",
+      "answer": "Randomly deactivating neurons to prevent overfitting."
+    },
+    {
+      "index": 55,
+      "question": "What is Batch Normalization?",
+      "answer": "Normalizes layer inputs to stabilize training."
+    },
+    {
+      "index": 56,
+      "question": "Classification Metrics?",
+      "answer": "Accuracy, Precision, Recall, F1, ROC-AUC."
+    },
+    {
+      "index": 57,
+      "question": "What is Precision?",
+      "answer": "TP / (TP + FP) – Measures false positives."
+    },
+    {
+      "index": 58,
+      "question": "What is Recall?",
+      "answer": "TP / (TP + FN) – Measures false negatives."
+    },
+    {
+      "index": 59,
+      "question": "What is F1-Score?",
+      "answer": "Harmonic mean of precision and recall."
+    },
+    {
+      "index": 60,
+      "question": "What is ROC-AUC?",
+      "answer": "Measures model's ability to distinguish classes."
+    },
+    {
+      "index": 61,
+      "question": "Regression Metrics?",
+      "answer": "MSE, RMSE, MAE, R²."
+    },
+    {
+      "index": 62,
+      "question": "What is R² Score?",
+      "answer": "Proportion of variance explained by the model."
+    },
+    {
+      "index": 63,
+      "question": "What is a Confusion Matrix?",
+      "answer": "A table showing TP, TN, FP, FN."
+    },
+    {
+      "index": 64,
+      "question": "What is Feature Scaling?",
+      "answer": "Normalizing features (e.g., MinMax, StandardScaler)."
+    },
+    {
+      "index": 65,
+      "question": "When to Normalize vs. Standardize?",
+      "answer": "Normalize for bounded ranges; Standardize for Gaussian-like data."
+    },
+    {
+      "index": 66,
+      "question": "What is One-Hot Encoding?",
+      "answer": "Converts categorical variables into binary columns."
+    },
+    {
+      "index": 67,
+      "question": "What is Label Encoding?",
+      "answer": "Assigns integer labels to categories (ordinal data)."
+    },
+    {
+      "index": 68,
+      "question": "Handling Missing Data?",
+      "answer": "Impute (mean/median/mode) or delete rows/columns."
+    },
+    {
+      "index": 69,
+      "question": "What is Feature Selection?",
+      "answer": "Choosing the most relevant features."
+    },
+    {
+      "index": 70,
+      "question": "Feature Selection Methods?",
+      "answer": "Filter (correlation), Wrapper (RFECV), Embedded (Lasso)."
+    },
+    {
+      "index": 71,
+      "question": "What is Tokenization?",
+      "answer": "Splitting text into words/tokens."
+    },
+    {
+      "index": 72,
+      "question": "What is TF-IDF?",
+      "answer": "Weighs word importance based on frequency in doc vs. corpus."
+    },
+    {
+      "index": 73,
+      "question": "What is Word2Vec?",
+      "answer": "An embedding technique representing words as vectors."
+    },
+    {
+      "index": 74,
+      "question": "What is BERT?",
+      "answer": "A transformer-based model for NLP tasks."
+    },
+    {
+      "index": 75,
+      "question": "What is Model Deployment?",
+      "answer": "Integrating an ML model into a production environment."
+    },
+    {
+      "index": 76,
+      "question": "What is A/B Testing?",
+      "answer": "Comparing two model versions to choose the best."
+    },
+    {
+      "index": 77,
+      "question": "What is MLOps?",
+      "answer": "DevOps for ML (CI/CD, monitoring, versioning)."
+    },
+    {
+      "index": 78,
+      "question": "What is Transfer Learning?",
+      "answer": "Using a pre-trained model for a new task."
+    },
+    {
+      "index": 79,
+      "question": "What is Hyperparameter Tuning?",
+      "answer": "Optimizing model settings (e.g., GridSearch, RandomSearch, Bayesian)."
+    },
+    {
+      "index": 80,
+      "question": "What is the Curse of Dimensionality?",
+      "answer": "High-dimensional data is sparse and harder to model."
+    },
+    {
+      "index": 81,
+      "question": "What is a Bayesian Network?",
+      "answer": "A probabilistic graphical model representing variables and their dependencies."
+    },
+    {
+      "index": 82,
+      "question": "What is Markov Chain Monte Carlo (MCMC)?",
+      "answer": "A method for sampling from probability distributions."
+    },
+    {
+      "index": 83,
+      "question": "What is Gaussian Mixture Model (GMM)?",
+      "answer": "A probabilistic model for clustering using Gaussian distributions."
+    },
+    {
+      "index": 84,
+      "question": "What is Hidden Markov Model (HMM)?",
+      "answer": "A statistical model for sequential data with unobserved states."
+    },
+    {
+      "index": 85,
+      "question": "What is Collaborative Filtering?",
+      "answer": "A recommendation technique based on user-item interactions."
+    },
+    {
+      "index": 86,
+      "question": "Content-Based Filtering vs. Collaborative Filtering?",
+      "answer": "Content-based uses item features; collaborative uses user behavior."
+    },
+    {
+      "index": 87,
+      "question": "What is a Recommender System?",
+      "answer": "A system that predicts user preferences (e.g., Netflix recommendations)."
+    },
+    {
+      "index": 88,
+      "question": "What is Matrix Factorization?",
+      "answer": "Decomposes a matrix (e.g., user-item ratings) into latent factors."
+    },
+    {
+      "index": 89,
+      "question": "What is Singular Value Decomposition (SVD)?",
+      "answer": "A matrix factorization technique used in recommender systems."
+    },
+    {
+      "index": 90,
+      "question": "What is a Manifold Learning?",
+      "answer": "Non-linear dimensionality reduction (e.g., Isomap, LLE)."
+    },
+    {
+      "index": 91,
+      "question": "What is Gradient Descent?",
+      "answer": "An optimization algorithm to minimize the loss function."
+    },
+    {
+      "index": 92,
+      "question": "Batch vs. Stochastic vs. Mini-Batch GD?",
+      "answer": "Batch: all data; Stochastic: 1 sample; Mini-batch: subset of data."
+    },
+    {
+      "index": 93,
+      "question": "What is Learning Rate?",
+      "answer": "A hyperparameter controlling step size in gradient descent."
+    },
+    {
+      "index": 94,
+      "question": "What is Momentum in Optimization?",
+      "answer": "Accelerates GD by adding a fraction of the previous update."
+    },
+    {
+      "index": 95,
+      "question": "What is Adam Optimizer?",
+      "answer": "Combines Momentum and RMSProp for adaptive learning rates."
+    },
+    {
+      "index": 96,
+      "question": "What is Early Stopping?",
+      "answer": "Halts training when validation performance degrades."
+    },
+    {
+      "index": 97,
+      "question": "What is Hyperparameter Tuning?",
+      "answer": "Optimizing model settings (e.g., learning rate, tree depth)."
+    },
+    {
+      "index": 98,
+      "question": "Grid Search vs. Random Search?",
+      "answer": "Grid: exhaustive; Random: random sampling of hyperparameters."
+    },
+    {
+      "index": 99,
+      "question": "What is Bayesian Optimization?",
+      "answer": "Uses probability to find optimal hyperparameters efficiently."
+    },
+    {
+      "index": 100,
+      "question": "What is AutoML?",
+      "answer": "Automates model selection, tuning, and feature engineering."
+    },
+    {
+      "index": 101,
+      "question": "What is a Bag of Words (BoW)?",
+      "answer": "Represents text as word frequencies (ignores order)."
+    },
+    {
+      "index": 102,
+      "question": "What is N-gram?",
+      "answer": "A contiguous sequence of N words (e.g., bigrams: 2 words)."
+    },
+    {
+      "index": 103,
+      "question": "What is Stop Word Removal?",
+      "answer": "Eliminating common words (e.g., 'the', 'and') for efficiency."
+    },
+    {
+      "index": 104,
+      "question": "What is Stemming vs. Lemmatization?",
+      "answer": "Stemming chops word endings; lemmatization uses dictionary roots."
+    },
+    {
+      "index": 105,
+      "question": "What is Named Entity Recognition (NER)?",
+      "answer": "Identifies entities (e.g., names, dates) in text."
+    },
+    {
+      "index": 106,
+      "question": "What is Sentiment Analysis?",
+      "answer": "Determines emotional tone (positive/negative) in text."
+    },
+    {
+      "index": 107,
+      "question": "What is Word Embedding?",
+      "answer": "Dense vector representations of words (e.g., Word2Vec, GloVe)."
+    },
+    {
+      "index": 108,
+
+      "question": "What is Attention Mechanism?",
+      "answer": "Allows models to focus on relevant parts of input (e.g., in Transformers)."
+    },
+    {
+      "index": 109,
+
+      "question": "What is BLEU Score?",
+      "answer": "Evaluates machine translation quality by comparing to human references."
+    },
+    {
+      "index": 110,
+
+      "question": "What is GPT?",
+      "answer": "Generative Pre-trained Transformer for text generation."
+    },
+    {
+      "index": 111,
+
+      "question": "What is Convolution?",
+      "answer": "A mathematical operation applying filters to extract features."
+    },
+    {
+      "index": 112,
+
+      "question": "What is Pooling?",
+      "answer": "Reduces spatial dimensions (e.g., Max Pooling)."
+    },
+    {
+      "index": 113,
+
+      "question": "Why Padding in CNNs?",
+      "answer": "Preserves spatial dimensions after convolution."
+    },
+    {
+      "index": 114,
+
+      "question": "What is Transfer Learning in CV?",
+      "answer": "Using pre-trained models (e.g., ResNet) for new tasks."
+    },
+    {
+      "index": 115,
+
+      "question": "What is Data Augmentation?",
+      "answer": "Artificially expands dataset via transformations (e.g., rotation)."
+    },
+    {
+      "index": 116,
+
+      "question": "What is Object Detection?",
+      "answer": "Identifies and localizes objects in images (e.g., YOLO, Faster R-CNN)."
+    },
+    {
+      "index": 117,
+
+      "question": "What is Semantic Segmentation?",
+      "answer": "Classifies each pixel in an image."
+    },
+    {
+      "index": 118,
+
+      "question": "What is Instance Segmentation?",
+      "answer": "Differentiates between instances of the same class."
+    },
+    {
+      "index": 119,
+
+      "question": "What is GAN?",
+      "answer": "Generative Adversarial Network: generator vs. discriminator."
+    },
+    {
+      "index": 120,
+
+      "question": "What is Style Transfer?",
+      "answer": "Applies artistic style from one image to another."
+    },
+    {
+      "index": 121,
+
+      "question": "What is Cold Start Problem?",
+      "answer": "Difficulty in recommending to new users/items with no history."
+    },
+    {
+      "index": 122,
+
+      "question": "How to Solve Cold Start?",
+      "answer": "Hybrid models (content + collaborative), demographic data."
+    },
+    {
+      "index": 123,
+
+      "question": "What is A/B Testing in Recommenders?",
+      "answer": "Comparing recommendation algorithms in production."
+    },
+    {
+      "index": 124,
+
+      "question": "What is Diversity in Recommendations?",
+      "answer": "Avoiding over-specialization (e.g., suggesting only one category)."
+    },
+    {
+      "index": 125,
+
+      "question": "What is Serendipity in Recommendations?",
+      "answer": "Suggesting surprisingly relevant items."
+    },
+    {
+      "index": 126,
+
+      "question": "What is Bias in ML?",
+      "answer": "Systematic errors favoring certain groups/outcomes."
+    },
+    {
+      "index": 127,
+
+      "question": "Types of Bias?",
+      "answer": "Selection, measurement, algorithmic, societal."
+    },
+    {
+      "index": 128,
+
+      "question": "What is Fairness in ML?",
+      "answer": "Ensuring models don't discriminate against protected groups."
+    },
+    {
+      "index": 129,
+
+      "question": "How to Detect Bias?",
+      "answer": "Disparity metrics (e.g., demographic parity, equal opportunity)."
+    },
+    {
+      "index": 130,
+
+      "question": "What is Explainable AI (XAI)?",
+      "answer": "Making ML models interpretable (e.g., SHAP, LIME)."
+    },
+    {
+      "index": 131,
+
+      "question": "What is Model Serialization?",
+      "answer": "Saving a model (e.g., Pickle, ONNX, HDF5)."
+    },
+    {
+      "index": 132,
+
+      "question": "What is a Model Registry?",
+      "answer": "Tracks model versions and metadata."
+    },
+    {
+      "index": 133,
+
+      "question": "What is CI/CD in ML?",
+      "answer": "Continuous Integration/Deployment for automated model updates."
+    },
+    {
+      "index": 134,
+
+      "question": "What is Model Drift?",
+      "answer": "Degradation in performance due to changing data distributions."
+    },
+    {
+      "index": 135,
+
+      "question": "How to Monitor Models?",
+      "answer": "Track accuracy, latency, data drift, and fairness metrics."
+    },
+    {
+      "index": 136,
+
+      "question": "What is Canary Deployment?",
+      "answer": "Rolling out a model to a small subset of users first."
+    },
+    {
+      "index": 137,
+
+      "question": "What is Edge ML?",
+      "answer": "Running models on devices (e.g., smartphones) instead of servers."
+    },
+    {
+      "index": 138,
+
+      "question": "What is Federated Learning?",
+      "answer": "Training models across decentralized devices without sharing raw data."
+    },
+    {
+      "index": 139,
+
+      "question": "What is a Feature Store?",
+      "answer": "Centralized repository for ML features (e.g., Feast, Tecton)."
+    },
+    {
+      "index": 140,
+
+      "question": "What is Kubeflow?",
+      "answer": "A platform for deploying ML workflows on Kubernetes."
+    },
+    {
+      "index": 141,
+
+      "question": "What is a Time Series?",
+      "answer": "Data points indexed in time order."
+    },
+    {
+      "index": 142,
+
+      "question": "What is Stationarity?",
+      "answer": "Statistical properties (mean, variance) don't change over time."
+    },
+    {
+      "index": 143,
+
+      "question": "How to Test Stationarity?",
+      "answer": "Augmented Dickey-Fuller (ADF) test."
+    },
+    {
+      "index": 144,
+
+      "question": "What is ARIMA?",
+      "answer": "AutoRegressive Integrated Moving Average for forecasting."
+    },
+    {
+      "index": 145,
+
+      "question": "What is Exponential Smoothing?",
+      "answer": "Weighted averages of past observations."
+    },
+    {
+      "index": 146,
+
+      "question": "What is Prophet?",
+      "answer": "Facebook's time series forecasting tool."
+    },
+    {
+      "index": 147,
+
+      "question": "What is LSTM for Time Series?",
+      "answer": "Captures long-term dependencies in sequential data."
+    },
+    {
+      "index": 148,
+
+      "question": "What is a Rolling Window?",
+      "answer": "Fixed-size window sliding over time series data."
+    },
+    {
+      "index": 149,
+
+      "question": "What is Cross-Validation for Time Series?",
+      "answer": "TimeSeriesSplit (preserves temporal order)."
+    },
+    {
+      "index": 150,
+
+      "question": "What is Anomaly Detection in Time Series?",
+      "answer": "Identifying outliers (e.g., using Isolation Forest)."
+    },
+    {
+      "index": 151,
+
+      "question": "How to handle missing data in Pandas?",
+      "answer": "df.dropna() or df.fillna(value)."
+    },
+    {
+      "index": 152,
+
+      "question": "What is NumPy used for?",
+      "answer": "Efficient numerical operations on arrays."
+    },
+    {
+      "index": 153,
+
+      "question": "How to normalize data in Scikit-learn?",
+      "answer": "StandardScaler() or MinMaxScaler()."
+    },
+    {
+      "index": 154,
+
+      "question": "How to save a Scikit-learn model?",
+      "answer": "joblib.dump(model, 'filename.pkl')."
+    },
+    {
+      "index": 155,
+
+      "question": "What is tf.data in TensorFlow?",
+      "answer": "API for building efficient input pipelines."
+    },
+    {
+      "index": 156,
+
+      "question": "How to use GPU in PyTorch?",
+      "answer": "model.to('cuda')."
+    },
+    {
+      "index": 157,
+
+      "question": "What is torch.nn.Module?",
+      "answer": "Base class for all neural network modules in PyTorch."
+    },
+    {
+      "index": 158,
+
+      "question": "What is Keras?",
+      "answer": "High-level API for TensorFlow."
+    },
+    {
+      "index": 159,
+
+      "question": "What is Dask?",
+      "answer": "Parallel computing library for large datasets."
+    },
+    {
+      "index": 160,
+
+      "question": "What is Spark MLlib?",
+      "answer": "Machine learning library for Apache Spark."
+    },
+    {
+      "index": 161,
+
+      "question": "What is Eigenvalue and Eigenvector?",
+      "answer": "For a matrix A, Av = λv (scalar λ = eigenvalue, *v* = eigenvector)."
+    },
+    {
+      "index": 162,
+
+      "question": "Why are Eigenvalues important in PCA?",
+      "answer": "They indicate the variance explained by each principal component."
+    },
+    {
+      "index": 163,
+
+      "question": "What is Singular Value Decomposition (SVD)?",
+      "answer": "Factorizes a matrix into UΣVᵀ (used in PCA, recommender systems)."
+    },
+    {
+      "index": 164,
+
+      "question": "What is the Chain Rule in Calculus?",
+      "answer": "Used in backpropagation to compute gradients."
+    },
+    {
+      "index": 165,
+
+      "question": "What is Jensen's Inequality?",
+      "answer": "Key for proving convexity in optimization problems."
+    },
+    {
+      "index": 166,
+
+      "question": "What is Entropy in Information Theory?",
+      "answer": "Measures uncertainty in a probability distribution."
+    },
+    {
+      "index": 167,
+
+      "question": "What is KL Divergence?",
+      "answer": "Measures difference between two probability distributions."
+    },
+    {
+      "index": 168,
+
+      "question": "What is Monte Carlo Simulation?",
+      "answer": "Uses random sampling to estimate numerical results."
+    },
+    {
+      "index": 169,
+
+      "question": "What is Markov's Inequality?",
+      "answer": "Bounds the probability of a non-negative random variable."
+    },
+    {
+      "index": 170,
+
+      "question": "What is Newton's Method?",
+      "answer": "An optimization algorithm using second-order derivatives."
+    },
+    {
+      "index": 171,
+      "question": "What is MapReduce?",
+      "answer": "A framework for processing large datasets in parallel."
+    },
+    {
+      "index": 172,
+      "question": "What is Apache Spark?",
+      "answer": "Distributed computing engine for big data processing."
+    },
+    {
+      "index": 173,
+      "question": "What is a DataFrame in Spark?",
+      "answer": "Distributed collection of data organized in columns."
+    },
+    {
+      "index": 174,
+      "question": "What is Parquet?",
+      "answer": "Columnar storage format optimized for big data."
+    },
+    {
+      "index": 175,
+      "question": "What is Feature Engineering at Scale?",
+      "answer": "Using tools like Spark or Dask for large datasets."
+    },
+    {
+      "index": 176,
+      "question": "What is Horovod?",
+      "answer": "Distributed training framework for TensorFlow/PyTorch."
+    },
+    {
+      "index": 177,
+      "question": "What is Data Partitioning?",
+      "answer": "Splitting data across nodes for parallel processing."
+    },
+    {
+      "index": 178,
+      "question": "What is Shuffling in Spark?",
+      "answer": "Redistributing data across partitions (expensive operation)."
+    },
+    {
+      "index": 179,
+      "question": "What is Exactly-Once Processing?",
+      "answer": "Guarantees no duplicates or misses in stream processing."
+    },
+    {
+      "index": 180,
+      "question": "What is Kafka?",
+      "answer": "Distributed event streaming platform."
+    },
+    {
+      "index": 181,
+
+      "question": "How would you predict customer churn?",
+      "answer": "Binary classification (e.g., Logistic Regression, XGBoost) on usage data."
+    },
+    {
+      "index": 182,
+
+      "question": "How to detect fraud?",
+      "answer": "Anomaly detection (Isolation Forest) or supervised learning on labeled fraud data."
+    },
+    {
+      "index": 183,
+
+      "question": "How to build a spam filter?",
+      "answer": "NLP + classification (e.g., Naive Bayes, SVM)."
+    },
+    {
+      "index": 184,
+
+      "question": "How to handle a dataset with 1000 features?",
+      "answer": "Dimensionality reduction (PCA) or feature selection (Lasso)."
+    },
+    {
+      "index": 185,
+
+      "question": "How to optimize a recommendation system's latency?",
+      "answer": "Cache frequent queries, use approximate nearest neighbors (ANN)."
+    },
+    {
+      "index": 186,
+
+      "question": "How to deploy a model with low latency?",
+      "answer": "Optimize code, use ONNX, or deploy on edge devices."
+    },
+    {
+      "index": 187,
+
+      "question": "How to explain a black-box model to stakeholders?",
+      "answer": "Use SHAP/LIME or surrogate models (e.g., Decision Tree)."
+    },
+    {
+      "index": 188,
+
+      "question": "How to validate a time series model?",
+      "answer": "Use TimeSeriesSplit and metrics like MAE, RMSE."
+    },
+    {
+      "index": 189,
+
+      "question": "How to improve a model stuck at 80% accuracy?",
+      "answer": "Feature engineering, hyperparameter tuning, or ensemble methods."
+    },
+    {
+      "index": 190,
+
+      "question": "How to handle non-IID data?",
+      "answer": "Use stratified sampling or domain adaptation techniques."
+    },
+    {
+      "index": 191,
+
+      "question": "What is a Siamese Network?",
+      "answer": "Compares two inputs (e.g., for face recognition)."
+    },
+    {
+      "index": 192,
+      "question": "What is a Variational Autoencoder (VAE)?",
+      "answer": "Generative model with a probabilistic encoder-decoder."
+    },
+    {
+      "index": 193,
+      "question": "What is a U-Net?",
+      "answer": "CNN architecture for image segmentation."
+    },
+    {
+      "index": 194,
+      "question": "What is Transformer Architecture?",
+      "answer": "Self-attention based model (e.g., BERT, GPT)."
+    },
+    {
+      "index": 195,
+      "question": "What is Mixture of Experts (MoE)?",
+      "answer": "Splits input among specialized submodels."
+    },
+    {
+      "index": 196,
+      "question": "What is SHAP?",
+      "answer": "A method to explain model predictions using game theory."
+    },
+    {
+      "index": 197,
+      "question": "What is Data Leakage?",
+      "answer": "When training data contains information about the test set."
+    },
+    {
+      "index": 198,
+      "question": "How to handle Imbalanced Data?",
+      "answer": "Resampling, SMOTE, class weights, anomaly detection."
+    },
+    {
+      "index": 199,
+
+      "question": "What is a Generative Model?",
+      "answer": "A model that generates new data (e.g., GANs, VAEs)."
+    },
+    {
+      "index": 200,
+
+      "question": "What is the Future of ML?",
+      "answer": "More automation (AutoML), ethical AI, and edge computing."
+    }
+  ]
+}

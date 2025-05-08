@@ -1,0 +1,1004 @@
+{
+  "data_base_basics": [
+    {
+      "index": 1,
+      "question": "What is SQL?",
+      "answer": "Structured Query Language, used to manage relational databases."
+    },
+    {
+      "index": 2,
+      "question": "What are the main types of SQL commands?",
+      "answer": "DDL (Data Definition), DML (Data Manipulation), DCL (Data Control), TCL (Transaction Control)."
+    },
+    {
+      "index": 3,
+      "question": "What is a primary key?",
+      "answer": "A unique identifier for a table record (cannot be NULL)."
+    },
+    {
+      "index": 4,
+      "question": "What is a foreign key?",
+      "answer": "A field that references the primary key of another table."
+    },
+    {
+      "index": 5,
+      "question": "What is a composite key?",
+      "answer": "A primary key made of multiple columns."
+    },
+    {
+      "index": 6,
+      "question": "What is a unique key?",
+      "answer": "Ensures all values in a column are unique (allows one NULL)."
+    },
+    {
+      "index": 7,
+      "question": "What is a NULL value?",
+      "answer": "Represents missing or unknown data (not zero or empty)."
+    },
+    {
+      "index": 8,
+      "question": "What is a DEFAULT constraint?",
+      "answer": "Sets a default value for a column if none is provided."
+    },
+    {
+      "index": 9,
+      "question": "What is a CHECK constraint?",
+      "answer": "Ensures a column meets a specific condition."
+    },
+    {
+      "index": 10,
+      "question": "What is normalization?",
+      "answer": "Organizing data to minimize redundancy."
+    },
+    {
+      "index": 11,
+      "question": "What is denormalization?",
+      "answer": "Combining tables to improve read performance."
+    },
+    {
+      "index": 12,
+      "question": "What is an index?",
+      "answer": "A performance-tuning method to speed up data retrieval."
+    },
+    {
+      "index": 13,
+      "question": "What are the types of indexes?",
+      "answer": "Clustered, non-clustered, unique, composite, full-text."
+    },
+    {
+      "index": 14,
+      "question": "What is a clustered index?",
+      "answer": "Determines the physical order of data in a table (only one per table)."
+    },
+    {
+      "index": 15,
+      "question": "What is a non-clustered index?",
+      "answer": "A separate structure that improves query speed (multiple allowed)."
+    },
+    {
+      "index": 16,
+      "question": "What is a view?",
+      "answer": "A virtual table based on a SQL query."
+    },
+    {
+      "index": 17,
+      "question": "What is a stored procedure?",
+      "answer": "A precompiled SQL query stored in the database."
+    },
+    {
+      "index": 18,
+      "question": "What is a trigger?",
+      "answer": "A procedure that automatically executes on a specific event."
+    },
+    {
+      "index": 19,
+      "question": "What is a transaction?",
+      "answer": "A sequence of operations performed as a single logical unit."
+    },
+    {
+      "index": 20,
+      "question": "What are ACID properties?",
+      "answer": "Atomicity, Consistency, Isolation, Durability."
+    },
+    {
+      "index": 21,
+      "question": "What is a JOIN?",
+      "answer": "Combines rows from two or more tables based on a related column."
+    },
+    {
+      "index": 22,
+      "question": "What are the types of JOINs?",
+      "answer": "INNER, LEFT, RIGHT, FULL, CROSS, SELF."
+    },
+    {
+      "index": 23,
+      "question": "What is an INNER JOIN?",
+      "answer": "Returns rows when there is a match in both tables."
+    },
+    {
+      "index": 24,
+      "question": "What is a LEFT JOIN?",
+      "answer": "Returns all rows from the left table and matched rows from the right."
+    },
+    {
+      "index": 25,
+      "question": "What is a RIGHT JOIN?",
+      "answer": "Returns all rows from the right table and matched rows from the left."
+    },
+    {
+      "index": 26,
+      "question": "What is a FULL JOIN?",
+      "answer": "Returns rows when there is a match in either table."
+    },
+    {
+      "index": 27,
+      "question": "What is a CROSS JOIN?",
+      "answer": "Returns the Cartesian product of both tables."
+    },
+    {
+      "index": 28,
+      "question": "What is a SELF JOIN?",
+      "answer": "Joins a table to itself."
+    },
+    {
+      "index": 29,
+      "question": "What is a subquery?",
+      "answer": "A query nested inside another query."
+    },
+    {
+      "index": 30,
+      "question": "What is a correlated subquery?",
+      "answer": "A subquery that depends on the outer query."
+    },
+    {
+      "index": 31,
+      "question": "What is GROUP BY?",
+      "answer": "Groups rows with the same values into summary rows."
+    },
+    {
+      "index": 32,
+      "question": "What is HAVING?",
+      "answer": "Filters groups after GROUP BY (unlike WHERE, which filters rows)."
+    },
+    {
+      "index": 33,
+      "question": "What is ORDER BY?",
+      "answer": "Sorts the result set in ascending or descending order."
+    },
+    {
+      "index": 34,
+      "question": "What is DISTINCT?",
+      "answer": "Returns unique values."
+    },
+    {
+      "index": 35,
+      "question": "What is UNION?",
+      "answer": "Combines results of two SELECT queries (removes duplicates)."
+    },
+    {
+      "index": 36,
+      "question": "What is UNION ALL?",
+      "answer": "Combines results but keeps duplicates."
+    },
+    {
+      "index": 37,
+      "question": "What is INTERSECT?",
+      "answer": "Returns common records from two SELECT queries."
+    },
+    {
+      "index": 38,
+      "question": "What is EXCEPT (or MINUS)?",
+      "answer": "Returns records from the first query not in the second."
+    },
+    {
+      "index": 39,
+      "question": "What is a temporary table?",
+      "answer": "A short-lived table stored in tempdb."
+    },
+    {
+      "index": 40,
+      "question": "What is a CTE (Common Table Expression)?",
+      "answer": "A temporary result set that can be referenced within a query."
+    },
+    {
+      "index": 41,
+      "question": "What is a window function?",
+      "answer": "Performs calculations across a set of table rows related to the current row."
+    },
+    {
+      "index": 42,
+      "question": "What is ROW_NUMBER()?",
+      "answer": "Assigns a unique sequential integer to rows within a partition."
+    },
+    {
+      "index": 43,
+      "question": "What is RANK()?",
+      "answer": "Assigns a rank with gaps for duplicate values."
+    },
+    {
+      "index": 44,
+      "question": "What is DENSE_RANK()?",
+      "answer": "Assigns a rank without gaps for duplicates."
+    },
+    {
+      "index": 45,
+      "question": "What is LEAD()?",
+      "answer": "Accesses data from a subsequent row in the same result set."
+    },
+    {
+      "index": 46,
+      "question": "What is LAG()?",
+      "answer": "Accesses data from a previous row in the same result set."
+    },
+    {
+      "index": 47,
+      "question": "What is a pivot table?",
+      "answer": "Rotates rows into columns for data summarization."
+    },
+    {
+      "index": 48,
+      "question": "What is a materialized view?",
+      "answer": "A view that stores the query result physically."
+    },
+    {
+      "index": 49,
+      "question": "What is a deadlock?",
+      "answer": "When two transactions block each other indefinitely."
+    },
+    {
+      "index": 50,
+      "question": "What is query optimization?",
+      "answer": "Improving query performance using indexing, execution plans, etc."
+    },
+    {
+      "index": 51,
+      "question": "What is an execution plan?",
+      "answer": "Shows how SQL Server executes a query."
+    },
+    {
+      "index": 52,
+      "question": "What is a covering index?",
+      "answer": "An index that includes all columns needed for a query."
+    },
+    {
+      "index": 53,
+      "question": "What is a table variable?",
+      "answer": "A variable that holds a result set (similar to temp tables)."
+    },
+    {
+      "index": 54,
+      "question": "What is dynamic SQL?",
+      "answer": "SQL queries constructed at runtime."
+    },
+    {
+      "index": 55,
+      "question": "What is a cursor?",
+      "answer": "A database object used to process rows one by one."
+    },
+    {
+      "index": 56,
+      "question": "What is a transaction isolation level?",
+      "answer": "Defines how transactions interact with each other."
+    },
+    {
+      "index": 57,
+      "question": "What are the isolation levels in SQL?",
+      "answer": "Read Uncommitted, Read Committed, Repeatable Read, Serializable, Snapshot."
+    },
+    {
+      "index": 58,
+      "question": "What is dirty read?",
+      "answer": "Reading uncommitted data from another transaction."
+    },
+    {
+      "index": 59,
+      "question": "What is phantom read?",
+      "answer": "New rows appear in a subsequent read within the same transaction."
+    },
+    {
+      "index": 60,
+      "question": "What is a database lock?",
+      "answer": "A mechanism to prevent concurrent access to data."
+    },
+    {
+      "index": 61,
+      "question": "What are the types of locks?",
+      "answer": "Shared, Exclusive, Update, Intent, Schema."
+    },
+    {
+      "index": 62,
+      "question": "What is a deadlock victim?",
+      "answer": "The transaction chosen to be rolled back to resolve a deadlock."
+    },
+    {
+      "index": 63,
+      "question": "What is database sharding?",
+      "answer": "Splitting a database into smaller, faster parts."
+    },
+    {
+      "index": 64,
+      "question": "What is replication?",
+      "answer": "Copying data from one database to another."
+    },
+    {
+      "index": 65,
+      "question": "What is database partitioning?",
+      "answer": "Dividing a table into smaller, more manageable pieces."
+    },
+    {
+      "index": 66,
+      "question": "What is a database schema?",
+      "answer": "A logical container for database objects (tables, views, etc.)."
+    },
+    {
+      "index": 67,
+      "question": "What is a surrogate key?",
+      "answer": "An artificial primary key (e.g., auto-increment ID)."
+    },
+    {
+      "index": 68,
+      "question": "What is a natural key?",
+      "answer": "A primary key derived from business data (e.g., SSN)."
+    },
+    {
+      "index": 69,
+      "question": "What is a database constraint?",
+      "answer": "Rules enforced on data columns (PK, FK, UNIQUE, CHECK, NOT NULL)."
+    },
+    {
+      "index": 70,
+      "question": "What is a database trigger?",
+      "answer": "A stored procedure that runs automatically on DML events."
+    },
+    {
+      "index": 71,
+      "question": "What is PostgreSQL?",
+      "answer": "An open-source, object-relational database system."
+    },
+    {
+      "index": 72,
+      "question": "What are PostgreSQL's key features?",
+      "answer": "ACID compliance, extensibility, JSON support, advanced indexing."
+    },
+    {
+      "index": 73,
+      "question": "What is a tablespace in PostgreSQL?",
+      "answer": "A location where database objects are stored."
+    },
+    {
+      "index": 74,
+      "question": "What is a TOAST table in PostgreSQL?",
+      "answer": "Stores large data values (compressed/out-of-line storage)."
+    },
+    {
+      "index": 75,
+      "question": "What is a sequence in PostgreSQL?",
+      "answer": "Generates unique numeric identifiers (used for auto-increment)."
+    },
+    {
+      "index": 76,
+      "question": "What is a GIN index in PostgreSQL?",
+      "answer": "Generalized Inverted Index, used for composite data (arrays, JSON)."
+    },
+    {
+      "index": 77,
+      "question": "What is a GiST index in PostgreSQL?",
+      "answer": "Generalized Search Tree, supports geometric and full-text search."
+    },
+    {
+      "index": 78,
+      "question": "What is a BRIN index in PostgreSQL?",
+      "answer": "Block Range Index, for large tables with sorted data."
+    },
+    {
+      "index": 79,
+      "question": "What is HStore in PostgreSQL?",
+      "answer": "A key-value store within a single PostgreSQL column."
+    },
+    {
+      "index": 80,
+      "question": "What is JSONB in PostgreSQL?",
+      "answer": "Binary JSON format with indexing support."
+    },
+    {
+      "index": 81,
+      "question": "What is a materialized view in PostgreSQL?",
+      "answer": "A view that physically stores query results."
+    },
+    {
+      "index": 82,
+      "question": "What is WAL (Write-Ahead Logging) in PostgreSQL?",
+      "answer": "Ensures data integrity by logging changes before applying them."
+    },
+    {
+      "index": 83,
+      "question": "What is VACUUM in PostgreSQL?",
+      "answer": "Reclaims storage occupied by dead tuples."
+    },
+    {
+      "index": 84,
+      "question": "What is autovacuum in PostgreSQL?",
+      "answer": "Automatically runs VACUUM and ANALYZE."
+    },
+    {
+      "index": 85,
+      "question": "What is pg_dump?",
+      "answer": "A PostgreSQL utility for backing up databases."
+    },
+    {
+      "index": 86,
+      "question": "What is pg_restore?",
+      "answer": "Restores a PostgreSQL database from a backup."
+    },
+    {
+      "index": 87,
+      "question": "What is psql?",
+      "answer": "PostgreSQL's command-line interface."
+    },
+    {
+      "index": 88,
+      "question": "What is a foreign data wrapper in PostgreSQL?",
+      "answer": "Allows querying external databases as if they were local."
+    },
+    {
+      "index": 89,
+      "question": "What is PL/pgSQL?",
+      "answer": "PostgreSQL's procedural language for writing functions and triggers."
+    },
+    {
+      "index": 90,
+      "question": "What is a prepared statement in PostgreSQL?",
+      "answer": "A precompiled SQL query for improved performance."
+    },
+    {
+      "index": 91,
+      "question": "What is NoSQL?",
+      "answer": "Non-relational databases for unstructured/semi-structured data."
+    },
+    {
+      "index": 92,
+      "question": "When to use NoSQL over SQL?",
+      "answer": "For scalability, flexibility, and handling large volumes of unstructured data."
+    },
+    {
+      "index": 93,
+      "question": "What are the types of NoSQL databases?",
+      "answer": "Document, Key-Value, Column-Family, Graph."
+    },
+    {
+      "index": 94,
+      "question": "What is a document database?",
+      "answer": "Stores data in JSON-like documents (e.g., MongoDB)."
+    },
+    {
+      "index": 95,
+      "question": "What is a key-value store?",
+      "answer": "Stores data as key-value pairs (e.g., Redis)."
+    },
+    {
+      "index": 96,
+      "question": "What is a column-family store?",
+      "answer": "Stores data in columns rather than rows (e.g., Cassandra)."
+    },
+    {
+      "index": 97,
+      "question": "What is a graph database?",
+      "answer": "Stores data as nodes and relationships (e.g., Neo4j)."
+    },
+    {
+      "index": 98,
+      "question": "What is eventual consistency?",
+      "answer": "Data will become consistent over time in distributed systems."
+    },
+    {
+      "index": 99,
+      "question": "What is CAP theorem?",
+      "answer": "A distributed system can only guarantee two of: Consistency, Availability, Partition Tolerance."
+    },
+    {
+      "index": 100,
+      "question": "What is BASE in NoSQL?",
+      "answer": "Basically Available, Soft state, Eventual consistency."
+    },
+    {
+      "index": 101,
+      "question": "What is sharding in MongoDB?",
+      "answer": "Splitting data across multiple servers for scalability."
+    },
+    {
+      "index": 102,
+      "question": "What is a replica set in MongoDB?",
+      "answer": "A group of MongoDB servers that maintain the same data (high availability)."
+    },
+    {
+      "index": 103,
+      "question": "What is aggregation in MongoDB?",
+      "answer": "Processing data records (e.g., $group, $match, $sort)."
+    },
+    {
+      "index": 104,
+      "question": "What is MapReduce?",
+      "answer": "A programming model for processing large datasets in parallel."
+    },
+    {
+      "index": 105,
+      "question": "What is Redis used for?",
+      "answer": "In-memory key-value store (caching, real-time analytics)."
+    },
+    {
+      "index": 106,
+      "question": "What is Cassandra's data model?",
+      "answer": "Column-family store (wide-column NoSQL database)."
+    },
+    {
+      "index": 107,
+      "question": "What is a Bloom filter?",
+      "answer": "A space-efficient probabilistic data structure for membership tests."
+    },
+    {
+      "index": 108,
+      "question": "What is DynamoDB?",
+      "answer": "AWS's managed NoSQL key-value/document database."
+    },
+    {
+      "index": 109,
+      "question": "What is Couchbase?",
+      "answer": "A NoSQL document database with SQL-like querying (N1QL)."
+    },
+    {
+      "index": 110,
+      "question": "What is a TTL index?",
+      "answer": "Automatically deletes documents after a set time (e.g., in MongoDB/Redis)."
+    },
+    {
+      "index": 111,
+      "question": "What is horizontal scaling?",
+      "answer": "Adding more servers to distribute load."
+    },
+    {
+      "index": 112,
+      "question": "What is vertical scaling?",
+      "answer": "Increasing resources (CPU/RAM) on a single server."
+    },
+    {
+      "index": 113,
+      "question": "What is a B-tree index?",
+      "answer": "Balanced tree structure for efficient range queries (default in PostgreSQL)."
+    },
+    {
+      "index": 114,
+      "question": "What is a hash index?",
+      "answer": "Uses hash function for O(1) lookups (exact matches only)."
+    },
+    {
+      "index": 115,
+      "question": "What is a full-text search?",
+      "answer": "Indexing and querying text content (e.g., PostgreSQL's tsvector)."
+    },
+    {
+      "index": 116,
+      "question": "What is Elasticsearch?",
+      "answer": "Distributed search/analytics engine (JSON document store)."
+    },
+    {
+      "index": 117,
+      "question": "What is a federated database?",
+      "answer": "Virtual database integrating multiple data sources."
+    },
+    {
+      "index": 118,
+      "question": "What is polyglot persistence?",
+      "answer": "Using different databases for different use cases."
+    },
+    {
+      "index": 119,
+      "question": "What is database normalization?",
+      "answer": "Structuring data to minimize redundancy."
+    },
+    {
+      "index": 120,
+      "question": "What is 1NF?",
+      "answer": "Eliminate duplicate columns, ensure atomic values."
+    },
+    {
+      "index": 121,
+      "question": "What is 2NF?",
+      "answer": "1NF + no partial dependency on PK."
+    },
+    {
+      "index": 122,
+      "question": "What is 3NF?",
+      "answer": "2NF + no transitive dependency on PK."
+    },
+    {
+      "index": 123,
+      "question": "What is BCNF?",
+      "answer": "Stricter 3NF (every determinant is a candidate key)."
+    },
+    {
+      "index": 124,
+      "question": "What is 4NF?",
+      "answer": "No multi-valued dependencies."
+    },
+    {
+      "index": 125,
+      "question": "What is 5NF?",
+      "answer": "No join dependencies (projection-join normal form)."
+    },
+    {
+      "index": 126,
+      "question": "What is OLTP?",
+      "answer": "Online Transaction Processing (real-time ops, e.g., orders)."
+    },
+    {
+      "index": 127,
+      "question": "What is OLAP?",
+      "answer": "Online Analytical Processing (historical data analysis)."
+    },
+    {
+      "index": 128,
+      "question": "What is a data warehouse?",
+      "answer": "Centralized repository for reporting/analytics."
+    },
+    {
+      "index": 129,
+      "question": "What is ETL?",
+      "answer": "Extract, Transform, Load (data pipeline to warehouse)."
+    },
+    {
+      "index": 130,
+      "question": "What is a star schema?",
+      "answer": "Fact table linked to dimension tables (denormalized)."
+    },
+    {
+      "index": 131,
+      "question": "What is a snowflake schema?",
+      "answer": "Normalized star schema (dimensions split further)."
+    },
+    {
+      "index": 132,
+      "question": "What is a fact table?",
+      "answer": "Stores metrics (e.g., sales) with foreign keys to dimensions."
+    },
+    {
+      "index": 133,
+      "question": "What is a dimension table?",
+      "answer": "Descriptive attributes (e.g., time, product)."
+    },
+    {
+      "index": 134,
+      "question": "What is a surrogate key in a data warehouse?",
+      "answer": "Artificial key (e.g., auto-increment ID) for dimensions."
+    },
+    {
+      "index": 135,
+      "question": "What is slowly changing dimension (SCD)?",
+      "answer": "Strategies to track historical dimension changes (Type 1/2/3)."
+    },
+    {
+      "index": 136,
+      "question": "What is data mining?",
+      "answer": "Discovering patterns in large datasets."
+    },
+    {
+      "index": 137,
+      "question": "What is a database trigger?",
+      "answer": "Auto-executed procedure on DML events."
+    },
+    {
+      "index": 138,
+      "question": "What is a database transaction log?",
+      "answer": "Logs all changes for recovery (e.g., PostgreSQL's WAL)."
+    },
+    {
+      "index": 139,
+      "question": "What is a database checkpoint?",
+      "answer": "Flushes dirty buffers to disk for recovery."
+    },
+    {
+      "index": 140,
+      "question": "What is database mirroring?",
+      "answer": "Real-time copying of a database to a standby server."
+    },
+    {
+      "index": 141,
+      "question": "What is database clustering?",
+      "answer": "Multiple servers working as a single system (high availability)."
+    },
+    {
+      "index": 142,
+      "question": "What is database caching?",
+      "answer": "Storing frequently accessed data in memory (e.g., Redis)."
+    },
+    {
+      "index": 143,
+      "question": "What is connection pooling?",
+      "answer": "Reusing database connections to reduce overhead."
+    },
+    {
+      "index": 144,
+      "question": "What is a database connection leak?",
+      "answer": "Unreleased connections exhausting resources."
+    },
+    {
+      "index": 145,
+      "question": "What is SQL injection?",
+      "answer": "Malicious SQL code insertion via input."
+    },
+    {
+      "index": 146,
+      "question": "How to prevent SQL injection?",
+      "answer": "Use parameterized queries/ORM, input validation."
+    },
+    {
+      "index": 147,
+      "question": "What is ORM?",
+      "answer": "Object-Relational Mapping (e.g., Hibernate, SQLAlchemy)."
+    },
+    {
+      "index": 148,
+      "question": "What is JPA?",
+      "answer": "Java Persistence API (ORM standard for Java)."
+    },
+    {
+      "index": 149,
+      "question": "What is Hibernate?",
+      "answer": "Popular JPA implementation for Java."
+    },
+    {
+      "index": 150,
+      "question": "What is Entity Framework?",
+      "answer": "Microsoft's ORM for .NET."
+    },
+    {
+      "index": 151,
+      "question": "What is JDBC?",
+      "answer": "Java Database Connectivity (API for SQL databases)."
+    },
+    {
+      "index": 152,
+      "question": "What is ODBC?",
+      "answer": "Open Database Connectivity (standard API for DB access)."
+    },
+    {
+      "index": 153,
+      "question": "What is a database driver?",
+      "answer": "Software enabling apps to interact with a DB (e.g., psycopg2)."
+    },
+    {
+      "index": 154,
+      "question": "What is a database cursor?",
+      "answer": "Pointer to traverse query results row-by-row."
+    },
+    {
+      "index": 155,
+      "question": "What is a database view?",
+      "answer": "Virtual table from a SQL query."
+    },
+    {
+      "index": 156,
+      "question": "What is a materialized view?",
+      "answer": "Physically stored view for faster queries."
+    },
+    {
+      "index": 157,
+      "question": "What is a database function?",
+      "answer": "Reusable SQL logic (e.g., SUM(), custom PL/pgSQL)."
+    },
+    {
+      "index": 158,
+      "question": "What is a stored procedure?",
+      "answer": "Precompiled SQL code stored in the DB."
+    },
+    {
+      "index": 159,
+      "question": "What is a database constraint?",
+      "answer": "Rule enforcing data integrity (PK, FK, CHECK)."
+    },
+    {
+      "index": 160,
+      "question": "What is referential integrity?",
+      "answer": "FK constraints ensuring valid relationships."
+    },
+    {
+      "index": 161,
+      "question": "What is a self-referencing table?",
+      "answer": "A table with a FK referencing its own PK."
+    },
+    {
+      "index": 162,
+      "question": "What is a recursive query?",
+      "answer": "A query that references itself (e.g., WITH RECURSIVE)."
+    },
+    {
+      "index": 163,
+      "question": "What is a common table expression (CTE)?",
+      "answer": "Temporary result set (WITH clause)."
+    },
+    {
+      "index": 164,
+      "question": "What is a pivot query?",
+      "answer": "Converts rows into columns (e.g., crosstab in PostgreSQL)."
+    },
+    {
+      "index": 165,
+      "question": "What is an unpivot query?",
+      "answer": "Converts columns into rows."
+    },
+    {
+      "index": 166,
+      "question": "What is a cross tab query?",
+      "answer": "Pivot table for summarizing data."
+    },
+    {
+      "index": 167,
+      "question": "What is a database index?",
+      "answer": "Structure speeding up data retrieval."
+    },
+    {
+      "index": 168,
+      "question": "What is a composite index?",
+      "answer": "Index on multiple columns."
+    },
+    {
+      "index": 169,
+      "question": "What is a partial index?",
+      "answer": "Index on a subset of data (e.g., WHERE status = 'active')."
+    },
+    {
+      "index": 170,
+      "question": "What is a bitmap index?",
+      "answer": "Efficient for low-cardinality columns (data warehousing)."
+    },
+    {
+      "index": 171,
+      "question": "What is a function-based index?",
+      "answer": "Index on an expression (e.g., UPPER(name))."
+    },
+    {
+      "index": 172,
+      "question": "What is a spatial index?",
+      "answer": "Optimizes geospatial queries (e.g., PostGIS R-tree)."
+    },
+    {
+      "index": 173,
+      "question": "What is full-text indexing?",
+      "answer": "Enables text search (e.g., PostgreSQL's tsvector)."
+    },
+    {
+      "index": 174,
+      "question": "What is database partitioning?",
+      "answer": "Splitting tables into smaller physical pieces."
+    },
+    {
+      "index": 175,
+      "question": "What is horizontal partitioning?",
+      "answer": "Dividing rows across partitions (sharding)."
+    },
+    {
+      "index": 176,
+      "question": "What is vertical partitioning?",
+      "answer": "Splitting columns into separate tables."
+    },
+    {
+      "index": 177,
+      "question": "What is range partitioning?",
+      "answer": "Partition by value ranges (e.g., dates)."
+    },
+    {
+      "index": 178,
+      "question": "What is list partitioning?",
+      "answer": "Partition by discrete values (e.g., regions)."
+    },
+    {
+      "index": 179,
+      "question": "What is hash partitioning?",
+      "answer": "Distributes data via hash function."
+    },
+    {
+      "index": 180,
+      "question": "What is database sharding?",
+      "answer": "Horizontal partitioning across servers."
+    },
+    {
+      "index": 181,
+      "question": "What is consistent hashing?",
+      "answer": "Distributes data evenly in sharded systems."
+    },
+    {
+      "index": 182,
+      "question": "What is database replication?",
+      "answer": "Copying data to multiple servers."
+    },
+    {
+      "index": 183,
+      "question": "What is master-slave replication?",
+      "answer": "Writes to master, reads from slaves."
+    },
+    {
+      "index": 184,
+      "question": "What is multi-master replication?",
+      "answer": "Writes allowed on multiple nodes."
+    },
+    {
+      "index": 185,
+      "question": "What is synchronous replication?",
+      "answer": "Waits for all replicas to confirm writes."
+    },
+    {
+      "index": 186,
+      "question": "What is asynchronous replication?",
+      "answer": "Writes proceed without waiting for replicas."
+    },
+    {
+      "index": 187,
+      "question": "What is database backup?",
+      "answer": "Copy of data for disaster recovery."
+    },
+    {
+      "index": 188,
+      "question": "What is a full backup?",
+      "answer": "Complete copy of the database."
+    },
+    {
+      "index": 189,
+      "question": "What is an incremental backup?",
+      "answer": "Only changes since the last backup."
+    },
+    {
+      "index": 190,
+      "question": "What is a differential backup?",
+      "answer": "Changes since the last full backup."
+    },
+    {
+      "index": 191,
+      "question": "What is point-in-time recovery?",
+      "answer": "Restores DB to a specific timestamp."
+    },
+    {
+      "index": 192,
+      "question": "What is database archiving?",
+      "answer": "Moving old data to cheaper storage."
+    },
+    {
+      "index": 193,
+      "question": "What is database compression?",
+      "answer": "Reduces storage space (e.g., TOAST in PostgreSQL)."
+    },
+    {
+      "index": 194,
+      "question": "What is database encryption?",
+      "answer": "Secures data at rest/in transit."
+    },
+    {
+      "index": 195,
+      "question": "What is TDE (Transparent Data Encryption)?",
+      "answer": "Encrypts entire database files."
+    },
+    {
+      "index": 196,
+      "question": "What is database auditing?",
+      "answer": "Tracks access/changes for security."
+    },
+    {
+      "index": 197,
+      "question": "What is database performance tuning?",
+      "answer": "Optimizing queries, indexes, and configs."
+    },
+    {
+      "index": 198,
+      "question": "What is query optimization?",
+      "answer": "Improving SQL execution efficiency."
+    },
+    {
+      "index": 199,
+      "question": "What is database monitoring?",
+      "answer": "Tracking health/performance metrics."
+    },
+    {
+      "index": 200,
+      "question": "What is database maintenance?",
+      "answer": "Routine tasks (vacuuming, backups, index rebuilds)."
+    }
+  ]
+}

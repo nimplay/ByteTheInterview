@@ -1,0 +1,1004 @@
+{
+    "python_basics": [
+      {
+        "index": 1,
+        "question": "What is Python?",
+        "answer": "Python is a high-level, interpreted, and general-purpose programming language known for its readability."
+      },
+      {
+        "index": 2,
+        "question": "Is Python compiled or interpreted?",
+        "answer": "Python is interpreted, but it compiles source code to bytecode before execution."
+      },
+      {
+        "index": 3,
+        "question": "What are Python's key features?",
+        "answer": "Easy syntax, dynamic typing, garbage collection, and extensive libraries."
+      },
+      {
+        "index": 4,
+        "question": "What are Python's built-in data types?",
+        "answer": "int, float, str, list, tuple, dict, set, bool, bytes."
+      },
+      {
+        "index": 5,
+        "question": "What is PEP 8?",
+        "answer": "Python Enhancement Proposal 8 defines Python's coding style guidelines."
+      },
+      {
+        "index": 6,
+        "question": "How do you comment in Python?",
+        "answer": "Single-line: # comment, Multi-line: \"\"\" comment \"\"\"."
+      },
+      {
+        "index": 7,
+        "question": "What is the difference between == and is?",
+        "answer": "== checks value equality, is checks identity (same memory location)."
+      },
+      {
+        "index": 8,
+        "question": "What is None in Python?",
+        "answer": "A special constant representing the absence of a value."
+      },
+      {
+        "index": 9,
+        "question": "What are Python's mutable and immutable types?",
+        "answer": "Mutable: list, dict, set. Immutable: int, str, tuple."
+      },
+      {
+        "index": 10,
+        "question": "What is type conversion in Python?",
+        "answer": "Converting one data type to another (e.g., int(\"5\"))."
+      },
+      {
+        "index": 11,
+        "question": "What is a variable in Python?",
+        "answer": "A name that refers to a value stored in memory."
+      },
+      {
+        "index": 12,
+        "question": "What are local and global variables?",
+        "answer": "Local: Inside a function. Global: Accessible everywhere."
+      },
+      {
+        "index": 13,
+        "question": "How do you declare a global variable inside a function?",
+        "answer": "Using the global keyword."
+      },
+      {
+        "index": 14,
+        "question": "What is the scope of a variable?",
+        "answer": "The region where a variable is accessible."
+      },
+      {
+        "index": 15,
+        "question": "What is a nonlocal variable?",
+        "answer": "Used in nested functions to modify a variable from the outer function."
+      },
+      {
+        "index": 16,
+        "question": "What are Python's arithmetic operators?",
+        "answer": "+, -, *, /, %, //, **."
+      },
+      {
+        "index": 17,
+        "question": "What is the difference between / and //?",
+        "answer": "/ is float division, // is floor division."
+      },
+      {
+        "index": 18,
+        "question": "What are logical operators in Python?",
+        "answer": "and, or, not."
+      },
+      {
+        "index": 19,
+        "question": "What is the ternary operator in Python?",
+        "answer": "x if condition else y."
+      },
+      {
+        "index": 20,
+        "question": "What is operator overloading?",
+        "answer": "Defining custom behavior for operators (e.g., + for objects)."
+      },
+      {
+        "index": 21,
+        "question": "What are Python's control flow statements?",
+        "answer": "if, elif, else, for, while, break, continue, pass."
+      },
+      {
+        "index": 22,
+        "question": "What is the difference between break and continue?",
+        "answer": "break exits the loop, continue skips to the next iteration."
+      },
+      {
+        "index": 23,
+        "question": "What is pass used for?",
+        "answer": "A placeholder for empty code blocks."
+      },
+      {
+        "index": 24,
+        "question": "How does a for loop work in Python?",
+        "answer": "Iterates over sequences (lists, strings, etc.)."
+      },
+      {
+        "index": 25,
+        "question": "What is range()?",
+        "answer": "Generates a sequence of numbers (e.g., range(5) gives 0,1,2,3,4)."
+      },
+      {
+        "index": 26,
+        "question": "How do you define a function in Python?",
+        "answer": "def function_name():"
+      },
+      {
+        "index": 27,
+        "question": "What are lambda functions?",
+        "answer": "Anonymous functions defined with lambda."
+      },
+      {
+        "index": 28,
+        "question": "What are *args and **kwargs?",
+        "answer": "*args for variable positional arguments, **kwargs for keyword arguments."
+      },
+      {
+        "index": 29,
+        "question": "What is recursion?",
+        "answer": "A function calling itself."
+      },
+      {
+        "index": 30,
+        "question": "What is a decorator?",
+        "answer": "A function that modifies another function's behavior."
+      },
+      {
+        "index": 31,
+        "question": "What is a list?",
+        "answer": "A mutable, ordered collection of items."
+      },
+      {
+        "index": 32,
+        "question": "What is a tuple?",
+        "answer": "An immutable, ordered collection."
+      },
+      {
+        "index": 33,
+        "question": "How do you reverse a list?",
+        "answer": "list.reverse() or list[::-1]."
+      },
+      {
+        "index": 34,
+        "question": "How do you remove duplicates from a list?",
+        "answer": "Convert to a set: list(set(my_list))."
+      },
+      {
+        "index": 35,
+        "question": "What is list comprehension?",
+        "answer": "A concise way to create lists: [x**2 for x in range(5)]."
+      },
+      {
+        "index": 36,
+        "question": "What is a dictionary?",
+        "answer": "A key-value pair collection ({\"key\": \"value\"})."
+      },
+      {
+        "index": 37,
+        "question": "How do you iterate over a dictionary?",
+        "answer": "for key, value in dict.items():"
+      },
+      {
+        "index": 38,
+        "question": "What is a set?",
+        "answer": "An unordered collection of unique elements."
+      },
+      {
+        "index": 39,
+        "question": "How do you merge two dictionaries?",
+        "answer": "dict1.update(dict2) or {**dict1, **dict2}."
+      },
+      {
+        "index": 40,
+        "question": "What is a frozen set?",
+        "answer": "An immutable version of a set."
+      },
+      {
+        "index": 41,
+        "question": "How do you concatenate strings?",
+        "answer": "Using + or \"\".join()."
+      },
+      {
+        "index": 42,
+        "question": "How do you format strings?",
+        "answer": "f-strings: f\"Hello {name}\", .format(), or % formatting."
+      },
+      {
+        "index": 43,
+        "question": "How do you reverse a string?",
+        "answer": "string[::-1]."
+      },
+      {
+        "index": 44,
+        "question": "What is string slicing?",
+        "answer": "Extracting parts of a string: string[start:stop:step]."
+      },
+      {
+        "index": 45,
+        "question": "How do you check if a string is a palindrome?",
+        "answer": "string == string[::-1]."
+      },
+      {
+        "index": 46,
+        "question": "How do you open a file in Python?",
+        "answer": "with open(\"file.txt\", \"r\") as file:"
+      },
+      {
+        "index": 47,
+        "question": "What are file modes in Python?",
+        "answer": "\"r\" (read), \"w\" (write), \"a\" (append), \"rb\" (binary read)."
+      },
+      {
+        "index": 48,
+        "question": "How do you read a file line by line?",
+        "answer": "for line in file:"
+      },
+      {
+        "index": 49,
+        "question": "How do you write to a file?",
+        "answer": "file.write(\"text\")."
+      },
+      {
+        "index": 50,
+        "question": "What is pickle?",
+        "answer": "A module for serializing Python objects."
+      },
+      {
+        "index": 51,
+        "question": "What is OOP?",
+        "answer": "Object-Oriented Programming (classes, objects, inheritance)."
+      },
+      {
+        "index": 52,
+        "question": "How do you define a class?",
+        "answer": "class MyClass:"
+      },
+      {
+        "index": 53,
+        "question": "What is self?",
+        "answer": "Refers to the instance of the class."
+      },
+      {
+        "index": 54,
+        "question": "What is inheritance?",
+        "answer": "A class inheriting attributes/methods from another class."
+      },
+      {
+        "index": 55,
+        "question": "What is polymorphism?",
+        "answer": "Methods with the same name but different implementations."
+      },
+      {
+        "index": 56,
+        "question": "What is exception handling?",
+        "answer": "Managing errors using try, except, finally."
+      },
+      {
+        "index": 57,
+        "question": "What are common Python exceptions?",
+        "answer": "ValueError, TypeError, IndexError, KeyError."
+      },
+      {
+        "index": 58,
+        "question": "What is try-except-else?",
+        "answer": "else runs if no exception occurs."
+      },
+      {
+        "index": 59,
+        "question": "What is finally used for?",
+        "answer": "Code that runs regardless of exceptions."
+      },
+      {
+        "index": 60,
+        "question": "How do you raise an exception?",
+        "answer": "raise ValueError(\"Error message\")."
+      },
+      {
+        "index": 61,
+        "question": "What is a module?",
+        "answer": "A .py file containing Python code."
+      },
+      {
+        "index": 62,
+        "question": "What is a package?",
+        "answer": "A collection of modules in a directory with __init__.py."
+      },
+      {
+        "index": 63,
+        "question": "How do you import a module?",
+        "answer": "import module or from module import function."
+      },
+      {
+        "index": 64,
+        "question": "What is __name__ == \"__main__\"?",
+        "answer": "Checks if the script is run directly (not imported)."
+      },
+      {
+        "index": 65,
+        "question": "What is pip?",
+        "answer": "Python's package installer."
+      },
+      {
+        "index": 66,
+        "question": "What is a generator?",
+        "answer": "A function that yields values one at a time (yield)."
+      },
+      {
+        "index": 67,
+        "question": "What is a decorator?",
+        "answer": "A function that modifies another function."
+      },
+      {
+        "index": 68,
+        "question": "What is @staticmethod?",
+        "answer": "A method that belongs to a class but doesn't need self."
+      },
+      {
+        "index": 69,
+        "question": "What is @classmethod?",
+        "answer": "A method that takes cls (class) as the first argument."
+      },
+      {
+        "index": 70,
+        "question": "What is __init__?",
+        "answer": "A constructor method called when an object is created."
+      },
+      {
+        "index": 71,
+        "question": "How does Python manage memory?",
+        "answer": "Uses reference counting and garbage collection."
+      },
+      {
+        "index": 72,
+        "question": "What is garbage collection?",
+        "answer": "Automatic memory management for unused objects."
+      },
+      {
+        "index": 73,
+        "question": "What is a memory leak?",
+        "answer": "Unreleased memory that accumulates over time."
+      },
+      {
+        "index": 74,
+        "question": "What is sys.getsizeof()?",
+        "answer": "Returns the size of an object in bytes."
+      },
+      {
+        "index": 75,
+        "question": "What is id()?",
+        "answer": "Returns the memory address of an object."
+      },
+      {
+        "index": 76,
+        "question": "What is multithreading?",
+        "answer": "Running multiple threads in a single process."
+      },
+      {
+        "index": 77,
+        "question": "What is the GIL?",
+        "answer": "Global Interpreter Lock restricts Python to one thread at a time."
+      },
+      {
+        "index": 78,
+        "question": "What is multiprocessing?",
+        "answer": "Running multiple processes (bypasses GIL)."
+      },
+      {
+        "index": 79,
+        "question": "What is threading vs multiprocessing?",
+        "answer": "Threading shares memory, multiprocessing does not."
+      },
+      {
+        "index": 80,
+        "question": "What is a deadlock?",
+        "answer": "Two threads waiting indefinitely for each other."
+      },
+      {
+        "index": 81,
+        "question": "What is NumPy?",
+        "answer": "A library for numerical computing with arrays."
+      },
+      {
+        "index": 82,
+        "question": "What is Pandas?",
+        "answer": "A library for data manipulation and analysis."
+      },
+      {
+        "index": 83,
+        "question": "What is Matplotlib?",
+        "answer": "A plotting library for data visualization."
+      },
+      {
+        "index": 84,
+        "question": "What is Flask?",
+        "answer": "A lightweight web framework."
+      },
+      {
+        "index": 85,
+        "question": "What is Django?",
+        "answer": "A high-level web framework."
+      },
+      {
+        "index": 86,
+        "question": "How do you connect to a database in Python?",
+        "answer": "Using sqlite3, psycopg2, or MySQLdb."
+      },
+      {
+        "index": 87,
+        "question": "What is SQL injection?",
+        "answer": "A security vulnerability from unsanitized SQL queries."
+      },
+      {
+        "index": 88,
+        "question": "How do you prevent SQL injection?",
+        "answer": "Use parameterized queries (cursor.execute(\"SELECT * FROM table WHERE id=?\", (id,)))."
+      },
+      {
+        "index": 89,
+        "question": "What is an ORM?",
+        "answer": "Object-Relational Mapping (e.g., Django ORM, SQLAlchemy)."
+      },
+      {
+        "index": 90,
+        "question": "What is SQLAlchemy?",
+        "answer": "A Python SQL toolkit and ORM."
+      },
+      {
+        "index": 91,
+        "question": "What is requests?",
+        "answer": "A library for making HTTP requests."
+      },
+      {
+        "index": 92,
+        "question": "What is BeautifulSoup?",
+        "answer": "A library for parsing HTML/XML."
+      },
+      {
+        "index": 93,
+        "question": "What is Scrapy?",
+        "answer": "A web scraping framework."
+      },
+      {
+        "index": 94,
+        "question": "How do you scrape a website?",
+        "answer": "Use requests + BeautifulSoup or Scrapy."
+      },
+      {
+        "index": 95,
+        "question": "What is selenium?",
+        "answer": "A tool for automating browser interactions."
+      },
+      {
+        "index": 96,
+        "question": "What is unit testing?",
+        "answer": "Testing individual components of code."
+      },
+      {
+        "index": 97,
+        "question": "What is unittest?",
+        "answer": "Python's built-in testing framework."
+      },
+      {
+        "index": 98,
+        "question": "What is pytest?",
+        "answer": "A popular testing framework."
+      },
+      {
+        "index": 99,
+        "question": "What is debugging?",
+        "answer": "Finding and fixing errors in code."
+      },
+      {
+        "index": 100,
+        "question": "What is pdb?",
+        "answer": "Python's built-in debugger."
+      },
+      {
+        "index": 101,
+        "question": "What is hashing?",
+        "answer": "Converting data into a fixed-size string (e.g., hashlib.sha256())."
+      },
+      {
+        "index": 102,
+        "question": "What is encryption?",
+        "answer": "Encoding data to prevent unauthorized access."
+      },
+      {
+        "index": 103,
+        "question": "What is SSL/TLS?",
+        "answer": "Protocols for secure communication."
+      },
+      {
+        "index": 104,
+        "question": "How do you handle passwords securely?",
+        "answer": "Use bcrypt or hashlib for hashing."
+      },
+      {
+        "index": 105,
+        "question": "What is CSRF?",
+        "answer": "Cross-Site Request Forgery (a web security vulnerability)."
+      },
+      {
+        "index": 106,
+        "question": "What is socket?",
+        "answer": "A low-level networking interface."
+      },
+      {
+        "index": 107,
+        "question": "What is HTTP?",
+        "answer": "HyperText Transfer Protocol for web communication."
+      },
+      {
+        "index": 108,
+        "question": "What is REST API?",
+        "answer": "Representational State Transfer (stateless web services)."
+      },
+      {
+        "index": 109,
+        "question": "What is Flask-RESTful?",
+        "answer": "An extension for building REST APIs with Flask."
+      },
+      {
+        "index": 110,
+        "question": "What is Django REST Framework?",
+        "answer": "A toolkit for building REST APIs with Django."
+      },
+      {
+        "index": 111,
+        "question": "What is asyncio?",
+        "answer": "A library for asynchronous programming."
+      },
+      {
+        "index": 112,
+        "question": "What is async/await?",
+        "answer": "Keywords for defining asynchronous functions."
+      },
+      {
+        "index": 113,
+        "question": "What is a coroutine?",
+        "answer": "A function that can pause/resume execution (async def)."
+      },
+      {
+        "index": 114,
+        "question": "What is gevent?",
+        "answer": "A coroutine-based networking library."
+      },
+      {
+        "index": 115,
+        "question": "What is aiohttp?",
+        "answer": "An async HTTP client/server library."
+      },
+      {
+        "index": 116,
+        "question": "What is scikit-learn?",
+        "answer": "A machine learning library."
+      },
+      {
+        "index": 117,
+        "question": "What is TensorFlow?",
+        "answer": "A deep learning framework."
+      },
+      {
+        "index": 118,
+        "question": "What is Keras?",
+        "answer": "A high-level neural networks API."
+      },
+      {
+        "index": 119,
+        "question": "What is PyTorch?",
+        "answer": "A deep learning framework by Facebook."
+      },
+      {
+        "index": 120,
+        "question": "What is a DataFrame?",
+        "answer": "A 2D tabular data structure in Pandas."
+      },
+      {
+        "index": 121,
+        "question": "What is functional programming?",
+        "answer": "Programming with pure functions (no side effects)."
+      },
+      {
+        "index": 122,
+        "question": "What is map()?",
+        "answer": "Applies a function to all items in an iterable."
+      },
+      {
+        "index": 123,
+        "question": "What is filter()?",
+        "answer": "Filters items based on a condition."
+      },
+      {
+        "index": 124,
+        "question": "What is reduce()?",
+        "answer": "Applies a rolling computation to sequential pairs (from functools import reduce)."
+      },
+      {
+        "index": 125,
+        "question": "What is a pure function?",
+        "answer": "A function with no side effects (same input → same output)."
+      },
+      {
+        "index": 126,
+        "question": "What is a singleton?",
+        "answer": "A class with only one instance."
+      },
+      {
+        "index": 127,
+        "question": "What is a factory pattern?",
+        "answer": "A class that creates objects of other classes."
+      },
+      {
+        "index": 128,
+        "question": "What is MVC?",
+        "answer": "Model-View-Controller (a design pattern)."
+      },
+      {
+        "index": 129,
+        "question": "What is a decorator pattern?",
+        "answer": "Adds behavior to objects dynamically."
+      },
+      {
+        "index": 130,
+        "question": "What is an iterator pattern?",
+        "answer": "Traverses a container without exposing its structure."
+      },
+      {
+        "index": 131,
+        "question": "How do you optimize Python code?",
+        "answer": "Use built-in functions, list comprehensions, and avoid global variables."
+      },
+      {
+        "index": 132,
+        "question": "What is timeit?",
+        "answer": "A module for measuring execution time."
+      },
+      {
+        "index": 133,
+        "question": "What is cProfile?",
+        "answer": "A profiler for analyzing Python code performance."
+      },
+      {
+        "index": 134,
+        "question": "What is memoization?",
+        "answer": "Caching function results to avoid recomputation."
+      },
+      {
+        "index": 135,
+        "question": "What is Cython?",
+        "answer": "A superset of Python for writing C extensions."
+      },
+      {
+        "index": 136,
+        "question": "What is __slots__?",
+        "answer": "Optimizes memory usage by restricting dynamic attributes."
+      },
+      {
+        "index": 137,
+        "question": "What is __call__?",
+        "answer": "Allows an object to be called like a function."
+      },
+      {
+        "index": 138,
+        "question": "What is __str__ vs __repr__?",
+        "answer": "__str__ for readable output, __repr__ for unambiguous representation."
+      },
+      {
+        "index": 139,
+        "question": "What is monkey patching?",
+        "answer": "Modifying code at runtime."
+      },
+      {
+        "index": 140,
+        "question": "What is eval()?",
+        "answer": "Executes a string as Python code (risky)."
+      },
+      {
+        "index": 141,
+        "question": "What are key differences between Python 2 and 3?",
+        "answer": "Print function, Unicode, integer division, xrange → range."
+      },
+      {
+        "index": 142,
+        "question": "How do you handle Unicode in Python 3?",
+        "answer": "Strings are Unicode by default (str is Unicode, bytes is binary)."
+      },
+      {
+        "index": 143,
+        "question": "What is xrange in Python 2?",
+        "answer": "A memory-efficient version of range (in Python 3, range is the same)."
+      },
+      {
+        "index": 144,
+        "question": "How is print different in Python 3?",
+        "answer": "print() is a function, not a statement."
+      },
+      {
+        "index": 145,
+        "question": "What is // in Python 3?",
+        "answer": "Floor division (same in Python 2)."
+      },
+      {
+        "index": 146,
+        "question": "What is a virtual environment?",
+        "answer": "An isolated Python environment for dependencies."
+      },
+      {
+        "index": 147,
+        "question": "How do you create a virtual environment?",
+        "answer": "python -m venv myenv."
+      },
+      {
+        "index": 148,
+        "question": "What is pipenv?",
+        "answer": "A tool for managing virtual environments and packages."
+      },
+      {
+        "index": 149,
+        "question": "What is conda?",
+        "answer": "A package manager for data science environments."
+      },
+      {
+        "index": 150,
+        "question": "Why use virtual environments?",
+        "answer": "Avoid dependency conflicts between projects."
+      },
+      {
+        "index": 151,
+        "question": "What is re?",
+        "answer": "Python's regular expression module."
+      },
+      {
+        "index": 152,
+        "question": "How do you match a pattern?",
+        "answer": "re.match(pattern, string)."
+      },
+      {
+        "index": 153,
+        "question": "What is re.search()?",
+        "answer": "Searches for a pattern anywhere in the string."
+      },
+      {
+        "index": 154,
+        "question": "What is re.findall()?",
+        "answer": "Returns all non-overlapping matches as a list."
+      },
+      {
+        "index": 155,
+        "question": "What is re.sub()?",
+        "answer": "Replaces matches with a string."
+      },
+      {
+        "index": 156,
+        "question": "What is JSON?",
+        "answer": "JavaScript Object Notation (a lightweight data format)."
+      },
+      {
+        "index": 157,
+        "question": "How do you parse JSON in Python?",
+        "answer": "json.loads() (string to dict) or json.load() (file to dict)."
+      },
+      {
+        "index": 158,
+        "question": "How do you convert Python to JSON?",
+        "answer": "json.dumps() (dict to string) or json.dump() (dict to file)."
+      },
+      {
+        "index": 159,
+        "question": "What is indent in json.dumps()?",
+        "answer": "Pretty-prints JSON with indentation."
+      },
+      {
+        "index": 160,
+        "question": "What is ensure_ascii in JSON?",
+        "answer": "Escapes non-ASCII characters if True."
+      },
+      {
+        "index": 161,
+        "question": "What is datetime?",
+        "answer": "A module for handling dates and times."
+      },
+      {
+        "index": 162,
+        "question": "How do you get the current time?",
+        "answer": "datetime.datetime.now()."
+      },
+      {
+        "index": 163,
+        "question": "How do you format a date?",
+        "answer": "date.strftime(\"%Y-%m-%d\")."
+      },
+      {
+        "index": 164,
+        "question": "What is timedelta?",
+        "answer": "Represents a duration between two dates."
+      },
+      {
+        "index": 165,
+        "question": "How do you parse a string to a date?",
+        "answer": "datetime.strptime(\"2023-01-01\", \"%Y-%m-%d\")."
+      },
+      {
+        "index": 166,
+        "question": "What is os?",
+        "answer": "A module for interacting with the operating system."
+      },
+      {
+        "index": 167,
+        "question": "How do you list files in a directory?",
+        "answer": "os.listdir() or glob.glob()."
+      },
+      {
+        "index": 168,
+        "question": "What is shutil?",
+        "answer": "A module for file operations (copy, move, etc.)."
+      },
+      {
+        "index": 169,
+        "question": "How do you check if a file exists?",
+        "answer": "os.path.exists(\"file.txt\")."
+      },
+      {
+        "index": 170,
+        "question": "How do you read a CSV file?",
+        "answer": "import csv or pandas.read_csv()."
+      },
+      {
+        "index": 171,
+        "question": "How do you create a ZIP file?",
+        "answer": "zipfile.ZipFile(\"file.zip\", \"w\")."
+      },
+      {
+        "index": 172,
+        "question": "How do you extract a ZIP file?",
+        "answer": "zipfile.ZipFile(\"file.zip\", \"r\").extractall()."
+      },
+      {
+        "index": 173,
+        "question": "What is zipfile?",
+        "answer": "A module for working with ZIP archives."
+      },
+      {
+        "index": 174,
+        "question": "How do you add files to a ZIP?",
+        "answer": "zip.write(\"file.txt\")."
+      },
+      {
+        "index": 175,
+        "question": "How do you list files in a ZIP?",
+        "answer": "zip.namelist()."
+      },
+      {
+        "index": 176,
+        "question": "What is threading?",
+        "answer": "A module for creating and managing threads."
+      },
+      {
+        "index": 177,
+        "question": "How do you start a thread?",
+        "answer": "thread = threading.Thread(target=func); thread.start()."
+      },
+      {
+        "index": 178,
+        "question": "What is thread.join()?",
+        "answer": "Waits for a thread to complete."
+      },
+      {
+        "index": 179,
+        "question": "What is a daemon thread?",
+        "answer": "A thread that runs in the background."
+      },
+      {
+        "index": 180,
+        "question": "How do you avoid race conditions?",
+        "answer": "Use locks (threading.Lock())."
+      },
+      {
+        "index": 181,
+        "question": "What is multiprocessing?",
+        "answer": "A module for parallel execution using processes."
+      },
+      {
+        "index": 182,
+        "question": "How do you start a process?",
+        "answer": "process = multiprocessing.Process(target=func); process.start()."
+      },
+      {
+        "index": 183,
+        "question": "What is a Pool?",
+        "answer": "Manages multiple worker processes."
+      },
+      {
+        "index": 184,
+        "question": "How do you share data between processes?",
+        "answer": "Use multiprocessing.Queue or multiprocessing.Value."
+      },
+      {
+        "index": 185,
+        "question": "What is Process.join()?",
+        "answer": "Waits for a process to finish."
+      },
+      {
+        "index": 186,
+        "question": "What is queue.Queue?",
+        "answer": "A thread-safe FIFO queue."
+      },
+      {
+        "index": 187,
+        "question": "What is queue.LifoQueue?",
+        "answer": "A LIFO (stack-like) queue."
+      },
+      {
+        "index": 188,
+        "question": "What is queue.PriorityQueue?",
+        "answer": "A queue where items are retrieved by priority."
+      },
+      {
+        "index": 189,
+        "question": "How do you add to a queue?",
+        "answer": "queue.put(item)."
+      },
+      {
+        "index": 190,
+        "question": "How do you get from a queue?",
+        "answer": "queue.get()."
+      },
+      {
+        "index": 191,
+        "question": "What is logging?",
+        "answer": "A module for tracking events in a program."
+      },
+      {
+        "index": 192,
+        "question": "What are logging levels?",
+        "answer": "DEBUG, INFO, WARNING, ERROR, CRITICAL."
+      },
+      {
+        "index": 193,
+        "question": "How do you configure logging?",
+        "answer": "logging.basicConfig(level=logging.INFO)."
+      },
+      {
+        "index": 194,
+        "question": "What is a logger?",
+        "answer": "An object used to log messages."
+      },
+      {
+        "index": 195,
+        "question": "How do you log to a file?",
+        "answer": "logging.basicConfig(filename=\"app.log\")."
+      },
+      {
+        "index": 196,
+        "question": "What is pickle?",
+        "answer": "Serializes Python objects to bytes."
+      },
+      {
+        "index": 197,
+        "question": "What is json vs pickle?",
+        "answer": "json is text-based (human-readable), pickle is binary (Python-only)."
+      },
+      {
+        "index": 198,
+        "question": "How do you pickle an object?",
+        "answer": "pickle.dumps(obj) or pickle.dump(obj, file)."
+      },
+      {
+        "index": 199,
+        "question": "How do you unpickle an object?",
+        "answer": "pickle.loads(data) or pickle.load(file)."
+      },
+      {
+        "index": 200,
+        "question": "What is shelve?",
+        "answer": "A persistent dictionary-like object storage."
+      }
+    ]
+  }

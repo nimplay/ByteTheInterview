@@ -1,0 +1,1004 @@
+{
+  "TypeScript_basics": [
+    {
+      "index": 1,
+      "question": "What is TypeScript?",
+      "answer": "TypeScript is a typed superset of JavaScript that compiles to plain JavaScript."
+    },
+    {
+      "index": 2,
+      "question": "How does TypeScript differ from JavaScript?",
+      "answer": "TypeScript adds static types, interfaces, and other OOP features."
+    },
+    {
+      "index": 3,
+      "question": "What are the benefits of using TypeScript?",
+      "answer": "Better tooling, early error detection, and improved code maintainability."
+    },
+    {
+      "index": 4,
+      "question": "What is a type in TypeScript?",
+      "answer": "A type defines the shape and behavior of a variable (e.g., string, number)."
+    },
+    {
+      "index": 5,
+      "question": "How do you declare a variable with a type?",
+      "answer": "let name: string = \"John\";"
+    },
+    {
+      "index": 6,
+      "question": "What are the basic types in TypeScript?",
+      "answer": "string, number, boolean, null, undefined, object, symbol, any, void, etc."
+    },
+    {
+      "index": 7,
+      "question": "What is the any type?",
+      "answer": "It disables type checking, allowing any value."
+    },
+    {
+      "index": 8,
+      "question": "What is the unknown type?",
+      "answer": "A safer alternative to any that requires type checking before use."
+    },
+    {
+      "index": 9,
+      "question": "What is the never type?",
+      "answer": "Represents values that never occur (e.g., a function that always throws an error)."
+    },
+    {
+      "index": 10,
+      "question": "What is the void type?",
+      "answer": "Used for functions that don't return a value."
+    },
+    {
+      "index": 11,
+      "question": "What is type inference in TypeScript?",
+      "answer": "TypeScript automatically assigns types based on initial values."
+    },
+    {
+      "index": 12,
+      "question": "How do you define an array of numbers?",
+      "answer": "let numbers: number[] = [1, 2, 3]; or Array<number>."
+    },
+    {
+      "index": 13,
+      "question": "What is a tuple in TypeScript?",
+      "answer": "A fixed-length array with known types at each position: let tuple: [string, number] = [\"a\", 1];"
+    },
+    {
+      "index": 14,
+      "question": "What is an enum?",
+      "answer": "A way to define named constants: enum Color { Red, Green, Blue }"
+    },
+    {
+      "index": 15,
+      "question": "What are const enums?",
+      "answer": "Enums that are inlined at compile time for performance: const enum Size { Small, Large }."
+    },
+    {
+      "index": 16,
+      "question": "What is type assertion?",
+      "answer": "Telling TypeScript the type of a value: let str = value as string;"
+    },
+    {
+      "index": 17,
+      "question": "What's the difference between interface and type?",
+      "answer": "Interfaces can be extended, while types can use unions and intersections."
+    },
+    {
+      "index": 18,
+      "question": "How do you define an optional property in an interface?",
+      "answer": "interface User { name?: string; }"
+    },
+    {
+      "index": 19,
+      "question": "What is a readonly property?",
+      "answer": "A property that cannot be reassigned: interface Point { readonly x: number; }"
+    },
+    {
+      "index": 20,
+      "question": "What is a union type?",
+      "answer": "A type that can be one of several types: let value: string | number;"
+    },
+    {
+      "index": 21,
+      "question": "What is an intersection type?",
+      "answer": "Combines multiple types into one: type NameAge = { name: string } & { age: number };"
+    },
+    {
+      "index": 22,
+      "question": "What is a type guard?",
+      "answer": "A runtime check to narrow types: if (typeof x === \"string\") { ... }"
+    },
+    {
+      "index": 23,
+      "question": "What is the keyof operator?",
+      "answer": "Gets keys of an object type: type Keys = keyof { a: 1, b: 2 }; // \"a\" | \"b\""
+    },
+    {
+      "index": 24,
+      "question": "What is the typeof operator in TypeScript?",
+      "answer": "Gets the type of a variable: let x = 5; type X = typeof x; // number"
+    },
+    {
+      "index": 25,
+      "question": "What is an indexed access type?",
+      "answer": "Gets the type of a property: type Name = User[\"name\"];"
+    },
+    {
+      "index": 26,
+      "question": "How do you define an interface?",
+      "answer": "interface Person { name: string; age: number; }"
+    },
+    {
+      "index": 27,
+      "question": "Can interfaces extend classes?",
+      "answer": "Yes, they inherit class members but not implementations."
+    },
+    {
+      "index": 28,
+      "question": "What is an abstract class?",
+      "answer": "A class that cannot be instantiated directly, only extended."
+    },
+    {
+      "index": 29,
+      "question": "How do you define a class in TypeScript?",
+      "answer": "class Animal { constructor(public name: string) {}  }"
+    },
+    {
+      "index": 30,
+      "question": "What are access modifiers in TypeScript?",
+      "answer": "public, private, protected, and readonly."
+    },
+    {
+      "index": 31,
+      "question": "What is method overriding?",
+      "answer": "When a child class provides its own implementation of a parent method."
+    },
+    {
+      "index": 32,
+      "question": "What is method overloading in TypeScript?",
+      "answer": "Defining multiple function signatures for the same function."
+    },
+    {
+      "index": 33,
+      "question": "What is an implements clause?",
+      "answer": "Ensures a class satisfies an interface: class Car implements Vehicle { ... }"
+    },
+    {
+      "index": 34,
+      "question": "What is a static property/method?",
+      "answer": "Belongs to the class, not instances: class Math { static PI = 3.14; }"
+    },
+    {
+      "index": 35,
+      "question": "What is an instance method?",
+      "answer": "A method called on an instance of a class."
+    },
+    {
+      "index": 36,
+      "question": "What is a constructor in TypeScript?",
+      "answer": "A special method for initializing objects: constructor(name: string) { ... }"
+    },
+    {
+      "index": 37,
+      "question": "What is inheritance in TypeScript?",
+      "answer": "A class extending another: class Dog extends Animal { ... }"
+    },
+    {
+      "index": 38,
+      "question": "What is polymorphism?",
+      "answer": "Child classes can override parent methods."
+    },
+    {
+      "index": 39,
+      "question": "What is encapsulation?",
+      "answer": "Hiding internal details using private/protected."
+    },
+    {
+      "index": 40,
+      "question": "What is a getter/setter?",
+      "answer": "Controlled property access: get fullName() { return this.name; } set fullName(value) { this.name = value; }"
+    },
+    {
+      "index": 41,
+      "question": "What are utility types?",
+      "answer": "Predefined generic types like Partial, Pick, Record."
+    },
+    {
+      "index": 42,
+      "question": "What does Partial<T> do?",
+      "answer": "Makes all properties of T optional."
+    },
+    {
+      "index": 43,
+      "question": "What does Required<T> do?",
+      "answer": "Makes all properties of T required."
+    },
+    {
+      "index": 44,
+      "question": "What does Readonly<T> do?",
+      "answer": "Makes all properties of T read-only."
+    },
+    {
+      "index": 45,
+      "question": "What does Pick<T, K> do?",
+      "answer": "Selects specific properties from T: Pick<User, \"name\" | \"age\">"
+    },
+    {
+      "index": 46,
+      "question": "What does Omit<T, K> do?",
+      "answer": "Removes specific properties from T: Omit<User, \"password\">"
+    },
+    {
+      "index": 47,
+      "question": "What does Record<K, T> do?",
+      "answer": "Creates an object type with keys K and values T: Record<string, number>"
+    },
+    {
+      "index": 48,
+      "question": "What does Exclude<T, U> do?",
+      "answer": "Excludes types from T that are assignable to U."
+    },
+    {
+      "index": 49,
+      "question": "What does Extract<T, U> do?",
+      "answer": "Extracts types from T that are assignable to U."
+    },
+    {
+      "index": 50,
+      "question": "What does NonNullable<T> do?",
+      "answer": "Removes null and undefined from T."
+    },
+    {
+      "index": 51,
+      "question": "What does Parameters<T> do?",
+      "answer": "Gets the parameter types of a function."
+    },
+    {
+      "index": 52,
+      "question": "What does ReturnType<T> do?",
+      "answer": "Gets the return type of a function."
+    },
+    {
+      "index": 53,
+      "question": "What is a conditional type?",
+      "answer": "A type that depends on a condition: T extends U ? X : Y"
+    },
+    {
+      "index": 54,
+      "question": "What are mapped types?",
+      "answer": "Types that transform properties: { [P in K]: T }"
+    },
+    {
+      "index": 55,
+      "question": "What is a template literal type?",
+      "answer": "String types with patterns: type Event = \"click\" | \"hover\";"
+    },
+    {
+      "index": 56,
+      "question": "How do you define a function type?",
+      "answer": "type Greet = (name: string) => void;"
+    },
+    {
+      "index": 57,
+      "question": "What is a generic in TypeScript?",
+      "answer": "A type that works with multiple types: function identity<T>(arg: T): T { ... }"
+    },
+    {
+      "index": 58,
+      "question": "How do you use generics with interfaces?",
+      "answer": "interface Box<T> { value: T; }"
+    },
+    {
+      "index": 59,
+      "question": "What is a default generic parameter?",
+      "answer": "function greet<T = string>(name: T) { ... }"
+    },
+    {
+      "index": 60,
+      "question": "What is a generic constraint?",
+      "answer": "Limits generics with extends: function log<T extends { name: string }>(obj: T) { ... }"
+    },
+    {
+      "index": 61,
+      "question": "What is function overloading?",
+      "answer": "Multiple function signatures for the same implementation."
+    },
+    {
+      "index": 62,
+      "question": "What is a rest parameter?",
+      "answer": "Collects arguments into an array: function sum(...nums: number[]) { ... }"
+    },
+    {
+      "index": 63,
+      "question": "What is a destructured parameter?",
+      "answer": "Unpacks object properties: function greet({ name }: { name: string }) { ... }"
+    },
+    {
+      "index": 64,
+      "question": "What is a callback function?",
+      "answer": "A function passed as an argument: function fetch(callback: () => void) { ... }"
+    },
+    {
+      "index": 65,
+      "question": "What is a higher-order function?",
+      "answer": "A function that takes or returns another function."
+    },
+    {
+      "index": 66,
+      "question": "What is a module in TypeScript?",
+      "answer": "A file that exports/imports code using import/export."
+    },
+    {
+      "index": 67,
+      "question": "What is a namespace?",
+      "answer": "A way to organize code: namespace MyApp { export function log() { ... }}"
+    },
+    {
+      "index": 68,
+      "question": "What's the difference between namespace and module?",
+      "answer": "namespace is for logical grouping, module is for file-based modules."
+    },
+    {
+      "index": 69,
+      "question": "How do you export/import a default export?",
+      "answer": "export default class User {} → import User from \"./User\";"
+    },
+    {
+      "index": 70,
+      "question": "How do you use dynamic imports?",
+      "answer": "const module = await import(\"./module\");"
+    },
+    {
+      "index": 71,
+      "question": "How does TypeScript help with debugging?",
+      "answer": "Catches type errors at compile time."
+    },
+    {
+      "index": 72,
+      "question": "What is a source map?",
+      "answer": "Maps compiled JS back to TS for debugging."
+    },
+    {
+      "index": 73,
+      "question": "How do you suppress TypeScript errors?",
+      "answer": "// @ts-ignore or tsconfig.json settings."
+    },
+    {
+      "index": 74,
+      "question": "What is tsconfig.json?",
+      "answer": "A file that defines TypeScript compiler options."
+    },
+    {
+      "index": 75,
+      "question": "What does strict mode do?",
+      "answer": "Enables all strict type-checking options."
+    },
+    {
+      "index": 76,
+      "question": "What is noImplicitAny?",
+      "answer": "Disallows implicit any types."
+    },
+    {
+      "index": 77,
+      "question": "What is strictNullChecks?",
+      "answer": "Ensures variables are not null/undefined unless explicitly allowed."
+    },
+    {
+      "index": 78,
+      "question": "What is target in tsconfig.json?",
+      "answer": "Specifies the ECMAScript version for output (e.g., ES6)."
+    },
+    {
+      "index": 79,
+      "question": "What is module in tsconfig.json?",
+      "answer": "Defines the module system (e.g., CommonJS, ES6)."
+    },
+    {
+      "index": 80,
+      "question": "What is outDir?",
+      "answer": "The directory where compiled JS files are placed."
+    },
+    {
+      "index": 81,
+      "question": "How do you define props in a React component?",
+      "answer": "interface Props { name: string; } → const Greet: React.FC<Props> = ({ name }) => ..."
+    },
+    {
+      "index": 82,
+      "question": "How do you type a React state?",
+      "answer": "const [count, setCount] = useState<number>(0);"
+    },
+    {
+      "index": 83,
+      "question": "How do you type a React ref?",
+      "answer": "const ref = useRef<HTMLInputElement>(null);"
+    },
+    {
+      "index": 84,
+      "question": "How do you type event handlers?",
+      "answer": "onClick: (e: React.MouseEvent) => void"
+    },
+    {
+      "index": 85,
+      "question": "What is Jest?",
+      "answer": "A JavaScript testing framework that works with TypeScript."
+    },
+    {
+      "index": 86,
+      "question": "How do you mock a function in TypeScript?",
+      "answer": "jest.fn() or const mockFn = vi.fn(); (Vitest)."
+    },
+    {
+      "index": 87,
+      "question": "What is declaration merging?",
+      "answer": "Combining multiple declarations of the same entity."
+    },
+    {
+      "index": 88,
+      "question": "What is a mixin?",
+      "answer": "A way to compose classes from multiple sources."
+    },
+    {
+      "index": 89,
+      "question": "What is a decorator?",
+      "answer": "A function that modifies classes/methods: @sealed class Greeter { ... }"
+    },
+    {
+      "index": 90,
+      "question": "What are ambient declarations?",
+      "answer": ".d.ts files that describe external JS libraries."
+    },
+    {
+      "index": 91,
+      "question": "What is a mapped type with as clauses?",
+      "answer": "Allows remapping keys: type Getters<T> = { [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K]; };"
+    },
+    {
+      "index": 92,
+      "question": "What are template literal types?",
+      "answer": "Dynamic string types: type Event = `on${'Click' | 'Hover'}`; // \"onClick\" | \"onHover\""
+    },
+    {
+      "index": 93,
+      "question": "What is recursive type aliasing?",
+      "answer": "A type that references itself: type Json = string | number | boolean | null | Json[] | { [key: string]: Json };"
+    },
+    {
+      "index": 94,
+      "question": "What is the infer keyword?",
+      "answer": "Extracts a type from a conditional: type UnpackPromise<T> = T extends Promise<infer U> ? U : never;"
+    },
+    {
+      "index": 95,
+      "question": "What is a branded/nominal type?",
+      "answer": "Simulates nominal typing: type UserID = string & { readonly brand: unique symbol };"
+    },
+    {
+      "index": 96,
+      "question": "What is a type predicate?",
+      "answer": "A function that acts as a type guard: function isString(x: any): x is string { return typeof x === \"string\"; }"
+    },
+    {
+      "index": 97,
+      "question": "What is this typing?",
+      "answer": "Explicitly defines the type of this: function greet(this: { name: string }) { return this.name; }"
+    },
+    {
+      "index": 98,
+      "question": "What is declaration merging for interfaces?",
+      "answer": "Multiple interface declarations merge: interface User { name: string; } interface User { age: number; }"
+    },
+    {
+      "index": 99,
+      "question": "What is a const assertion?",
+      "answer": "Preserves literal types: let colors = [\"red\", \"green\"] as const; // readonly [\"red\", \"green\"]"
+    },
+    {
+      "index": 100,
+      "question": "What is the satisfies operator?",
+      "answer": "Ensures a value matches a type without widening: let user = { name: \"Alice\" } satisfies { name: string };"
+    },
+    {
+      "index": 101,
+      "question": "What is a default type parameter?",
+      "answer": "Provides a fallback type: function fetch<T = string>(url: string): Promise<T> { ... }"
+    },
+    {
+      "index": 102,
+      "question": "What is a homomorphic mapped type?",
+      "answer": "Preserves modifiers (e.g., readonly): type ReadonlyCopy<T> = { readonly [K in keyof T]: T[K] };"
+    },
+    {
+      "index": 103,
+      "question": "What is a distributive conditional type?",
+      "answer": "Conditionals distribute over unions: type ToArray<T> = T extends any ? T[] : never;"
+    },
+    {
+      "index": 104,
+      "question": "What is the Awaited utility type?",
+      "answer": "Unwraps Promise types: type Result = Awaited<Promise<string>>; // string"
+    },
+    {
+      "index": 105,
+      "question": "What is the Intrinsic String Manipulation Types?",
+      "answer": "Built-in string utilities: type UppercaseStr = Uppercase<\"hello\">; // \"HELLO\""
+    },
+    {
+      "index": 106,
+      "question": "How do you type Object.keys correctly?",
+      "answer": "Use a type assertion: const keys = Object.keys(obj) as Array<keyof typeof obj>;"
+    },
+    {
+      "index": 107,
+      "question": "What is the as const pattern for exhaustive checks?",
+      "answer": "Ensures all cases are handled: const actions = [\"CREATE\", \"DELETE\"] as const; type Action = typeof actions[number];"
+    },
+    {
+      "index": 108,
+      "question": "How do you type a variadic tuple?",
+      "answer": "Captures dynamic argument lengths: function concat<T, U>(arr1: T[], arr2: U[]): [...T[], ...U[]];"
+    },
+    {
+      "index": 109,
+      "question": "What is the override keyword?",
+      "answer": "Explicitly marks method overriding (TS 4.3+): class Child extends Parent { override method() { ... } }"
+    },
+    {
+      "index": 110,
+      "question": "What is the noUncheckedIndexedAccess flag?",
+      "answer": "Adds undefined to index signatures: const arr: number[] = [1, 2]; const item = arr[3]; // number | undefined"
+    },
+    {
+      "index": 111,
+      "question": "What is a class decorator?",
+      "answer": "Modifies a class constructor: @sealed class User { ... }"
+    },
+    {
+      "index": 112,
+      "question": "What is a method decorator?",
+      "answer": "Wraps a method: class Test { @log method() { ... } }"
+    },
+    {
+      "index": 113,
+      "question": "What is a property decorator?",
+      "answer": "Observes property changes: class User { @observable name: string; }"
+    },
+    {
+      "index": 114,
+      "question": "What is a parameter decorator?",
+      "answer": "Adds metadata to parameters: class Api { get(@inject() id: string) { ... } }"
+    },
+    {
+      "index": 115,
+      "question": "What is reflect-metadata?",
+      "answer": "A polyfill for runtime type metadata."
+    },
+    {
+      "index": 116,
+      "question": "How do you enable decorators in tsconfig.json?",
+      "answer": "Set \"experimentalDecorators\": true."
+    },
+    {
+      "index": 117,
+      "question": "What is decorator composition?",
+      "answer": "Applying multiple decorators: @f @g x."
+    },
+    {
+      "index": 118,
+      "question": "What is a decorator factory?",
+      "answer": "A function that returns a decorator: function log(message: string) { return (target: any) => console.log(message); }"
+    },
+    {
+      "index": 119,
+      "question": "What is the @deprecated decorator?",
+      "answer": "Marks a method as obsolete (TS 5.0+)."
+    },
+    {
+      "index": 120,
+      "question": "What is the emitDecoratorMetadata flag?",
+      "answer": "Preserves type metadata for decorators."
+    },
+    {
+      "index": 121,
+      "question": "How do you type try-catch errors?",
+      "answer": "Use unknown (preferred) or any: try { ... } catch (err: unknown) { ... }"
+    },
+    {
+      "index": 122,
+      "question": "What is the @ts-expect-error directive?",
+      "answer": "Suppresses expected errors: // @ts-expect-error: Ignore this line const x: number = \"string\";"
+    },
+    {
+      "index": 123,
+      "question": "What is the @ts-check comment?",
+      "answer": "Enables type checking in JS files."
+    },
+    {
+      "index": 124,
+      "question": "How do you debug TypeScript in VS Code?",
+      "answer": "Use source maps and launch.json."
+    },
+    {
+      "index": 125,
+      "question": "What is a type error vs. a syntax error?",
+      "answer": "Type errors: Incorrect types. Syntax errors: Invalid code structure."
+    },
+    {
+      "index": 126,
+      "question": "How do you log types at runtime?",
+      "answer": "Use console.log(typeof variable)."
+    },
+    {
+      "index": 127,
+      "question": "What is a \"non-null assertion operator\" (!)?",
+      "answer": "Asserts a value is non-null: const name = user!.name;."
+    },
+    {
+      "index": 128,
+      "question": "What is the strictPropertyInitialization flag?",
+      "answer": "Ensures class properties are initialized."
+    },
+    {
+      "index": 129,
+      "question": "How do you handle third-party library type errors?",
+      "answer": "Use declare module or install @types/package."
+    },
+    {
+      "index": 130,
+      "question": "What is a \"floating promise\" error?",
+      "answer": "A promise that's not awaited or .catch()ed."
+    },
+    {
+      "index": 131,
+      "question": "How do you reduce TypeScript compile time?",
+      "answer": "Use incremental builds, skipLibCheck, and project references."
+    },
+    {
+      "index": 132,
+      "question": "What is isolatedModules?",
+      "answer": "Ensures files can be transpiled independently."
+    },
+    {
+      "index": 133,
+      "question": "What is a \"barrel file\"?",
+      "answer": "Re-exports multiple modules from a single file (index.ts)."
+    },
+    {
+      "index": 134,
+      "question": "How do you avoid circular dependencies?",
+      "answer": "Use dependency injection or refactor code."
+    },
+    {
+      "index": 135,
+      "question": "What is esModuleInterop?",
+      "answer": "Improves compatibility with CommonJS modules."
+    },
+    {
+      "index": 136,
+      "question": "What is allowSyntheticDefaultImports?",
+      "answer": "Allows import React from \"react\" for CJS modules."
+    },
+    {
+      "index": 137,
+      "question": "How do you optimize large enums?",
+      "answer": "Use const enum or string literals."
+    },
+    {
+      "index": 138,
+      "question": "What is import type?",
+      "answer": "Imports only types (removed at runtime)."
+    },
+    {
+      "index": 139,
+      "question": "What is export type?",
+      "answer": "Exports only types."
+    },
+    {
+      "index": 140,
+      "question": "How do you measure TypeScript performance?",
+      "answer": "Use --extendedDiagnostics or tsc --showConfig."
+    },
+    {
+      "index": 141,
+      "question": "How do you type functional component props?",
+      "answer": "interface Props { name: string; } const Greet: React.FC<Props> = ({ name }) => <div>{name}</div>;"
+    },
+    {
+      "index": 142,
+      "question": "How do you type component state?",
+      "answer": "const [count, setCount] = useState<number>(0);"
+    },
+    {
+      "index": 143,
+      "question": "How do you type a ref to a DOM element?",
+      "answer": "const ref = useRef<HTMLInputElement>(null);"
+    },
+    {
+      "index": 144,
+      "question": "How do you type event handlers?",
+      "answer": "const onClick = (e: React.MouseEvent<HTMLButtonElement>) => { ... };"
+    },
+    {
+      "index": 145,
+      "question": "How do you type children?",
+      "answer": "interface Props { children: React.ReactNode; }"
+    },
+    {
+      "index": 146,
+      "question": "How do you type a context?",
+      "answer": "const ThemeContext = createContext<\"light\" | \"dark\">(\"light\");"
+    },
+    {
+      "index": 147,
+      "question": "How do you type a reducer?",
+      "answer": "type Action = { type: \"INCREMENT\" } | { type: \"DECREMENT\" }; const reducer = (state: number, action: Action) => { ... };"
+    },
+    {
+      "index": 148,
+      "question": "How do you type defaultProps?",
+      "answer": "Use optional props + default values: interface Props { name?: string; } const Greet = ({ name = \"Guest\" }: Props) => <div>{name}</div>;"
+    },
+    {
+      "index": 149,
+      "question": "How do you type a styled component?",
+      "answer": "const Button = styled.button<{ primary?: boolean }>` background: ${props => props.primary ? \"blue\" : \"gray\"};`;"
+    },
+    {
+      "index": 150,
+      "question": "How do you type a generic component?",
+      "answer": "interface ListProps<T> { items: T[]; renderItem: (item: T) => ReactNode; } function List<T>({ items, renderItem }: ListProps<T>) { ... }"
+    },
+    {
+      "index": 151,
+      "question": "How do you type a Jest mock?",
+      "answer": "jest.mock(\"./module\", () => ({ fetch: jest.fn() }));"
+    },
+    {
+      "index": 152,
+      "question": "How do you type a Vitest mock?",
+      "answer": "vi.mock(\"./module\", () => ({ fetch: vi.fn() }));"
+    },
+    {
+      "index": 153,
+      "question": "How do you type expect in tests?",
+      "answer": "Use @types/jest or @types/vitest."
+    },
+    {
+      "index": 154,
+      "question": "What is ts-jest?",
+      "answer": "A TypeScript preprocessor for Jest."
+    },
+    {
+      "index": 155,
+      "question": "What is esbuild with TypeScript?",
+      "answer": "A fast bundler with TS support."
+    },
+    {
+      "index": 156,
+      "question": "What is swc?",
+      "answer": "A Rust-based TS/JS compiler (faster than Babel)."
+    },
+    {
+      "index": 157,
+      "question": "How do you debug TS in Chrome DevTools?",
+      "answer": "Use source maps and debugger statements."
+    },
+    {
+      "index": 158,
+      "question": "What is ts-node?",
+      "answer": "Runs TypeScript files directly."
+    },
+    {
+      "index": 159,
+      "question": "What is tsup?",
+      "answer": "A zero-config TS bundler."
+    },
+    {
+      "index": 160,
+      "question": "What is typedoc?",
+      "answer": "Generates documentation from TS types."
+    },
+    {
+      "index": 161,
+      "question": "What is the \"builder pattern\" in TS?",
+      "answer": "Fluent API for object construction: class QueryBuilder { where(cond: string) { ...; return this; } }"
+    },
+    {
+      "index": 162,
+      "question": "What is the \"singleton pattern\"?",
+      "answer": "Ensures a class has one instance: class Database { private static instance: Database; private constructor() {} }"
+    },
+    {
+      "index": 163,
+      "question": "What is a \"discriminated union\"?",
+      "answer": "A union with a common property: type Action = { type: \"ADD\"; payload: string } | { type: \"REMOVE\"; id: number };"
+    },
+    {
+      "index": 164,
+      "question": "What is the \"factory pattern\"?",
+      "answer": "Creates objects without exposing instantiation logic."
+    },
+    {
+      "index": 165,
+      "question": "What is \"dependency injection\"?",
+      "answer": "Passing dependencies externally (e.g., via constructors)."
+    },
+    {
+      "index": 166,
+      "question": "What is the \"adapter pattern\"?",
+      "answer": "Bridges incompatible interfaces."
+    },
+    {
+      "index": 167,
+      "question": "What is the \"strategy pattern\"?",
+      "answer": "Swaps algorithms at runtime."
+    },
+    {
+      "index": 168,
+      "question": "What is the \"observer pattern\"?",
+      "answer": "Pub/sub event system."
+    },
+    {
+      "index": 169,
+      "question": "What is the \"memento pattern\"?",
+      "answer": "Saves/restores object state."
+    },
+    {
+      "index": 170,
+      "question": "What is the \"proxy pattern\"?",
+      "answer": "Controls access to an object."
+    },
+    {
+      "index": 171,
+      "question": "What is the \"command pattern\"?",
+      "answer": "Encapsulates requests as objects."
+    },
+    {
+      "index": 172,
+      "question": "What is the \"template method pattern\"?",
+      "answer": "Defines an algorithm skeleton."
+    },
+    {
+      "index": 173,
+      "question": "What is the \"visitor pattern\"?",
+      "answer": "Separates algorithms from objects."
+    },
+    {
+      "index": 174,
+      "question": "What is the \"decorator pattern\"?",
+      "answer": "Dynamically adds responsibilities."
+    },
+    {
+      "index": 175,
+      "question": "What is the \"flyweight pattern\"?",
+      "answer": "Shares objects to save memory."
+    },
+    {
+      "index": 176,
+      "question": "What is the \"chain of responsibility\"?",
+      "answer": "Passes requests through handlers."
+    },
+    {
+      "index": 177,
+      "question": "What is the \"state pattern\"?",
+      "answer": "Changes behavior based on state."
+    },
+    {
+      "index": 178,
+      "question": "What is the \"composite pattern\"?",
+      "answer": "Treats individual and group objects uniformly."
+    },
+    {
+      "index": 179,
+      "question": "What is the \"bridge pattern\"?",
+      "answer": "Separates abstraction from implementation."
+    },
+    {
+      "index": 180,
+      "question": "What is the \"mediator pattern\"?",
+      "answer": "Centralizes communication between objects."
+    },
+    {
+      "index": 181,
+      "question": "How do you type Object.entries correctly?",
+      "answer": "Use a type assertion: const entries = Object.entries(obj) as Array<[keyof typeof obj, typeof obj[keyof typeof obj]]>;"
+    },
+    {
+      "index": 182,
+      "question": "What is the satisfies operator vs type assertion?",
+      "answer": "satisfies checks without widening, while as forces the type (may hide errors)."
+    },
+    {
+      "index": 183,
+      "question": "How do you type dynamic object keys?",
+      "answer": "Use Record or index signatures: type Dict = Record<string, number>; or { [key: string]: number };"
+    },
+    {
+      "index": 184,
+      "question": "What is the difference between interface and class?",
+      "answer": "Interface defines shape, class is both type and implementation."
+    },
+    {
+      "index": 185,
+      "question": "How do you type a Promise return value?",
+      "answer": "async function fetch(): Promise<string> { ... }"
+    },
+    {
+      "index": 186,
+      "question": "What is the global type in TypeScript?",
+      "answer": "Represents the global scope (like window in browsers)."
+    },
+    {
+      "index": 187,
+      "question": "How do you extend the Window type?",
+      "answer": "declare global { interface Window { myProp: string; } }"
+    },
+    {
+      "index": 188,
+      "question": "What is the difference between extends and implements?",
+      "answer": "extends inherits from a class, implements requires matching an interface."
+    },
+    {
+      "index": 189,
+      "question": "How do you type a function with multiple signatures?",
+      "answer": "Use overloads: function greet(name: string): string; function greet(age: number): string; function greet(value: string | number): string { ... }"
+    },
+    {
+      "index": 190,
+      "question": "What is the InstanceType utility?",
+      "answer": "Gets instance type from class constructor: type MyInstance = InstanceType<typeof MyClass>;"
+    },
+    {
+      "index": 191,
+      "question": "How do you type a dictionary with enum keys?",
+      "answer": "type EnumDict = { [key in MyEnum]: string };"
+    },
+    {
+      "index": 192,
+      "question": "What is the difference between type and const enums?",
+      "answer": "const enums are inlined (no runtime code), regular enums generate objects."
+    },
+    {
+      "index": 193,
+      "question": "How do you type a React forwardRef component?",
+      "answer": "const Component = forwardRef<HTMLDivElement, Props>((props, ref) => ...);"
+    },
+    {
+      "index": 194,
+      "question": "What is the difference between React.FC and direct annotation?",
+      "answer": "React.FC includes children prop and has some differences in return type handling."
+    },
+    {
+      "index": 195,
+      "question": "How do you type a generic React component with forwardRef?",
+      "answer": "const Component = forwardRef<RefType, Props<T>>(<T,>(props: Props<T>, ref: Ref<RefType>) => ...);"
+    },
+    {
+      "index": 196,
+      "question": "What is the difference between useRef and createRef?",
+      "answer": "useRef works with functional components and persists across renders, createRef is for class components."
+    },
+    {
+      "index": 197,
+      "question": "How do you type a Redux action creator?",
+      "answer": "const addTodo = (text: string): AddTodoAction => ({ type: 'ADD_TODO', payload: text });"
+    },
+    {
+      "index": 198,
+      "question": "What is the difference between unknown and any?",
+      "answer": "unknown requires type checking before use, any bypasses type checking completely."
+    },
+    {
+      "index": 199,
+      "question": "How do you type a function that throws errors?",
+      "answer": "function fail(message: string): never { throw new Error(message); }"
+    },
+    {
+      "index": 200,
+      "question": "What is the difference between readonly and const?",
+      "answer": "const is for variables, readonly is for properties in interfaces/classes."
+    }
+  ]
+}

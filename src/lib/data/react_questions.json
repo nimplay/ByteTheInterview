@@ -1,0 +1,1204 @@
+{
+  "react_basics": [
+    {
+      "index": 1,
+
+      "question": "What is React?",
+      "answer": "React is a JavaScript library for building user interfaces, developed by Facebook."
+    },
+    {
+      "index": 2,
+
+      "question": "What are the key features of React?",
+      "answer": "Virtual DOM, JSX, component-based architecture, and unidirectional data flow."
+    },
+    {
+      "index": 3,
+
+      "question": "What is JSX?",
+      "answer": "JSX is a syntax extension for JavaScript that allows writing HTML-like code in React."
+    },
+    {
+      "index": 4,
+
+      "question": "How is JSX different from HTML?",
+      "answer": "JSX allows embedding JavaScript expressions and uses className instead of class."
+    },
+    {
+      "index": 5,
+
+      "question": "What is the Virtual DOM?",
+      "answer": "A lightweight copy of the real DOM that improves performance by minimizing direct DOM updates."
+    },
+    {
+      "index": 6,
+
+      "question": "How does React use the Virtual DOM?",
+      "answer": "React compares the Virtual DOM with the previous version and updates only the changed parts (reconciliation)."
+    },
+    {
+      "index": 7,
+
+      "question": "What is a React component?",
+      "answer": "A reusable piece of UI that can be a function or a class."
+    },
+    {
+      "index": 8,
+
+      "question": "What are the two types of components in React?",
+      "answer": "Functional components (hooks) and class components."
+    },
+    {
+      "index": 9,
+
+      "question": "What is the difference between functional and class components?",
+      "answer": "Functional components use hooks, are simpler, and class components have lifecycle methods."
+    },
+    {
+      "index": 10,
+
+      "question": "What is React.createElement?",
+      "answer": "A method that creates a React element (used under the hood by JSX)."
+    },
+    {
+      "index": 11,
+
+      "question": "What are props in React?",
+      "answer": "Props (properties) are read-only data passed from parent to child components."
+    },
+    {
+      "index": 12,
+
+      "question": "What is state in React?",
+      "answer": "State is mutable data managed within a component."
+    },
+    {
+      "index": 13,
+
+      "question": "How do you update state in a functional component?",
+      "answer": "Using the useState hook: const [count, setCount] = useState(0);"
+    },
+    {
+      "index": 14,
+
+      "question": "How do you update state in a class component?",
+      "answer": "Using this.setState(): this.setState({ count: this.state.count + 1 });"
+    },
+    {
+      "index": 15,
+
+      "question": "Can you modify props directly?",
+      "answer": "No, props are read-only."
+    },
+    {
+      "index": 16,
+
+      "question": "What is prop drilling?",
+      "answer": "Passing props through multiple layers of components (can be solved with Context API or state management)."
+    },
+    {
+      "index": 17,
+
+      "question": "How can you avoid prop drilling?",
+      "answer": "Using Context API, Redux, or state management libraries."
+    },
+    {
+      "index": 18,
+
+      "question": "What is the difference between state and props?",
+      "answer": "State is internal and mutable, props are external and read-only."
+    },
+    {
+      "index": 19,
+
+      "question": "What is Lifting State Up?",
+      "answer": "Moving shared state to the closest common ancestor component."
+    },
+    {
+      "index": 20,
+
+      "question": "How do you pass data from child to parent?",
+      "answer": "By passing a callback function as a prop."
+    },
+    {
+      "index": 21,
+
+      "question": "What are React hooks?",
+      "answer": "Functions that let you use state and lifecycle features in functional components."
+    },
+    {
+      "index": 22,
+
+      "question": "What is useState?",
+      "answer": "A hook to manage state in functional components."
+    },
+    {
+      "index": 23,
+
+      "question": "What is useEffect?",
+      "answer": "A hook to perform side effects (like API calls) in functional components."
+    },
+    {
+      "index": 24,
+
+      "question": "What are the dependencies in useEffect?",
+      "answer": "An array of variables that trigger the effect when changed."
+    },
+    {
+      "index": 25,
+
+      "question": "What happens if you omit the dependency array in useEffect?",
+      "answer": "The effect runs after every render."
+    },
+    {
+      "index": 26,
+
+      "question": "What is useContext?",
+      "answer": "A hook to consume a React context."
+    },
+    {
+      "index": 27,
+
+      "question": "What is useRef?",
+      "answer": "A hook to create a mutable reference that persists across renders."
+    },
+    {
+      "index": 28,
+
+      "question": "What is useMemo?",
+      "answer": "A hook to memoize expensive calculations."
+    },
+    {
+      "index": 29,
+
+      "question": "What is useCallback?",
+      "answer": "A hook to memoize functions to prevent unnecessary re-renders."
+    },
+    {
+      "index": 30,
+
+      "question": "Can hooks be used in class components?",
+      "answer": "No, only in functional components."
+    },
+    {
+      "index": 31,
+
+      "question": "What are React lifecycle methods?",
+      "answer": "Methods that execute at different stages of a component's life (mounting, updating, unmounting)."
+    },
+    {
+      "index": 32,
+
+      "question": "What is componentDidMount?",
+      "answer": "Runs after the component is rendered for the first time."
+    },
+    {
+      "index": 33,
+
+      "question": "What is componentDidUpdate?",
+      "answer": "Runs after the component updates."
+    },
+    {
+      "index": 34,
+
+      "question": "What is componentWillUnmount?",
+      "answer": "Runs before the component is removed from the DOM."
+    },
+    {
+      "index": 35,
+
+      "question": "What is shouldComponentUpdate?",
+      "answer": "A method to optimize performance by preventing unnecessary re-renders."
+    },
+    {
+      "index": 36,
+
+      "question": "What is React Router?",
+      "answer": "A library for handling navigation in React apps."
+    },
+    {
+      "index": 37,
+
+      "question": "How do you install React Router?",
+      "answer": "npm install react-router-dom"
+    },
+    {
+      "index": 38,
+
+      "question": "What is BrowserRouter?",
+      "answer": "A router that uses HTML5 history API for navigation."
+    },
+    {
+      "index": 39,
+
+      "question": "What is Route?",
+      "answer": "A component that renders UI based on the URL path."
+    },
+    {
+      "index": 40,
+
+      "question": "What is Link?",
+      "answer": "A component for navigation without page reload."
+    },
+    {
+      "index": 41,
+
+      "question": "What is Redux?",
+      "answer": "A state management library for React."
+    },
+    {
+      "index": 42,
+
+      "question": "What are the three principles of Redux?",
+      "answer": "Single source of truth, state is read-only, changes via pure functions (reducers)."
+    },
+    {
+      "index": 43,
+
+      "question": "What is a Redux store?",
+      "answer": "An object that holds the application state."
+    },
+    {
+      "index": 44,
+
+      "question": "What is a reducer?",
+      "answer": "A pure function that takes state and action, returns new state."
+    },
+    {
+      "index": 45,
+
+      "question": "What is an action?",
+      "answer": "An object describing what happened (e.g., { type: 'INCREMENT' })."
+    },
+    {
+      "index": 46,
+
+      "question": "What is useSelector?",
+      "answer": "A hook to extract data from the Redux store."
+    },
+    {
+      "index": 47,
+
+      "question": "What is useDispatch?",
+      "answer": "A hook to dispatch actions in Redux."
+    },
+    {
+      "index": 48,
+
+      "question": "What is Context API?",
+      "answer": "A React feature for global state management without external libraries."
+    },
+    {
+      "index": 49,
+
+      "question": "When to use Context API vs Redux?",
+      "answer": "Context API for small apps, Redux for large-scale state management."
+    },
+    {
+      "index": 50,
+
+      "question": "What is MobX?",
+      "answer": "An alternative state management library using observables."
+    },
+    {
+      "index": 51,
+
+      "question": "How do you optimize React performance?",
+      "answer": "Use React.memo, useMemo, useCallback, and avoid unnecessary re-renders."
+    },
+    {
+      "index": 52,
+
+      "question": "What is React.memo?",
+      "answer": "A higher-order component to memoize functional components."
+    },
+    {
+      "index": 53,
+
+      "question": "What is code splitting?",
+      "answer": "Splitting code into smaller chunks to improve load time (e.g., React.lazy)."
+    },
+    {
+      "index": 54,
+
+      "question": "What is React.lazy?",
+      "answer": "A function to lazy-load components."
+    },
+    {
+      "index": 55,
+
+      "question": "What is the significance of keys in React lists?",
+      "answer": "Keys help React identify which items have changed, improving rendering performance."
+    },
+    {
+      "index": 56,
+
+      "question": "What are Higher-Order Components (HOC)?",
+      "answer": "A function that takes a component and returns an enhanced component."
+    },
+    {
+      "index": 57,
+
+      "question": "What are Render Props?",
+      "answer": "A pattern where a component's children are a function providing shared logic."
+    },
+    {
+      "index": 58,
+
+      "question": "What are Error Boundaries?",
+      "answer": "Components that catch JavaScript errors in their child component tree."
+    },
+    {
+      "index": 59,
+
+      "question": "What is React.Fragment?",
+      "answer": "A way to group elements without adding extra DOM nodes (<>...</>)."
+    },
+    {
+      "index": 60,
+
+      "question": "What are Portals?",
+      "answer": "A way to render children outside the parent DOM hierarchy."
+    },
+    {
+      "index": 61,
+
+      "question": "How do you test React components?",
+      "answer": "Using Jest and React Testing Library."
+    },
+    {
+      "index": 62,
+
+      "question": "What is Jest?",
+      "answer": "A JavaScript testing framework."
+    },
+    {
+      "index": 63,
+
+      "question": "What is React Testing Library?",
+      "answer": "A library for testing React components in a user-centric way."
+    },
+    {
+      "index": 64,
+
+      "question": "How do you test async actions in React?",
+      "answer": "Using async/await or waitFor in React Testing Library."
+    },
+    {
+      "index": 65,
+
+      "question": "What is snapshot testing?",
+      "answer": "Capturing the output of a component and comparing it to a stored snapshot."
+    },
+    {
+      "index": 66,
+
+      "question": "What is the significance of key in React lists?",
+      "answer": "Helps React identify which items have changed."
+    },
+    {
+      "index": 67,
+
+      "question": "What is server-side rendering (SSR)?",
+      "answer": "Rendering React on the server for better SEO and performance."
+    },
+    {
+      "index": 68,
+
+      "question": "What is Next.js?",
+      "answer": "A React framework with SSR and static site generation."
+    },
+    {
+      "index": 69,
+
+      "question": "What is the difference between React and Angular?",
+      "answer": "React is a library (UI-focused), Angular is a framework (full MVC)."
+    },
+    {
+      "index": 70,
+
+      "question": "What are controlled components?",
+      "answer": "Form elements controlled by React state."
+    },
+    {
+      "index": 71,
+
+      "question": "What is the purpose of React.StrictMode?",
+      "answer": "Helps identify unsafe lifecycle methods, deprecated APIs, and side effects during development."
+    },
+    {
+      "index": 72,
+
+      "question": "How does React handle synthetic events?",
+      "answer": "React wraps native browser events into synthetic events for cross-browser compatibility."
+    },
+    {
+      "index": 73,
+
+      "question": "What is the significance of key prop in lists?",
+      "answer": "Helps React identify which items changed, were added, or removed (improves performance)."
+    },
+    {
+      "index": 74,
+
+      "question": "Can you use index as a key?",
+      "answer": "Avoid it if the list order changes; use unique IDs instead."
+    },
+    {
+      "index": 75,
+
+      "question": "What is the difference between useEffect and useLayoutEffect?",
+      "answer": "useLayoutEffect fires synchronously after DOM mutations, while useEffect is asynchronous."
+    },
+    {
+      "index": 76,
+
+      "question": "When would you use useLayoutEffect?",
+      "answer": "For DOM measurements or mutations that must be visible before the browser paints."
+    },
+    {
+      "index": 77,
+
+      "question": "What is a custom hook?",
+      "answer": "A reusable function that uses other hooks (e.g., useFetch for API calls)."
+    },
+    {
+      "index": 78,
+
+      "question": "How do you share logic between components?",
+      "answer": "Using custom hooks, HOCs, or render props."
+    },
+    {
+      "index": 79,
+
+      "question": "What is the rules of hooks?",
+      "answer": "Only call hooks at the top level (not in loops/conditions) and from React functions."
+    },
+    {
+      "index": 80,
+
+      "question": "Why can't hooks be called conditionally?",
+      "answer": "React relies on the order of hooks to preserve state between re-renders."
+    },
+    {
+      "index": 81,
+
+      "question": "What is useImperativeHandle?",
+      "answer": "A hook to customize the instance value exposed when using ref."
+    },
+    {
+      "index": 82,
+
+      "question": "How do you handle errors in React?",
+      "answer": "Using error boundaries (componentDidCatch in class components)."
+    },
+    {
+      "index": 83,
+
+      "question": "Can you use try/catch with React hooks?",
+      "answer": "Yes, but it won't catch errors inside hooks (use error boundaries instead)."
+    },
+    {
+      "index": 84,
+
+      "question": "What is server-side rendering (SSR)?",
+      "answer": "Rendering React on the server to improve SEO and initial load performance."
+    },
+    {
+      "index": 85,
+
+      "question": "What is hydration in SSR?",
+      "answer": "Attaching event listeners to server-rendered HTML to make it interactive."
+    },
+    {
+      "index": 86,
+
+      "question": "What is Next.js?",
+      "answer": "A React framework with built-in SSR, static site generation, and routing."
+    },
+    {
+      "index": 87,
+
+      "question": "What are React Server Components?",
+      "answer": "Components that render on the server to reduce client-side bundle size."
+    },
+    {
+      "index": 88,
+
+      "question": "What is the difference between CSR and SSR?",
+      "answer": "CSR renders in the browser (faster navigation), SSR renders on the server (better SEO)."
+    },
+    {
+      "index": 89,
+
+      "question": "How do you optimize bundle size in React?",
+      "answer": "Code splitting, dynamic imports (React.lazy), and tree-shaking."
+    },
+    {
+      "index": 90,
+
+      "question": "What is Redux middleware?",
+      "answer": "Functions that intercept actions before they reach the reducer (e.g., redux-thunk)."
+    },
+    {
+      "index": 91,
+
+      "question": "What is redux-thunk?",
+      "answer": "Middleware to handle async actions in Redux."
+    },
+    {
+      "index": 92,
+
+      "question": "What is a Redux selector?",
+      "answer": "A function that extracts specific data from the Redux store."
+    },
+    {
+      "index": 93,
+
+      "question": "What is reselect?",
+      "answer": "A library for creating memoized Redux selectors."
+    },
+    {
+      "index": 94,
+
+      "question": "What is the Context API?",
+      "answer": "A React feature to share state globally without prop drilling."
+    },
+    {
+      "index": 95,
+
+      "question": "When should you use Context API vs Redux?",
+      "answer": "Context API for simple state, Redux for complex state management."
+    },
+    {
+      "index": 96,
+
+      "question": "What is the downside of Context API?",
+      "answer": "Can cause unnecessary re-renders if not optimized."
+    },
+    {
+      "index": 97,
+
+      "question": "What is Zustand?",
+      "answer": "A lightweight state management library alternative to Redux."
+    },
+    {
+      "index": 98,
+
+      "question": "What is MobX?",
+      "answer": "A reactive state management library using observables."
+    },
+    {
+      "index": 99,
+
+      "question": "What is the Flux architecture?",
+      "answer": "A unidirectional data flow pattern (actions → dispatcher → store → view)."
+    },
+    {
+      "index": 100,
+
+      "question": "How do you prevent unnecessary re-renders?",
+      "answer": "Use React.memo, useMemo, useCallback, and optimize state updates."
+    },
+    {
+      "index": 101,
+
+      "question": "What is React.memo?",
+      "answer": "A HOC that memoizes a component to prevent re-renders if props don't change."
+    },
+    {
+      "index": 102,
+
+      "question": "What is useMemo?",
+      "answer": "A hook to memoize expensive calculations."
+    },
+    {
+      "index": 103,
+
+      "question": "What is useCallback?",
+      "answer": "A hook to memoize functions and prevent re-creations on re-renders."
+    },
+    {
+      "index": 104,
+
+      "question": "What is code splitting?",
+      "answer": "Splitting code into smaller chunks loaded on demand (e.g., with React.lazy)."
+    },
+    {
+      "index": 105,
+
+      "question": "What is dynamic import?",
+      "answer": "Loading modules asynchronously (e.g., import('./module'))."
+    },
+    {
+      "index": 106,
+
+      "question": "What is tree shaking?",
+      "answer": "Removing unused code during bundling (requires ES6 modules)."
+    },
+    {
+      "index": 107,
+
+      "question": "How do you measure React performance?",
+      "answer": "Using React.Profiler, Chrome DevTools, or libraries like why-did-you-render."
+    },
+    {
+      "index": 108,
+
+      "question": "What is windowing/virtualization?",
+      "answer": "Rendering only visible items in large lists (e.g., react-window)."
+    },
+    {
+      "index": 109,
+
+      "question": "What is the key prop optimization trick?",
+      "answer": "Changing key forces React to remount a component (e.g., resetting state)."
+    },
+    {
+      "index": 110,
+
+      "question": "What is useNavigate?",
+      "answer": "A hook for programmatic navigation in React Router v6."
+    },
+    {
+      "index": 111,
+
+      "question": "What is useParams?",
+      "answer": "A hook to access URL parameters."
+    },
+    {
+      "index": 112,
+
+      "question": "How do you handle 404 routes?",
+      "answer": "Add a * route at the end with a NotFound component."
+    },
+    {
+      "index": 113,
+
+      "question": "What is lazy loading routes?",
+      "answer": "Loading routes only when needed (e.g., with React.lazy)."
+    },
+    {
+      "index": 114,
+
+      "question": "How do you pass state via Link?",
+      "answer": "<Link to=\"/path\" state={{ data }} />"
+    },
+    {
+      "index": 115,
+
+      "question": "What is the difference between HashRouter and BrowserRouter?",
+      "answer": "HashRouter uses URL hashes (e.g., #/path), BrowserRouter uses HTML5 history."
+    },
+    {
+      "index": 116,
+
+      "question": "How do you protect routes (authentication)?",
+      "answer": "Create a PrivateRoute component that checks auth status before rendering."
+    },
+    {
+      "index": 117,
+
+      "question": "What is useRoutes?",
+      "answer": "A hook to define routes as JavaScript objects (React Router v6)."
+    },
+    {
+      "index": 118,
+
+      "question": "How do you handle nested routes?",
+      "answer": "Use <Outlet /> in parent components and nested route definitions."
+    },
+    {
+      "index": 119,
+
+      "question": "What is useLocation?",
+      "answer": "A hook to access the current URL location object."
+    },
+    {
+      "index": 120,
+
+      "question": "What is Jest?",
+      "answer": "A JavaScript testing framework."
+    },
+    {
+      "index": 121,
+
+      "question": "What is React Testing Library?",
+      "answer": "A library for testing React components in a user-centric way."
+    },
+    {
+      "index": 122,
+
+      "question": "How do you test components with hooks?",
+      "answer": "Render the component in tests and mock hooks if needed."
+    },
+    {
+      "index": 123,
+
+      "question": "What is act() in testing?",
+      "answer": "A utility to ensure updates are processed before assertions."
+    },
+    {
+      "index": 124,
+
+      "question": "How do you test async code?",
+      "answer": "Use async/await or waitFor in React Testing Library."
+    },
+    {
+      "index": 125,
+
+      "question": "What is snapshot testing?",
+      "answer": "Capturing a component's output and comparing it to a saved snapshot."
+    },
+    {
+      "index": 126,
+
+      "question": "How do you debug React apps?",
+      "answer": "Using React DevTools, console.log, or debugging tools in browsers."
+    },
+    {
+      "index": 127,
+
+      "question": "What is why-did-you-render?",
+      "answer": "A library to track unnecessary re-renders."
+    },
+    {
+      "index": 128,
+
+      "question": "How do you test Redux?",
+      "answer": "Mock the store and test actions, reducers, and selectors separately."
+    },
+    {
+      "index": 129,
+
+      "question": "What is end-to-end (E2E) testing?",
+      "answer": "Testing the entire app flow (e.g., with Cypress or Playwright)."
+    },
+    {
+      "index": 130,
+
+      "question": "What are controlled vs uncontrolled components?",
+      "answer": "Controlled: State managed by React. Uncontrolled: State managed by the DOM."
+    },
+    {
+      "index": 131,
+
+      "question": "How do you handle forms in React?",
+      "answer": "Controlled components or libraries like Formik/React Hook Form."
+    },
+    {
+      "index": 132,
+
+      "question": "What is Formik?",
+      "answer": "A library for form state management and validation."
+    },
+    {
+      "index": 133,
+
+      "question": "What is React Hook Form?",
+      "answer": "A lightweight form library with minimal re-renders."
+    },
+    {
+      "index": 134,
+
+      "question": "How do you handle file uploads?",
+      "answer": "Using <input type=\"file\"> and FormData."
+    },
+    {
+      "index": 135,
+
+      "question": "What is dangerouslySetInnerHTML?",
+      "answer": "A React prop to inject raw HTML (risks XSS attacks)."
+    },
+    {
+      "index": 136,
+
+      "question": "How do you prevent XSS in React?",
+      "answer": "Sanitize inputs, avoid dangerouslySetInnerHTML, use CSP headers."
+    },
+    {
+      "index": 137,
+
+      "question": "What is CORS and how to handle it in React?",
+      "answer": "A security feature; proxy requests or configure the backend to allow origins."
+    },
+    {
+      "index": 138,
+
+      "question": "How do you use environment variables?",
+      "answer": "Prefix with REACT_APP_ and access via process.env."
+    },
+    {
+      "index": 139,
+
+      "question": "What is PropTypes?",
+      "answer": "A library for type-checking props (deprecated in favor of TypeScript)."
+    },
+    {
+      "index": 140,
+
+      "question": "What is the Compound Component Pattern?",
+      "answer": "Components that work together (e.g., <Select> and <Option>)."
+    },
+    {
+      "index": 141,
+
+      "question": "What is the Render Props Pattern?",
+      "answer": "Sharing logic via a prop that's a function (e.g., <DataProvider render={data => ...}>)."
+    },
+    {
+      "index": 142,
+
+      "question": "What is the Provider Pattern?",
+      "answer": "Using Context API to provide global state (e.g., ThemeProvider)."
+    },
+    {
+      "index": 143,
+
+      "question": "What is the HOC Pattern?",
+      "answer": "A function that takes a component and returns an enhanced component."
+    },
+    {
+      "index": 144,
+
+      "question": "What is the State Reducer Pattern?",
+      "answer": "Letting the user override state changes (used in libraries like downshift)."
+    },
+    {
+      "index": 145,
+
+      "question": "What is the Observer Pattern?",
+      "answer": "Components subscribe to changes (e.g., Redux stores)."
+    },
+    {
+      "index": 146,
+
+      "question": "What is the Singleton Pattern in React?",
+      "answer": "Ensuring only one instance exists (e.g., global state stores)."
+    },
+    {
+      "index": 147,
+
+      "question": "What is the Factory Pattern?",
+      "answer": "Creating components dynamically based on conditions."
+    },
+    {
+      "index": 148,
+
+      "question": "What is the Flyweight Pattern?",
+      "answer": "Reusing shared objects to save memory (e.g., memoized components)."
+    },
+    {
+      "index": 149,
+
+      "question": "What is the Decorator Pattern?",
+      "answer": "Adding functionality to components (e.g., HOCs)."
+    },
+    {
+      "index": 150,
+
+      "question": "What is the Fiber architecture?",
+      "answer": "React's reconciliation algorithm for incremental rendering."
+    },
+    {
+      "index": 151,
+
+      "question": "What is reconciliation?",
+      "answer": "The process of comparing Virtual DOM with the real DOM to apply updates."
+    },
+    {
+      "index": 152,
+
+      "question": "What is the diffing algorithm?",
+      "answer": "React's method to determine the minimal changes needed for updates."
+    },
+    {
+      "index": 153,
+
+      "question": "What are concurrent features in React?",
+      "answer": "Features like Suspense and transitions for smoother UIs."
+    },
+    {
+      "index": 154,
+
+      "question": "What is Suspense?",
+      "answer": "A component to handle async operations (e.g., lazy loading, data fetching)."
+    },
+    {
+      "index": 155,
+
+      "question": "What is React Server Components (RSC)?",
+      "answer": "Components that render on the server to reduce client-side JS."
+    },
+    {
+      "index": 156,
+
+      "question": "What is hydration?",
+      "answer": "Attaching event listeners to server-rendered HTML."
+    },
+    {
+      "index": 157,
+
+      "question": "What is the difference between createElement and cloneElement?",
+      "answer": "createElement creates new elements, cloneElement clones and modifies existing ones."
+    },
+    {
+      "index": 158,
+
+      "question": "What is Children.map?",
+      "answer": "A utility to iterate over props.children."
+    },
+    {
+      "index": 159,
+
+      "question": "What is React.forwardRef?",
+      "answer": "A function to forward ref to a child component."
+    },
+    {
+      "index": 160,
+
+      "question": "What is the significance of React's synthetic event system?",
+      "answer": "Provides cross-browser compatibility and performance optimizations for events."
+    },
+    {
+      "index": 161,
+
+      "question": "What is the significance of keys in React lists?",
+      "answer": "Keys help React identify which items have changed, improving rendering performance."
+    },
+    {
+      "index": 162,
+
+      "question": "Why should you avoid using index as key in lists?",
+      "answer": "It can cause performance issues and bugs if the list order changes."
+    },
+    {
+      "index": 163,
+
+      "question": "What is the purpose of React's StrictMode?",
+      "answer": "Helps identify potential problems in the application during development."
+    },
+    {
+      "index": 164,
+
+      "question": "How does React handle events differently from HTML?",
+      "answer": "React uses camelCase naming and synthetic events for cross-browser consistency."
+    },
+    {
+      "index": 165,
+
+      "question": "What is the significance of the children prop?",
+      "answer": "Allows components to compose and nest other components/elements."
+    },
+    {
+      "index": 166,
+
+      "question": "How do you optimize performance for large lists in React?",
+      "answer": "Use windowing/virtualization libraries like react-window or react-virtualized."
+    },
+    {
+      "index": 167,
+
+      "question": "What is the purpose of React's Profiler API?",
+      "answer": "To measure how often components render and identify performance bottlenecks."
+    },
+    {
+      "index": 168,
+
+      "question": "How do you handle global state without external libraries?",
+      "answer": "Using React's Context API combined with useReducer hook."
+    },
+    {
+      "index": 169,
+
+      "question": "What is the recommended way to fetch data in React?",
+      "answer": "Using useEffect hook for side effects or libraries like React Query."
+    },
+    {
+      "index": 170,
+
+      "question": "How do you handle authentication in React apps?",
+      "answer": "Using context for auth state, protected routes, and JWT tokens."
+    },
+    {
+      "index": 171,
+
+      "question": "What are the benefits of using Redux Toolkit?",
+      "answer": "Simplifies Redux setup, reduces boilerplate, and includes best practices by default."
+    },
+    {
+      "index": 172,
+
+      "question": "What is Redux Saga?",
+      "answer": "A middleware for handling side effects in Redux using generator functions."
+    },
+    {
+      "index": 173,
+
+      "question": "How does Zustand compare to Redux?",
+      "answer": "Zustand is simpler, requires less boilerplate, and uses hooks for state management."
+    },
+    {
+      "index": 174,
+
+      "question": "What is the purpose of Redux Persist?",
+      "answer": "To persist Redux state to storage (e.g., localStorage) and rehydrate on app load."
+    },
+    {
+      "index": 175,
+
+      "question": "How do you handle async actions in Redux without middleware?",
+      "answer": "By dispatching actions manually after async operations complete."
+    },
+    {
+      "index": 176,
+
+      "question": "What is the purpose of Redux DevTools?",
+      "answer": "To inspect Redux state changes, actions, and time-travel debugging."
+    },
+    {
+      "index": 177,
+
+      "question": "How do you optimize Context API performance?",
+      "answer": "By splitting contexts, using memoization, and avoiding unnecessary re-renders."
+    },
+    {
+      "index": 178,
+
+      "question": "What is React Query?",
+      "answer": "A library for managing server state, caching, and data fetching in React."
+    },
+    {
+      "index": 179,
+
+      "question": "What is SWR?",
+      "answer": "A React hook library for data fetching with features like caching and revalidation."
+    },
+    {
+      "index": 180,
+
+      "question": "How do you choose between Redux and Context API?",
+      "answer": "Redux for complex state with frequent updates, Context API for simpler global state."
+    },
+    {
+      "index": 181,
+
+      "question": "What is the purpose of React's useDeferredValue hook?",
+      "answer": "To defer updating less important parts of the UI during heavy renders."
+    },
+    {
+      "index": 182,
+
+      "question": "What is the purpose of React's useTransition hook?",
+      "answer": "To mark low-priority state updates that can be interrupted for more urgent updates."
+    },
+    {
+      "index": 183,
+
+      "question": "How do you implement lazy loading for components?",
+      "answer": "Using React.lazy() with Suspense: const LazyComp = React.lazy(() => import('./LazyComp'))"
+    },
+    {
+      "index": 184,
+
+      "question": "What is the purpose of React's startTransition API?",
+      "answer": "To mark non-urgent state updates that shouldn't block more important updates."
+    },
+    {
+      "index": 185,
+
+      "question": "How do you optimize images in React applications?",
+      "answer": "Use lazy loading, modern formats (WebP), responsive images, and CDNs."
+    },
+    {
+      "index": 186,
+
+      "question": "What is the purpose of React's useId hook?",
+      "answer": "To generate unique IDs that are stable across server and client rendering."
+    },
+    {
+      "index": 187,
+
+      "question": "How do you prevent unnecessary effect runs?",
+      "answer": "By properly specifying dependency arrays in useEffect hooks."
+    },
+    {
+      "index": 188,
+
+      "question": "What is the purpose of React's Profiler component?",
+      "answer": "To measure rendering performance of a part of the component tree."
+    },
+    {
+      "index": 189,
+
+      "question": "How do you implement debouncing in React?",
+      "answer": "Using setTimeout/clearTimeout in useEffect or libraries like lodash.debounce."
+    },
+    {
+      "index": 190,
+
+      "question": "What is the purpose of React's memo function?",
+      "answer": "To memoize components and prevent unnecessary re-renders when props don't change."
+    },
+    {
+      "index": 191,
+
+      "question": "What is the difference between useNavigate and useHistory?",
+      "answer": "useNavigate is for React Router v6, useHistory was for v5."
+    },
+    {
+      "index": 192,
+
+      "question": "How do you handle route transitions in React Router?",
+      "answer": "Using the useNavigation hook in v6 or custom route transition components."
+    },
+    {
+      "index": 193,
+
+      "question": "What is the purpose of React Router's Outlet component?",
+      "answer": "To render child routes in parent route components."
+    },
+    {
+      "index": 194,
+
+      "question": "How do you implement route-based code splitting?",
+      "answer": "Using React.lazy with React Router's routes configuration."
+    },
+    {
+      "index": 195,
+
+      "question": "What is the purpose of React Router's NavLink component?",
+      "answer": "A special version of Link that adds styling attributes when active."
+    },
+    {
+      "index": 196,
+
+      "question": "How do you handle scroll restoration with React Router?",
+      "answer": "Using the useScrollRestoration hook or ScrollRestoration component in v6."
+    },
+    {
+      "index": 197,
+
+      "question": "What is the purpose of React Router's useMatch hook?",
+      "answer": "To check if the current URL matches a given pattern."
+    },
+    {
+      "index": 198,
+
+      "question": "How do you implement animated transitions between routes?",
+      "answer": "Using libraries like framer-motion or react-transition-group with React Router."
+    },
+    {
+      "index": 199,
+
+      "question": "What is the purpose of React Router's useResolvedPath hook?",
+      "answer": "To resolve a relative path against the current route's path."
+    },
+    {
+      "index": 200,
+
+      "question": "How do you implement route guards in React Router?",
+      "answer": "By creating wrapper components that check conditions before rendering routes."
+    }
+  ]
+}

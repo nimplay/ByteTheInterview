@@ -1,0 +1,512 @@
+{
+  "acronyms_basics": [
+    { "index": 1, "question": "CEO", "answer": "Chief Executive Officer" },
+    { "index": 2, "question": "CTO", "answer": "Chief Technology Officer" },
+    { "index": 3, "question": "CIO", "answer": "Chief Information Officer" },
+    { "index": 4, "question": "CFO", "answer": "Chief Financial Officer" },
+    { "index": 5, "question": "COO", "answer": "Chief Operating Officer" },
+    { "index": 6, "question": "IT", "answer": "Information Technology" },
+    {
+      "index": 7,
+      "question": "ICT",
+      "answer": "Information and Communication Technology"
+    },
+    { "index": 8, "question": "QA", "answer": "Quality Assurance" },
+    { "index": 9, "question": "UX", "answer": "User Experience" },
+    { "index": 10, "question": "UI", "answer": "User Interface" },
+    {
+      "index": 11,
+      "question": "API",
+      "answer": "Application Programming Interface"
+    },
+    { "index": 12, "question": "SQL", "answer": "Structured Query Language" },
+    { "index": 13, "question": "NoSQL", "answer": "Not Only SQL" },
+    { "index": 14, "question": "SaaS", "answer": "Software as a Service" },
+    { "index": 15, "question": "PaaS", "answer": "Platform as a Service" },
+    {
+      "index": 16,
+      "question": "IaaS",
+      "answer": "Infrastructure as a Service"
+    },
+    { "index": 17, "question": "VPN", "answer": "Virtual Private Network" },
+    { "index": 18, "question": "LAN", "answer": "Local Area Network" },
+    { "index": 19, "question": "WAN", "answer": "Wide Area Network" },
+    {
+      "index": 20,
+      "question": "HTTP",
+      "answer": "Hypertext Transfer Protocol"
+    },
+    {
+      "index": 21,
+      "question": "HTTPS",
+      "answer": "Hypertext Transfer Protocol Secure"
+    },
+    { "index": 22, "question": "HTML", "answer": "Hypertext Markup Language" },
+    { "index": 23, "question": "CSS", "answer": "Cascading Style Sheets" },
+    { "index": 24, "question": "JS", "answer": "JavaScript" },
+    {
+      "index": 25,
+      "question": "CRM",
+      "answer": "Customer Relationship Management"
+    },
+    {
+      "index": 26,
+      "question": "ERP",
+      "answer": "Enterprise Resource Planning"
+    },
+    { "index": 27, "question": "BI", "answer": "Business Intelligence" },
+    { "index": 28, "question": "AI", "answer": "Artificial Intelligence" },
+    { "index": 29, "question": "ML", "answer": "Machine Learning" },
+    { "index": 30, "question": "IoT", "answer": "Internet of Things" },
+    { "index": 31, "question": "RPA", "answer": "Robotic Process Automation" },
+    { "index": 32, "question": "SEO", "answer": "Search Engine Optimization" },
+    { "index": 33, "question": "SEM", "answer": "Search Engine Marketing" },
+    { "index": 34, "question": "KPI", "answer": "Key Performance Indicator" },
+    { "index": 35, "question": "ROI", "answer": "Return on Investment" },
+    { "index": 36, "question": "SLA", "answer": "Service Level Agreement" },
+    { "index": 37, "question": "DNS", "answer": "Domain Name System" },
+    { "index": 38, "question": "OS", "answer": "Operating System" },
+    { "index": 39, "question": "RAM", "answer": "Random Access Memory" },
+    { "index": 40, "question": "ROM", "answer": "Read-Only Memory" },
+    { "index": 41, "question": "SSD", "answer": "Solid State Drive" },
+    { "index": 42, "question": "HDD", "answer": "Hard Disk Drive" },
+    { "index": 43, "question": "URL", "answer": "Uniform Resource Locator" },
+    {
+      "index": 44,
+      "question": "IDE",
+      "answer": "Integrated Development Environment"
+    },
+    { "index": 45, "question": "SDK", "answer": "Software Development Kit" },
+    { "index": 46, "question": "FTP", "answer": "File Transfer Protocol" },
+    { "index": 47, "question": "ISP", "answer": "Internet Service Provider" },
+    { "index": 48, "question": "B2B", "answer": "Business to Business" },
+    { "index": 49, "question": "B2C", "answer": "Business to Consumer" },
+    { "index": 50, "question": "CMS", "answer": "Content Management System" },
+    { "index": 51, "question": "OOP", "answer": "Object-Oriented Programming" },
+    { "index": 52, "question": "FP", "answer": "Functional Programming" },
+    {
+      "index": 53,
+      "question": "REST",
+      "answer": "Representational State Transfer"
+    },
+    {
+      "index": 54,
+      "question": "SOAP",
+      "answer": "Simple Object Access Protocol"
+    },
+    { "index": 55, "question": "JSON", "answer": "JavaScript Object Notation" },
+    { "index": 56, "question": "XML", "answer": "eXtensible Markup Language" },
+    { "index": 57, "question": "YAML", "answer": "YAML Ain't Markup Language" },
+    { "index": 58, "question": "CSV", "answer": "Comma-Separated Values" },
+    { "index": 59, "question": "TSV", "answer": "Tab-Separated Values" },
+    { "index": 60, "question": "ORM", "answer": "Object-Relational Mapping" },
+    { "index": 61, "question": "MVC", "answer": "Model-View-Controller" },
+    { "index": 62, "question": "MVVM", "answer": "Model-View-ViewModel" },
+    { "index": 63, "question": "CI", "answer": "Continuous Integration" },
+    {
+      "index": 64,
+      "question": "CD",
+      "answer": "Continuous Delivery/Deployment"
+    },
+    { "index": 65, "question": "DevOps", "answer": "Development + Operations" },
+    {
+      "index": 66,
+      "question": "Agile",
+      "answer": "Iterative Development Methodology"
+    },
+    {
+      "index": 67,
+      "question": "Scrum",
+      "answer": "Agile Framework for Project Management"
+    },
+    {
+      "index": 68,
+      "question": "Kanban",
+      "answer": "Visual Workflow Management System"
+    },
+    {
+      "index": 69,
+      "question": "Sprint",
+      "answer": "Time-Boxed Work Cycle in Scrum"
+    },
+    { "index": 70, "question": "PO", "answer": "Product Owner (Scrum Role)" },
+    { "index": 71, "question": "SM", "answer": "Scrum Master" },
+    { "index": 72, "question": "MVP", "answer": "Minimum Viable Product" },
+    { "index": 73, "question": "TDD", "answer": "Test-Driven Development" },
+    { "index": 74, "question": "BDD", "answer": "Behavior-Driven Development" },
+    { "index": 75, "question": "DBA", "answer": "Database Administrator" },
+    { "index": 76, "question": "ETL", "answer": "Extract, Transform, Load" },
+    {
+      "index": 77,
+      "question": "OLAP",
+      "answer": "Online Analytical Processing"
+    },
+    {
+      "index": 78,
+      "question": "OLTP",
+      "answer": "Online Transaction Processing"
+    },
+    {
+      "index": 79,
+      "question": "NoSQL DB",
+      "answer": "Non-Relational Database"
+    },
+    { "index": 80, "question": "SQL DB", "answer": "Relational Database" },
+    {
+      "index": 81,
+      "question": "ACID",
+      "answer": "Atomicity, Consistency, Isolation, Durability"
+    },
+    {
+      "index": 82,
+      "question": "CAP",
+      "answer": "Consistency, Availability, Partition Tolerance"
+    },
+    {
+      "index": 83,
+      "question": "BASE",
+      "answer": "Basically Available, Soft state, Eventually consistent"
+    },
+    { "index": 84, "question": "GraphQL", "answer": "Query Language for APIs" },
+    {
+      "index": 85,
+      "question": "gRPC",
+      "answer": "Google Remote Procedure Call"
+    },
+    { "index": 86, "question": "JWT", "answer": "JSON Web Token" },
+    { "index": 87, "question": "OAuth", "answer": "Open Authorization" },
+    { "index": 88, "question": "SSO", "answer": "Single Sign-On" },
+    { "index": 89, "question": "MFA", "answer": "Multi-Factor Authentication" },
+    { "index": 90, "question": "RBAC", "answer": "Role-Based Access Control" },
+    { "index": 91, "question": "JIT", "answer": "Just-In-Time (Compilation)" },
+    { "index": 92, "question": "AOT", "answer": "Ahead-Of-Time (Compilation)" },
+    { "index": 93, "question": "GC", "answer": "Garbage Collection" },
+    { "index": 94, "question": "VM", "answer": "Virtual Machine" },
+    { "index": 95, "question": "JVM", "answer": "Java Virtual Machine" },
+    {
+      "index": 96,
+      "question": "CLR",
+      "answer": "Common Language Runtime (.NET)"
+    },
+    { "index": 97, "question": "DLL", "answer": "Dynamic Link Library" },
+    {
+      "index": 98,
+      "question": "SDLC",
+      "answer": "Software Development Life Cycle"
+    },
+    { "index": 99, "question": "UAT", "answer": "User Acceptance Testing" },
+    { "index": 100, "question": "QA", "answer": "Quality Assurance" },
+    { "index": 101, "question": "ML", "answer": "Machine Learning" },
+    { "index": 102, "question": "DL", "answer": "Deep Learning" },
+    {
+      "index": 103,
+      "question": "NLP",
+      "answer": "Natural Language Processing"
+    },
+    { "index": 104, "question": "CV", "answer": "Computer Vision" },
+    {
+      "index": 105,
+      "question": "GAN",
+      "answer": "Generative Adversarial Network"
+    },
+    { "index": 106, "question": "RNN", "answer": "Recurrent Neural Network" },
+    {
+      "index": 107,
+      "question": "CNN",
+      "answer": "Convolutional Neural Network"
+    },
+    { "index": 108, "question": "LSTM", "answer": "Long Short-Term Memory" },
+    { "index": 109, "question": "SVM", "answer": "Support Vector Machine" },
+    {
+      "index": 110,
+      "question": "PCA",
+      "answer": "Principal Component Analysis"
+    },
+    { "index": 111, "question": "KNN", "answer": "K-Nearest Neighbors" },
+    { "index": 112, "question": "RF", "answer": "Random Forest" },
+    {
+      "index": 113,
+      "question": "XGBoost",
+      "answer": "Extreme Gradient Boosting"
+    },
+    { "index": 114, "question": "EDA", "answer": "Exploratory Data Analysis" },
+    { "index": 115, "question": "ETL", "answer": "Extract, Transform, Load" },
+    { "index": 116, "question": "ELT", "answer": "Extract, Load, Transform" },
+    { "index": 117, "question": "DBT", "answer": "Data Build Tool" },
+    { "index": 118, "question": "DWH", "answer": "Data Warehouse" },
+    { "index": 119, "question": "CDC", "answer": "Change Data Capture" },
+    { "index": 120, "question": "SQL", "answer": "Structured Query Language" },
+    { "index": 121, "question": "NoSQL", "answer": "Not Only SQL" },
+    {
+      "index": 122,
+      "question": "MongoDB",
+      "answer": "Document-Based NoSQL Database"
+    },
+    {
+      "index": 123,
+      "question": "PostgreSQL",
+      "answer": "Advanced Open-Source RDBMS"
+    },
+    {
+      "index": 124,
+      "question": "MySQL",
+      "answer": "Popular Open-Source RDBMS"
+    },
+    {
+      "index": 125,
+      "question": "SQLite",
+      "answer": "Lightweight Embedded Database"
+    },
+    {
+      "index": 126,
+      "question": "Redis",
+      "answer": "In-Memory Key-Value Store"
+    },
+    {
+      "index": 127,
+      "question": "Cassandra",
+      "answer": "Distributed NoSQL Database"
+    },
+    { "index": 128, "question": "Neo4j", "answer": "Graph Database" },
+    {
+      "index": 129,
+      "question": "Elasticsearch",
+      "answer": "Search & Analytics Engine"
+    },
+    {
+      "index": 130,
+      "question": "Kafka",
+      "answer": "Distributed Event Streaming"
+    },
+    {
+      "index": 131,
+      "question": "Spark",
+      "answer": "Big Data Processing Framework"
+    },
+    {
+      "index": 132,
+      "question": "Hadoop",
+      "answer": "Distributed Data Processing"
+    },
+    {
+      "index": 133,
+      "question": "HDFS",
+      "answer": "Hadoop Distributed File System"
+    },
+    {
+      "index": 134,
+      "question": "MapReduce",
+      "answer": "Data Processing Model"
+    },
+    {
+      "index": 135,
+      "question": "YARN",
+      "answer": "Yet Another Resource Negotiator"
+    },
+    {
+      "index": 136,
+      "question": "Airflow",
+      "answer": "Workflow Automation Tool"
+    },
+    {
+      "index": 137,
+      "question": "Docker",
+      "answer": "Containerization Platform"
+    },
+    {
+      "index": 138,
+      "question": "K8s",
+      "answer": "Kubernetes (Container Orchestration)"
+    },
+    { "index": 139, "question": "IaC", "answer": "Infrastructure as Code" },
+    {
+      "index": 140,
+      "question": "Terraform",
+      "answer": "Infrastructure as Code Tool"
+    },
+    {
+      "index": 141,
+      "question": "Ansible",
+      "answer": "Configuration Management Tool"
+    },
+    { "index": 142, "question": "Chef", "answer": "Infrastructure Automation" },
+    {
+      "index": 143,
+      "question": "Puppet",
+      "answer": "Configuration Management"
+    },
+    {
+      "index": 144,
+      "question": "Prometheus",
+      "answer": "Monitoring & Alerting"
+    },
+    {
+      "index": 145,
+      "question": "Grafana",
+      "answer": "Data Visualization Tool"
+    },
+    {
+      "index": 146,
+      "question": "Splunk",
+      "answer": "Log Analysis & Monitoring"
+    },
+    {
+      "index": 147,
+      "question": "Nagios",
+      "answer": "IT Infrastructure Monitoring"
+    },
+    { "index": 148, "question": "Zabbix", "answer": "Enterprise Monitoring" },
+    {
+      "index": 149,
+      "question": "Nginx",
+      "answer": "High-Performance Web Server"
+    },
+    { "index": 150, "question": "Apache", "answer": "Web Server Software" },
+    { "index": 151, "question": "AWS", "answer": "Amazon Web Services" },
+    { "index": 152, "question": "GCP", "answer": "Google Cloud Platform" },
+    { "index": 153, "question": "Azure", "answer": "Microsoft Cloud Platform" },
+    {
+      "index": 154,
+      "question": "S3",
+      "answer": "Simple Storage Service (AWS)"
+    },
+    {
+      "index": 155,
+      "question": "EC2",
+      "answer": "Elastic Compute Cloud (AWS)"
+    },
+    {
+      "index": 156,
+      "question": "Lambda",
+      "answer": "Serverless Computing (AWS)"
+    },
+    {
+      "index": 157,
+      "question": "RDS",
+      "answer": "Relational Database Service (AWS)"
+    },
+    {
+      "index": 158,
+      "question": "IAM",
+      "answer": "Identity and Access Management"
+    },
+    {
+      "index": 159,
+      "question": "VPC",
+      "answer": "Virtual Private Cloud (AWS)"
+    },
+    { "index": 160, "question": "CDN", "answer": "Content Delivery Network" },
+    { "index": 161, "question": "DNS", "answer": "Domain Name System" },
+    { "index": 162, "question": "SSL", "answer": "Secure Sockets Layer" },
+    { "index": 163, "question": "TLS", "answer": "Transport Layer Security" },
+    { "index": 164, "question": "PKI", "answer": "Public Key Infrastructure" },
+    {
+      "index": 165,
+      "question": "CSRF",
+      "answer": "Cross-Site Request Forgery"
+    },
+    { "index": 166, "question": "XSS", "answer": "Cross-Site Scripting" },
+    { "index": 167, "question": "SQLi", "answer": "SQL Injection" },
+    { "index": 168, "question": "DoS", "answer": "Denial of Service" },
+    {
+      "index": 169,
+      "question": "DDoS",
+      "answer": "Distributed Denial of Service"
+    },
+    { "index": 170, "question": "MITM", "answer": "Man-in-the-Middle Attack" },
+    { "index": 171, "question": "RCE", "answer": "Remote Code Execution" },
+    {
+      "index": 172,
+      "question": "CVE",
+      "answer": "Common Vulnerabilities and Exposures"
+    },
+    {
+      "index": 173,
+      "question": "OWASP",
+      "answer": "Open Web Application Security Project"
+    },
+    {
+      "index": 174,
+      "question": "NIST",
+      "answer": "National Institute of Standards and Technology"
+    },
+    {
+      "index": 175,
+      "question": "GDPR",
+      "answer": "General Data Protection Regulation"
+    },
+    {
+      "index": 176,
+      "question": "HIPAA",
+      "answer": "Health Insurance Portability and Accountability Act"
+    },
+    {
+      "index": 177,
+      "question": "PCI DSS",
+      "answer": "Payment Card Industry Data Security Standard"
+    },
+    { "index": 178, "question": "SOC", "answer": "Security Operations Center" },
+    {
+      "index": 179,
+      "question": "SIEM",
+      "answer": "Security Information and Event Management"
+    },
+    { "index": 180, "question": "IDS", "answer": "Intrusion Detection System" },
+    {
+      "index": 181,
+      "question": "IPS",
+      "answer": "Intrusion Prevention System"
+    },
+    { "index": 182, "question": "WAF", "answer": "Web Application Firewall" },
+    { "index": 183, "question": "NGFW", "answer": "Next-Generation Firewall" },
+    {
+      "index": 184,
+      "question": "EDR",
+      "answer": "Endpoint Detection and Response"
+    },
+    {
+      "index": 185,
+      "question": "XDR",
+      "answer": "Extended Detection and Response"
+    },
+    {
+      "index": 186,
+      "question": "SOAR",
+      "answer": "Security Orchestration, Automation, and Response"
+    },
+    { "index": 187, "question": "CTI", "answer": "Cyber Threat Intelligence" },
+    { "index": 188, "question": "IoC", "answer": "Indicator of Compromise" },
+    { "index": 189, "question": "APT", "answer": "Advanced Persistent Threat" },
+    { "index": 190, "question": "RAT", "answer": "Remote Access Trojan" },
+    { "index": 191, "question": "DLL", "answer": "Dynamic Link Library" },
+    { "index": 192, "question": "PE", "answer": "Portable Executable" },
+    {
+      "index": 193,
+      "question": "ELF",
+      "answer": "Executable and Linkable Format"
+    },
+    {
+      "index": 194,
+      "question": "ASLR",
+      "answer": "Address Space Layout Randomization"
+    },
+    { "index": 195, "question": "DEP", "answer": "Data Execution Prevention" },
+    {
+      "index": 196,
+      "question": "PIE",
+      "answer": "Position Independent Executable"
+    },
+    {
+      "index": 197,
+      "question": "ROP",
+      "answer": "Return-Oriented Programming"
+    },
+    { "index": 198, "question": "JOP", "answer": "Jump-Oriented Programming" },
+    {
+      "index": 199,
+      "question": "COOP",
+      "answer": "Counterfeit Object-Oriented Programming"
+    },
+    { "index": 200, "question": "CFG", "answer": "Control Flow Guard" }
+  ]
+}

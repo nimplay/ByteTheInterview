@@ -1,0 +1,1006 @@
+{
+  "JavaScript_basics": [
+    {
+      "index": 1,
+      "question": "What is JavaScript?",
+      "answer": "A scripting language used to make web pages interactive."
+    },
+    {
+      "index": 2,
+      "question": "Difference between let, const, and var?",
+      "answer": "var: Function-scoped, hoisted. let: Block-scoped, reassignable. const: Block-scoped, immutable (can’t reassign)."
+    },
+    {
+      "index": 3,
+      "question": "What is hoisting?",
+      "answer": "JavaScript moves declarations (var, function) to the top of their scope before execution."
+    },
+    {
+      "index": 4,
+      "question": "What is the typeof operator?",
+      "answer": "Returns a string indicating the type of a variable (\"number\", \"string\", \"object\", etc.)."
+    },
+    {
+      "index": 5,
+      "question": "What is NaN?",
+      "answer": "\"Not a Number,\" returned when a math operation fails (typeof NaN is \"number\")."
+    },
+    {
+      "index": 6,
+      "question": "What is undefined vs null?",
+      "answer": "undefined: Variable declared but not assigned. null: Explicitly set as \"no value.\""
+    },
+    {
+      "index": 7,
+      "question": "What is an IIFE?",
+      "answer": "Immediately Invoked Function Expression: (function() {})(); runs immediately."
+    },
+    {
+      "index": 8,
+      "question": "What is \"use strict\";?",
+      "answer": "Enforces stricter parsing and error handling (e.g., prevents undeclared variables)."
+    },
+    {
+      "index": 9,
+      "question": "What is the difference between == and ===?",
+      "answer": "== checks value (with coercion), === checks value and type."
+    },
+    {
+      "index": 10,
+      "question": "What is truthy/falsy in JavaScript?",
+      "answer": "Falsy: false, 0, \"\", null, undefined, NaN. Everything else is truthy."
+    },
+
+    {
+      "index": 11,
+      "question": "What is a closure?",
+      "answer": "A function that remembers its outer scope even after execution."
+    },
+    {
+      "index": 12,
+      "question": "What is a callback function?",
+      "answer": "A function passed as an argument to another function."
+    },
+    {
+      "index": 13,
+      "question": "What is a pure function?",
+      "answer": "A function that always returns the same output for the same inputs (no side effects)."
+    },
+    {
+      "index": 14,
+      "question": "What is an arrow function?",
+      "answer": "Shorter syntax: () => {}, no this binding."
+    },
+    {
+      "index": 15,
+      "question": "What is the difference between function foo() {} and const foo = () => {}?",
+      "answer": "function is hoisted, has this; arrow function isn’t hoisted, inherits this."
+    },
+    {
+      "index": 16,
+      "question": "What is a higher-order function?",
+      "answer": "A function that takes/returns another function (e.g., map, filter)."
+    },
+    {
+      "index": 17,
+      "question": "What is currying?",
+      "answer": "Transforming a function with multiple args into a sequence of functions: f(a)(b)(c)."
+    },
+    {
+      "index": 18,
+      "question": "What is memoization?",
+      "answer": "Caching function results to optimize performance."
+    },
+    {
+      "index": 19,
+      "question": "What is a generator function?",
+      "answer": "A function that can pause/resume (function*, yield)."
+    },
+    {
+      "index": 20,
+      "question": "What is the arguments object?",
+      "answer": "Array-like object containing function arguments (not available in arrow functions)."
+    },
+    {
+      "index": 21,
+      "question": "How to create an object?",
+      "answer": "const obj = {}, new Object(), or Object.create()."
+    },
+    {
+      "index": 22,
+      "question": "What is a prototype?",
+      "answer": "A mechanism for inheritance in JavaScript (objects inherit properties from prototypes)."
+    },
+    {
+      "index": 23,
+      "question": "What is __proto__ vs prototype?",
+      "answer": "prototype: Property of functions (constructor’s blueprint). __proto__: Property of instances (links to prototype)."
+    },
+    {
+      "index": 24,
+      "question": "What is the difference between classical and prototypal inheritance?",
+      "answer": "Classical: Classes inherit from classes (Java). Prototypal: Objects inherit from objects (JavaScript)."
+    },
+    {
+      "index": 25,
+      "question": "How to check if a property exists in an object?",
+      "answer": "obj.hasOwnProperty('key') or 'key' in obj."
+    },
+    {
+      "index": 26,
+      "question": "What is object destructuring?",
+      "answer": "Unpacking properties: const { a, b } = obj."
+    },
+    {
+      "index": 27,
+      "question": "What is the this keyword?",
+      "answer": "Refers to the object executing the current function."
+    },
+    {
+      "index": 28,
+      "question": "How to change this context?",
+      "answer": "call(), apply(), bind(), or arrow functions."
+    },
+    {
+      "index": 29,
+      "question": "What is the new keyword?",
+      "answer": "Creates an instance of a constructor function."
+    },
+    {
+      "index": 30,
+      "question": "What is object freezing?",
+      "answer": "Object.freeze(obj) prevents modifications."
+    },
+    {
+      "index": 31,
+      "question": "How to check if a variable is an array?",
+      "answer": "Array.isArray(arr)."
+    },
+    {
+      "index": 32,
+      "question": "What is the difference between forEach and map?",
+      "answer": "forEach executes a function, map returns a new array."
+    },
+    {
+      "index": 33,
+      "question": "What does filter do?",
+      "answer": "Returns a new array with elements that pass a test."
+    },
+    {
+      "index": 34,
+      "question": "What does reduce do?",
+      "answer": "Reduces an array to a single value: arr.reduce((acc, val) => acc + val, 0)."
+    },
+    {
+      "index": 35,
+      "question": "How to remove duplicates from an array?",
+      "answer": "[...new Set(arr)] or arr.filter((v, i) => arr.indexOf(v) === i)."
+    },
+    {
+      "index": 36,
+      "question": "What is the difference between slice and splice?",
+      "answer": "slice returns a copy, splice mutates the array."
+    },
+    {
+      "index": 37,
+      "question": "How to flatten an array?",
+      "answer": "arr.flat() or [].concat(...arr)."
+    },
+    {
+      "index": 38,
+      "question": "What is the spread operator?",
+      "answer": "... expands iterables ([...arr], { ...obj })."
+    },
+    {
+      "index": 39,
+      "question": "How to copy an array?",
+      "answer": "const copy = [...arr] or arr.slice()."
+    },
+    {
+      "index": 40,
+      "question": "What is Array.from()?",
+      "answer": "Creates an array from array-like objects (e.g., arguments)."
+    },
+    {
+      "index": 41,
+      "question": "What is asynchronous JavaScript?",
+      "answer": "Non-blocking operations (e.g., callbacks, promises, async/await)."
+    },
+    {
+      "index": 42,
+      "question": "What is a promise?",
+      "answer": "An object representing eventual completion/failure of an async operation."
+    },
+    {
+      "index": 43,
+      "question": "What are promise states?",
+      "answer": "pending, fulfilled, rejected."
+    },
+    {
+      "index": 44,
+      "question": "What is async/await?",
+      "answer": "Syntactic sugar for promises (async functions return promises, await pauses execution)."
+    },
+    {
+      "index": 45,
+      "question": "What is the event loop?",
+      "answer": "Mechanism handling async callbacks (call stack, callback queue, microtasks)."
+    },
+    {
+      "index": 46,
+      "question": "What is setTimeout?",
+      "answer": "Executes a function after a delay (in milliseconds)."
+    },
+    {
+      "index": 47,
+      "question": "What is setInterval?",
+      "answer": "Repeatedly executes a function at intervals."
+    },
+    {
+      "index": 48,
+      "question": "What is a callback hell?",
+      "answer": "Nested callbacks making code hard to read (solved by promises/async-await)."
+    },
+    {
+      "index": 49,
+      "question": "What is Promise.all?",
+      "answer": "Waits for all promises to resolve or any to reject."
+    },
+    {
+      "index": 50,
+      "question": "What is Promise.race?",
+      "answer": "Resolves/rejects as soon as one promise settles."
+    },
+    {
+      "index": 51,
+      "question": "What is the DOM?",
+      "answer": "Document Object Model: Tree representation of HTML."
+    },
+    {
+      "index": 52,
+      "question": "How to select an element?",
+      "answer": "document.getElementById(), querySelector(), getElementsByClassName()."
+    },
+    {
+      "index": 53,
+      "question": "How to create an element?",
+      "answer": "document.createElement('div')."
+    },
+    {
+      "index": 54,
+      "question": "What is event bubbling?",
+      "answer": "Events propagate from the target up to the root."
+    },
+    {
+      "index": 55,
+      "question": "What is event delegation?",
+      "answer": "Attaching an event listener to a parent to handle children."
+    },
+    {
+      "index": 56,
+      "question": "How to prevent default behavior?",
+      "answer": "event.preventDefault()."
+    },
+    {
+      "index": 57,
+      "question": "What is event.target vs event.currentTarget?",
+      "answer": "target: Element that triggered the event. currentTarget: Element with the listener."
+    },
+    {
+      "index": 58,
+      "question": "How to add/remove event listeners?",
+      "answer": "addEventListener(), removeEventListener()."
+    },
+    {
+      "index": 59,
+      "question": "What is the difference between window and document?",
+      "answer": "window: Global browser object. document: Root of the DOM."
+    },
+    {
+      "index": 60,
+      "question": "What is localStorage vs sessionStorage?",
+      "answer": "localStorage: Persistent storage. sessionStorage: Cleared on tab close."
+    },
+    {
+      "index": 61,
+      "question": "What are template literals?",
+      "answer": "`Hello ${name}` allows embedded expressions."
+    },
+    {
+      "index": 62,
+      "question": "What are default parameters?",
+      "answer": "function foo(a = 1) {}."
+    },
+    {
+      "index": 63,
+      "question": "What are rest parameters?",
+      "answer": "function foo(...args) {} collects remaining args into an array."
+    },
+    {
+      "index": 64,
+      "question": "What are classes in JavaScript?",
+      "answer": "Syntactic sugar over prototypes (class Foo { constructor() {} })."
+    },
+    {
+      "index": 65,
+      "question": "What are getters/setters?",
+      "answer": "get prop() {}, set prop(val) {} for computed properties."
+    },
+    {
+      "index": 66,
+      "question": "What are symbols?",
+      "answer": "Unique, immutable primitives (const sym = Symbol('desc'))."
+    },
+    {
+      "index": 67,
+      "question": "What are iterators/generators?",
+      "answer": "Objects with next() method (function*)."
+    },
+    {
+      "index": 68,
+      "question": "What are modules?",
+      "answer": "import/export for code organization."
+    },
+    {
+      "index": 69,
+      "question": "What is Object.assign()?",
+      "answer": "Copies properties from sources to a target object."
+    },
+    {
+      "index": 70,
+      "question": "What is Object.keys()?",
+      "answer": "Returns an array of an object’s own property names."
+    },
+    {
+      "index": 71,
+      "question": "What is try-catch?",
+      "answer": "Handles exceptions: try { riskyOp(); } catch (err) { console.error(err); }"
+    },
+    {
+      "index": 72,
+      "question": "What is throw?",
+      "answer": "Throws a custom error: throw new Error('Message')."
+    },
+    {
+      "index": 73,
+      "question": "What is finally?",
+      "answer": "Code that runs regardless of try/catch outcome."
+    },
+    {
+      "index": 74,
+      "question": "What are common JavaScript errors?",
+      "answer": "TypeError, ReferenceError, SyntaxError."
+    },
+    {
+      "index": 75,
+      "question": "How to create a custom error?",
+      "answer": "class CustomError extends Error {}."
+    },
+
+    {
+      "index": 76,
+      "question": "What is the call stack?",
+      "answer": "Tracks function calls (LIFO)."
+    },
+    {
+      "index": 77,
+      "question": "What is a stack overflow?",
+      "answer": "When the call stack exceeds its limit (e.g., infinite recursion)."
+    },
+    {
+      "index": 78,
+      "question": "What is memoization?",
+      "answer": "Caching function results for optimization."
+    },
+    {
+      "index": 79,
+      "question": "What is debouncing/throttling?",
+      "answer": "Debouncing: Delays execution until after a pause. Throttling: Limits execution rate."
+    },
+    {
+      "index": 80,
+      "question": "What is Web Workers?",
+      "answer": "Runs scripts in background threads."
+    },
+    {
+      "index": 81,
+      "question": "What is unit testing?",
+      "answer": "Testing individual components (e.g., with Jest)."
+    },
+    {
+      "index": 82,
+      "question": "What is TDD?",
+      "answer": "Test-Driven Development: Write tests before code."
+    },
+    {
+      "index": 83,
+      "question": "What is Babel?",
+      "answer": "Transpiler for converting modern JS to older versions."
+    },
+    {
+      "index": 84,
+      "question": "What is Webpack?",
+      "answer": "Module bundler for JavaScript apps."
+    },
+    {
+      "index": 85,
+      "question": "What is ESLint?",
+      "answer": "Linter for identifying code issues."
+    },
+    {
+      "index": 86,
+      "question": "What is XSS?",
+      "answer": "Cross-Site Scripting: Injecting malicious scripts."
+    },
+    {
+      "index": 87,
+      "question": "How to prevent XSS?",
+      "answer": "Escape user input, use textContent instead of innerHTML."
+    },
+    {
+      "index": 88,
+      "question": "What is CORS?",
+      "answer": "Cross-Origin Resource Sharing: Security policy for cross-domain requests."
+    },
+    {
+      "index": 89,
+      "question": "What is CSRF?",
+      "answer": "Cross-Site Request Forgery: Unauthorized commands from a trusted user."
+    },
+    {
+      "index": 90,
+      "question": "What is JWT?",
+      "answer": "JSON Web Token for secure authentication."
+    },
+    {
+      "index": 91,
+      "question": "What is lazy loading?",
+      "answer": "Delays loading resources until needed."
+    },
+    {
+      "index": 92,
+      "question": "What is the critical rendering path?",
+      "answer": "Steps the browser takes to render a page."
+    },
+    {
+      "index": 93,
+      "question": "What is requestAnimationFrame?",
+      "answer": "Optimized for animations (better than setTimeout)."
+    },
+    {
+      "index": 94,
+      "question": "What is a memory leak?",
+      "answer": "Unused memory not released (e.g., global variables, forgotten timers)."
+    },
+    {
+      "index": 95,
+      "question": "How to optimize JavaScript?",
+      "answer": "Minify code, debounce events, use Web Workers."
+    },
+    {
+      "index": 96,
+      "question": "What is fetch?",
+      "answer": "Modern API for HTTP requests (returns a promise)."
+    },
+    {
+      "index": 97,
+      "question": "What is XMLHttpRequest?",
+      "answer": "Older API for HTTP requests (pre-fetch)."
+    },
+    {
+      "index": 98,
+      "question": "What is the Geolocation API?",
+      "answer": "Accesses user’s location: navigator.geolocation.getCurrentPosition()."
+    },
+    {
+      "index": 99,
+      "question": "What is the Web Storage API?",
+      "answer": "localStorage and sessionStorage."
+    },
+    {
+      "index": 100,
+      "question": "What is the History API?",
+      "answer": "Manipulates browser history (pushState, replaceState)."
+    },
+    {
+      "index": 101,
+      "question": "What is JSON?",
+      "answer": "Lightweight data format (JSON.parse(), JSON.stringify())."
+    },
+    {
+      "index": 102,
+      "question": "What is Date object?",
+      "answer": "Represents dates: new Date()."
+    },
+    {
+      "index": 103,
+      "question": "What is RegExp?",
+      "answer": "Regular expressions for pattern matching (/pattern/flags)."
+    },
+    {
+      "index": 104,
+      "question": "What is eval?",
+      "answer": "Executes a string as code (avoid due to security risks)."
+    },
+    {
+      "index": 105,
+      "question": "What is with statement?",
+      "answer": "Adds properties to scope (deprecated)."
+    },
+    {
+      "index": 106,
+      "question": "What is lexical scope?",
+      "answer": "Scope defined at lexing time (where variables are written in the code)."
+    },
+    {
+      "index": 107,
+      "question": "What is a scope chain?",
+      "answer": "The hierarchy of scopes that JavaScript checks to resolve variables."
+    },
+    {
+      "index": 108,
+      "question": "How does closure help in data privacy?",
+      "answer": "Encapsulates variables within a function, preventing external access."
+    },
+    {
+      "index": 109,
+      "question": "Give an example of closure.",
+      "answer": "function outer() { let x = 10; return function inner() { console.log(x); }; }"
+    },
+    {
+      "index": 110,
+      "question": "Can closures cause memory leaks?",
+      "answer": "Yes, if they hold references to unused objects (e.g., event listeners)."
+    },
+    {
+      "index": 111,
+      "question": "How to implement inheritance without classes?",
+      "answer": "Using Object.create() or constructor functions + prototypes."
+    },
+    {
+      "index": 112,
+      "question": "What is Object.create(null)?",
+      "answer": "Creates an object with no prototype (no inherited properties)."
+    },
+    {
+      "index": 113,
+      "question": "What is the constructor property?",
+      "answer": "Points to the constructor function that created the instance."
+    },
+    {
+      "index": 114,
+      "question": "How to check if an object inherits from a prototype?",
+      "answer": "obj instanceof Constructor or Constructor.prototype.isPrototypeOf(obj)."
+    },
+    {
+      "index": 115,
+      "question": "What is the difference between Object.create() and new?",
+      "answer": "Object.create() sets the prototype directly; new invokes a constructor."
+    },
+    {
+      "index": 116,
+      "question": "What are dynamic imports?",
+      "answer": "Loading modules on-demand: import('./module.js').then(module => ...)."
+    },
+    {
+      "index": 117,
+      "question": "What are tagged template literals?",
+      "answer": "Functions that process template literals: function tag(strings, ...values) {} tag`Hello ${name}`;"
+    },
+    {
+      "index": 118,
+      "question": "What are Map and Set?",
+      "answer": "Map: Key-value pairs (keys can be any type). Set: Collection of unique values."
+    },
+    {
+      "index": 119,
+      "question": "What is WeakMap?",
+      "answer": "Map with weakly held keys (doesn’t prevent garbage collection)."
+    },
+    {
+      "index": 120,
+      "question": "What is Promise.finally?",
+      "answer": "Runs after a promise settles (regardless of success/failure)."
+    },
+    {
+      "index": 121,
+      "question": "What is a microtask vs macrotask?",
+      "answer": "Microtasks (e.g., promises) run before macrotasks (e.g., setTimeout)."
+    },
+    {
+      "index": 122,
+      "question": "What is queueMicrotask?",
+      "answer": "Queues a function to run as a microtask."
+    },
+    {
+      "index": 123,
+      "question": "How to cancel a fetch request?",
+      "answer": "Use AbortController: const controller = new AbortController(); fetch(url, { signal: controller.signal }); controller.abort();"
+    },
+    {
+      "index": 124,
+      "question": "What is async/await error handling?",
+      "answer": "Wrap in try/catch or use .catch() on the promise."
+    },
+    {
+      "index": 125,
+      "question": "What is the difference between Promise.all and Promise.allSettled?",
+      "answer": "all rejects if any promise rejects; allSettled waits for all to settle."
+    },
+    {
+      "index": 126,
+      "question": "What is Error.stack?",
+      "answer": "A string representing the call stack when the error was created."
+    },
+    {
+      "index": 127,
+      "question": "How to create a custom error class?",
+      "answer": "class CustomError extends Error { constructor(message) { super(message); } }"
+    },
+    {
+      "index": 128,
+      "question": "What is unhandledrejection?",
+      "answer": "Event fired when a promise rejects without a .catch()."
+    },
+    {
+      "index": 129,
+      "question": "How to catch uncaught exceptions in Node.js?",
+      "answer": "process.on('uncaughtException', (err) => {})."
+    },
+    {
+      "index": 130,
+      "question": "What is window.onerror?",
+      "answer": "Global handler for runtime errors in browsers."
+    },
+    {
+      "index": 131,
+      "question": "What is documentFragment?",
+      "answer": "Lightweight DOM container for batch updates."
+    },
+    {
+      "index": 132,
+      "question": "How to check if an element exists?",
+      "answer": "if (document.getElementById('foo')) {}."
+    },
+    {
+      "index": 133,
+      "question": "What is innerHTML vs textContent?",
+      "answer": "innerHTML parses HTML; textContent escapes it (safer for XSS)."
+    },
+    {
+      "index": 134,
+      "question": "How to remove all child nodes?",
+      "answer": "element.innerHTML = '' or while (element.firstChild) element.removeChild(element.firstChild)."
+    },
+    {
+      "index": 135,
+      "question": "What is getBoundingClientRect()?",
+      "answer": "Returns an element’s size and position relative to the viewport."
+    },
+    {
+      "index": 136,
+      "question": "What is event.stopPropagation()?",
+      "answer": "Stops event bubbling/capturing."
+    },
+    {
+      "index": 137,
+      "question": "What is event.stopImmediatePropagation()?",
+      "answer": "Stops other listeners on the same element from executing."
+    },
+    {
+      "index": 138,
+      "question": "What is passive event listener?",
+      "answer": "Optimizes scroll/touch events ({ passive: true })."
+    },
+    {
+      "index": 139,
+      "question": "What is once option in event listeners?",
+      "answer": "Automatically removes the listener after one execution."
+    },
+    {
+      "index": 140,
+      "question": "How to trigger an event programmatically?",
+      "answer": "element.dispatchEvent(new Event('click'))."
+    },
+    {
+      "index": 141,
+      "question": "What is debouncing?",
+      "answer": "Delays function execution until after a pause (e.g., search input)."
+    },
+    {
+      "index": 142,
+      "question": "What is throttling?",
+      "answer": "Limits function execution rate (e.g., scroll/resize handlers)."
+    },
+    {
+      "index": 143,
+      "question": "What is lazy loading images?",
+      "answer": "<img loading=\"lazy\"> or IntersectionObserver."
+    },
+    {
+      "index": 144,
+      "question": "What is requestIdleCallback?",
+      "answer": "Runs a function during browser idle periods."
+    },
+    {
+      "index": 145,
+      "question": "How to reduce reflows/repaints?",
+      "answer": "Batch DOM changes, use transform/opacity for animations."
+    },
+    {
+      "index": 146,
+      "question": "What is Content Security Policy (CSP)?",
+      "answer": "Mitigates XSS by restricting script sources."
+    },
+    {
+      "index": 147,
+      "question": "What is HttpOnly cookie?",
+      "answer": "Prevents JavaScript access to cookies."
+    },
+    {
+      "index": 148,
+      "question": "What is Subresource Integrity (SRI)?",
+      "answer": "Ensures external scripts/styles haven’t been tampered with."
+    },
+    {
+      "index": 149,
+      "question": "What is sandbox attribute in iframes?",
+      "answer": "Restricts iframe capabilities for security."
+    },
+    {
+      "index": 150,
+      "question": "How to sanitize user input?",
+      "answer": "Use libraries like DOMPurify or escape HTML entities."
+    },
+    {
+      "index": 151,
+      "question": "What is Jest?",
+      "answer": "JavaScript testing framework by Facebook."
+    },
+    {
+      "index": 152,
+      "question": "What is a mock function?",
+      "answer": "Simulates behavior for testing (e.g., jest.fn())."
+    },
+    {
+      "index": 153,
+      "question": "What is snapshot testing?",
+      "answer": "Compares rendered UI to a saved snapshot."
+    },
+    {
+      "index": 154,
+      "question": "What is Istanbul (nyc)?",
+      "answer": "Code coverage tool for JavaScript."
+    },
+    {
+      "index": 155,
+      "question": "What is ESLint?",
+      "answer": "Linter for identifying code issues."
+    },
+    {
+      "index": 156,
+      "question": "What is IntersectionObserver?",
+      "answer": "Detects when elements enter/exit the viewport."
+    },
+    {
+      "index": 157,
+      "question": "What is Service Worker?",
+      "answer": "Script that runs in the background (enables PWAs)."
+    },
+    {
+      "index": 158,
+      "question": "What is WebSocket?",
+      "answer": "Protocol for real-time client-server communication."
+    },
+    {
+      "index": 159,
+      "question": "What is Notification API?",
+      "answer": "Displays system notifications."
+    },
+    {
+      "index": 160,
+      "question": "What is Blob?",
+      "answer": "Immutable raw data object (e.g., for file handling)."
+    },
+    {
+      "index": 161,
+      "question": "What is immutability?",
+      "answer": "Data cannot be changed after creation (e.g., const, Object.freeze)."
+    },
+    {
+      "index": 162,
+      "question": "What is a higher-order function?",
+      "answer": "Takes/returns other functions (e.g., map, filter)."
+    },
+    {
+      "index": 163,
+      "question": "What is function composition?",
+      "answer": "Combining functions: f(g(x)) → compose(f, g)(x)."
+    },
+    {
+      "index": 164,
+      "question": "What is a monad?",
+      "answer": "A design pattern for chaining operations (e.g., Promise)."
+    },
+    {
+      "index": 165,
+      "question": "What is referential transparency?",
+      "answer": "A function’s output depends only on its inputs (no side effects)."
+    },
+    {
+      "index": 166,
+      "question": "What is Symbol.iterator?",
+      "answer": "Defines iteration behavior for objects."
+    },
+    {
+      "index": 167,
+      "question": "What is at() for arrays?",
+      "answer": "Accesses elements with negative indices (arr.at(-1))."
+    },
+    {
+      "index": 168,
+      "question": "What is Temporal API (proposal)?",
+      "answer": "Modern date/time API to replace Date."
+    },
+    {
+      "index": 169,
+      "question": "What is Array.prototype.groupBy (proposal)?",
+      "answer": "Groups array elements by a key function."
+    },
+    {
+      "index": 170,
+      "question": "What is the difference between import and require?",
+      "answer": "import: ES6 static imports (hoisted). require: CommonJS dynamic imports (Node.js)."
+    },
+    {
+      "index": 171,
+      "question": "What is the Virtual DOM?",
+      "answer": "Lightweight copy of the real DOM (used in React)."
+    },
+    {
+      "index": 172,
+      "question": "What is JSX?",
+      "answer": "Syntax extension for JavaScript (looks like HTML in React)."
+    },
+    {
+      "index": 173,
+      "question": "What is state in React?",
+      "answer": "Data that determines component rendering."
+    },
+    {
+      "index": 174,
+      "question": "What is props in React?",
+      "answer": "Data passed from parent to child components."
+    },
+    {
+      "index": 175,
+      "question": "What is a React hook?",
+      "answer": "Functions that let you use state/effects in functional components."
+    },
+    {
+      "index": 176,
+      "question": "What is Promise.any?",
+      "answer": "Resolves when any promise fulfills (ignores rejections unless all fail)."
+    },
+    {
+      "index": 177,
+      "question": "What is a race condition?",
+      "answer": "Unpredictable behavior due to async operations completing in unexpected order."
+    },
+    {
+      "index": 178,
+      "question": "How to throttle API calls?",
+      "answer": "Limit calls per time period (e.g., using setTimeout or libraries like Lodash)."
+    },
+    {
+      "index": 179,
+      "question": "What is setImmediate (Node.js)?",
+      "answer": "Executes a callback right after I/O events (similar to setTimeout(0))."
+    },
+    {
+      "index": 180,
+      "question": "What is process.nextTick (Node.js)?",
+      "answer": "Runs a callback before the next event loop iteration (higher priority than microtasks)."
+    },
+    {
+      "index": 181,
+      "question": "What is uncaughtException in Node.js?",
+      "answer": "Event emitted when an uncaught JavaScript exception bubbles to the event loop."
+    },
+    {
+      "index": 182,
+      "question": "What is unhandledRejection in Node.js?",
+      "answer": "Event emitted when a Promise is rejected and no error handler is attached."
+    },
+    {
+      "index": 183,
+      "question": "How to handle async errors in Node.js?",
+      "answer": "Use try/catch with async/await or .catch() with promises."
+    },
+    {
+      "index": 184,
+      "question": "What is domain module in Node.js?",
+      "answer": "Deprecated way to handle multiple async operations as a group."
+    },
+    {
+      "index": 185,
+      "question": "What is the difference between error-first callbacks and promises?",
+      "answer": "Error-first callbacks: function(err, data). Promises: .then()/.catch()."
+    },
+    {
+      "index": 186,
+      "question": "What is Prettier?",
+      "answer": "Code formatter for consistent styling."
+    },
+    {
+      "index": 187,
+      "question": "What is tree shaking?",
+      "answer": "Dead code elimination in bundlers."
+    },
+    {
+      "index": 188,
+      "question": "What is a polyfill?",
+      "answer": "Code that adds modern features to older browsers."
+    },
+    {
+      "index": 189,
+      "question": "What is source maps?",
+      "answer": "Maps minified code back to original source for debugging."
+    },
+    {
+      "index": 190,
+      "question": "What is npm vs npx?",
+      "answer": "npm: Package manager. npx: Executes packages without installation."
+    },
+    {
+      "index": 191,
+      "question": "What is BigInt?",
+      "answer": "A primitive for large integers: 123n."
+    },
+    {
+      "index": 192,
+      "question": "What is globalThis?",
+      "answer": "Standard way to access the global object (window in browsers, global in Node)."
+    },
+    {
+      "index": 193,
+      "question": "What are optional chaining (?.)?",
+      "answer": "Safely accesses nested properties: obj?.prop?.nested."
+    },
+    {
+      "index": 194,
+      "question": "What is nullish coalescing (??)?",
+      "answer": "Returns the right-hand operand if the left is null/undefined."
+    },
+    {
+      "index": 195,
+      "question": "What are private class fields (#)?",
+      "answer": "Encapsulates class properties: class Foo { #privateField = 42; }"
+    },
+    {
+      "index": 196,
+      "question": "What is code splitting?",
+      "answer": "Splitting code into smaller bundles for lazy loading."
+    },
+    {
+      "index": 197,
+      "question": "What is virtual scrolling?",
+      "answer": "Renders only visible items in large lists for performance."
+    },
+    {
+      "index": 198,
+      "question": "What is WebAssembly?",
+      "answer": "Low-level language for high-performance web apps."
+    },
+    {
+      "index": 199,
+      "question": "What is the Performance API?",
+      "answer": "Provides timing metrics for performance measurement."
+    },
+    {
+      "index": 200,
+      "question": "What is the difference between CPU and GPU rendering?",
+      "answer": "CPU: General-purpose. GPU: Optimized for parallel tasks (e.g., animations)."
+    }
+  ]
+}

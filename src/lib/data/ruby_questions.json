@@ -1,0 +1,1007 @@
+{
+  "ruby_basics": [
+    {
+      "index": 1,
+      "question": "What is Ruby?",
+      "answer": "A dynamic, open-source, object-oriented programming language."
+    },
+    {
+      "index": 2,
+      "question": "Who created Ruby?",
+      "answer": "Yukihiro \"Matz\" Matsumoto in 1995."
+    },
+    {
+      "index": 3,
+      "question": "What are Ruby's key features?",
+      "answer": "Object-oriented, dynamic typing, duck typing, metaprogramming, blocks, and mixins."
+    },
+    {
+      "index": 4,
+      "question": "Explain duck typing in Ruby.",
+      "answer": "If an object behaves like a duck (has the same methods), Ruby treats it as a duck."
+    },
+    {
+      "index": 5,
+      "question": "What is IRB?",
+      "answer": "Interactive Ruby Shell, a REPL for Ruby."
+    },
+    {
+      "index": 6,
+      "question": "What are Ruby gems?",
+      "answer": "Libraries or packages that extend Ruby functionality."
+    },
+    {
+      "index": 7,
+      "question": "How do you install a gem?",
+      "answer": "gem install gem_name"
+    },
+    {
+      "index": 8,
+      "question": "What is nil in Ruby?",
+      "answer": "An object representing \"nothing\" or \"no value.\""
+    },
+    {
+      "index": 9,
+      "question": "Difference between nil and false?",
+      "answer": "nil means \"no value,\" false is a boolean false."
+    },
+    {
+      "index": 10,
+      "question": "What are symbols in Ruby?",
+      "answer": "Immutable, lightweight strings used as identifiers (e.g., :name)."
+    },
+    {
+      "index": 11,
+      "question": "Difference between symbols and strings?",
+      "answer": "Symbols are immutable and memory-efficient; strings are mutable."
+    },
+    {
+      "index": 12,
+      "question": "What is a lambda?",
+      "answer": "An anonymous function that can be stored in a variable."
+    },
+    {
+      "index": 13,
+      "question": "Difference between lambda and Proc?",
+      "answer": "Lambdas check argument count; Procs do not."
+    },
+    {
+      "index": 14,
+      "question": "What is a block in Ruby?",
+      "answer": "A chunk of code passed to methods (e.g., do ... end or { ... })."
+    },
+    {
+      "index": 15,
+      "question": "How do you call a block inside a method?",
+      "answer": "Using yield or &block parameter."
+    },
+    {
+      "index": 16,
+      "question": "What is yield in Ruby?",
+      "answer": "A keyword that executes a passed block inside a method."
+    },
+    {
+      "index": 17,
+      "question": "What is a module in Ruby?",
+      "answer": "A container for methods and constants (used for mixins)."
+    },
+    {
+      "index": 18,
+      "question": "Difference between class and module?",
+      "answer": "Classes can be instantiated; modules cannot."
+    },
+    {
+      "index": 19,
+      "question": "What is a mixin?",
+      "answer": "Including a module in a class to inherit its methods."
+    },
+    {
+      "index": 20,
+      "question": "What is require vs. include?",
+      "answer": "require loads a file; include adds module methods to a class."
+    },
+    {
+      "index": 21,
+      "question": "What is extend in Ruby?",
+      "answer": "Adds module methods as class methods (instead of instance methods)."
+    },
+    {
+      "index": 22,
+      "question": "What is prepend?",
+      "answer": "Inserts a module before the class in the method lookup chain."
+    },
+    {
+      "index": 23,
+      "question": "What is method lookup path?",
+      "answer": "The order Ruby searches for methods (class → modules → superclass)."
+    },
+    {
+      "index": 24,
+      "question": "What is self in Ruby?",
+      "answer": "Refers to the current object or class context."
+    },
+    {
+      "index": 25,
+      "question": "What are class variables (@@var)?",
+      "answer": "Shared across all instances of a class and its subclasses."
+    },
+    {
+      "index": 26,
+      "question": "What are instance variables (@var)?",
+      "answer": "Variables tied to an object instance."
+    },
+    {
+      "index": 27,
+      "question": "What are global variables ($var)?",
+      "answer": "Accessible anywhere in the program (avoid them)."
+    },
+    {
+      "index": 28,
+      "question": "What is a singleton method?",
+      "answer": "A method defined for a single object instance."
+    },
+    {
+      "index": 29,
+      "question": "How to define a singleton class?",
+      "answer": "class << obj; def method; end; end"
+    },
+    {
+      "index": 30,
+      "question": "What is attr_accessor?",
+      "answer": "Generates getter and setter methods for an instance variable."
+    },
+    {
+      "index": 31,
+      "question": "Difference between attr_reader and attr_writer?",
+      "answer": "attr_reader creates a getter; attr_writer creates a setter."
+    },
+    {
+      "index": 32,
+      "question": "What is metaprogramming?",
+      "answer": "Writing code that generates or modifies code at runtime."
+    },
+    {
+      "index": 33,
+      "question": "What is define_method?",
+      "answer": "Dynamically defines a method at runtime."
+    },
+    {
+      "index": 34,
+      "question": "What is send in Ruby?",
+      "answer": "Calls a method dynamically by name (e.g., object.send(:method))."
+    },
+    {
+      "index": 35,
+      "question": "What is eval?",
+      "answer": "Executes a string as Ruby code (avoid due to security risks)."
+    },
+    {
+      "index": 36,
+      "question": "What is binding?",
+      "answer": "A snapshot of the execution context (variables, methods, etc.)."
+    },
+    {
+      "index": 37,
+      "question": "What is BEGIN and END in Ruby?",
+      "answer": "Blocks that run at the start and end of a program."
+    },
+    {
+      "index": 38,
+      "question": "What is redo?",
+      "answer": "Restarts the current iteration of a loop."
+    },
+    {
+      "index": 39,
+      "question": "What is retry?",
+      "answer": "Restarts an entire block (deprecated in modern Ruby)."
+    },
+    {
+      "index": 40,
+      "question": "What is catch and throw?",
+      "answer": "Used for non-local control flow (like raise/rescue but not for errors)."
+    },
+    {
+      "index": 41,
+      "question": "What is Enumerable?",
+      "answer": "A module providing traversal and searching methods (e.g., each, map)."
+    },
+    {
+      "index": 42,
+      "question": "What is <=> (spaceship operator)?",
+      "answer": "Compares two objects (-1, 0, 1 for less, equal, greater)."
+    },
+    {
+      "index": 43,
+      "question": "What is === (case equality)?",
+      "answer": "Used in case statements (checks if an item matches a condition)."
+    },
+    {
+      "index": 44,
+      "question": "What is Kernel module?",
+      "answer": "Contains core methods (e.g., puts, raise) available everywhere."
+    },
+    {
+      "index": 45,
+      "question": "What is Object in Ruby?",
+      "answer": "The default root class for all Ruby objects."
+    },
+    {
+      "index": 46,
+      "question": "What is BasicObject?",
+      "answer": "The minimal parent class with almost no methods."
+    },
+    {
+      "index": 47,
+      "question": "What is Struct?",
+      "answer": "A shortcut for creating simple data classes."
+    },
+    {
+      "index": 48,
+      "question": "What is OpenStruct?",
+      "answer": "A dynamic data structure (like Struct but allows adding fields)."
+    },
+    {
+      "index": 49,
+      "question": "What is Marshal?",
+      "answer": "Ruby's built-in serialization module."
+    },
+    {
+      "index": 50,
+      "question": "What is $LOAD_PATH?",
+      "answer": "An array of directories where Ruby looks for files when using require."
+    },
+
+    {
+      "index": 51,
+      "question": "What is Ruby on Rails?",
+      "answer": "A web application framework built in Ruby following MVC."
+    },
+    {
+      "index": 52,
+      "question": "What is MVC?",
+      "answer": "Model (data), View (UI), Controller (logic)."
+    },
+    {
+      "index": 53,
+      "question": "What is Convention over Configuration?",
+      "answer": "Rails uses sensible defaults to reduce setup."
+    },
+    {
+      "index": 54,
+      "question": "What is DRY?",
+      "answer": "\"Don't Repeat Yourself\" (avoid code duplication)."
+    },
+    {
+      "index": 55,
+      "question": "What is CoC?",
+      "answer": "\"Convention over Configuration.\""
+    },
+    {
+      "index": 56,
+      "question": "What is ActiveRecord?",
+      "answer": "Rails' ORM for database interactions."
+    },
+    {
+      "index": 57,
+      "question": "What is ORM?",
+      "answer": "Object-Relational Mapping (translates Ruby to SQL)."
+    },
+    {
+      "index": 58,
+      "question": "What is Rake?",
+      "answer": "Ruby's build tool (like make)."
+    },
+    {
+      "index": 59,
+      "question": "What is rails console?",
+      "answer": "An interactive REPL for Rails."
+    },
+    {
+      "index": 60,
+      "question": "What is rails dbconsole?",
+      "answer": "Opens a database shell."
+    },
+    {
+      "index": 61,
+      "question": "What is rails generate?",
+      "answer": "Creates models, controllers, etc."
+    },
+    {
+      "index": 62,
+      "question": "What is rails destroy?",
+      "answer": "Reverses a generate command."
+    },
+    {
+      "index": 63,
+      "question": "What is rails runner?",
+      "answer": "Executes Ruby code in the Rails context."
+    },
+    {
+      "index": 64,
+      "question": "What is rails assets:precompile?",
+      "answer": "Precompiles assets for production."
+    },
+    {
+      "index": 65,
+      "question": "What is config/routes.rb?",
+      "answer": "Defines URL routes for the app."
+    },
+    {
+      "index": 66,
+      "question": "What is resources in routes?",
+      "answer": "Generates RESTful routes for a resource."
+    },
+    {
+      "index": 67,
+      "question": "What is rake routes?",
+      "answer": "Lists all defined routes."
+    },
+    {
+      "index": 68,
+      "question": "What is a migration?",
+      "answer": "A script to modify the database schema."
+    },
+    {
+      "index": 69,
+      "question": "How to create a migration?",
+      "answer": "rails generate migration AddNameToUsers name:string"
+    },
+    {
+      "index": 70,
+      "question": "How to run migrations?",
+      "answer": "rails db:migrate"
+    },
+    {
+      "index": 71,
+      "question": "How to rollback a migration?",
+      "answer": "rails db:rollback"
+    },
+    {
+      "index": 72,
+      "question": "What is schema.rb?",
+      "answer": "A snapshot of the current database schema."
+    },
+    {
+      "index": 73,
+      "question": "What is seeds.rb?",
+      "answer": "A file to populate the database with initial data."
+    },
+    {
+      "index": 74,
+      "question": "What is belongs_to?",
+      "answer": "Defines a one-to-one association (foreign key)."
+    },
+    {
+      "index": 75,
+      "question": "What is has_many?",
+      "answer": "Defines a one-to-many association."
+    },
+    {
+      "index": 76,
+      "question": "What is has_one?",
+      "answer": "Defines a one-to-one association."
+    },
+    {
+      "index": 77,
+      "question": "What is has_and_belongs_to_many (HABTM)?",
+      "answer": "Defines a many-to-many association without a model."
+    },
+    {
+      "index": 78,
+      "question": "What is has_many :through?",
+      "answer": "Defines a many-to-many association with a join model."
+    },
+    {
+      "index": 79,
+      "question": "What is dependent: :destroy?",
+      "answer": "Deletes associated records when parent is deleted."
+    },
+    {
+      "index": 80,
+      "question": "What is validates?",
+      "answer": "Ensures data meets certain conditions before saving."
+    },
+    {
+      "index": 81,
+      "question": "What is before_save?",
+      "answer": "A callback that runs before saving a record."
+    },
+    {
+      "index": 82,
+      "question": "What is after_create?",
+      "answer": "A callback that runs after creating a record."
+    },
+    {
+      "index": 83,
+      "question": "What is scope?",
+      "answer": "A reusable query method (e.g., scope :active, -> { where(active: true) })."
+    },
+    {
+      "index": 84,
+      "question": "What is ActiveJob?",
+      "answer": "A framework for background jobs."
+    },
+    {
+      "index": 85,
+      "question": "What is ActionMailer?",
+      "answer": "Rails' email-sending framework."
+    },
+    {
+      "index": 86,
+      "question": "What is ActionCable?",
+      "answer": "Rails' WebSocket/real-time communication framework."
+    },
+    {
+      "index": 87,
+      "question": "What is ActiveStorage?",
+      "answer": "Rails' file upload and storage system."
+    },
+    {
+      "index": 88,
+      "question": "What is Turbolinks?",
+      "answer": "Speeds up page loads by using AJAX for navigation."
+    },
+    {
+      "index": 89,
+      "question": "What is CSRF protection?",
+      "answer": "Prevents Cross-Site Request Forgery attacks."
+    },
+    {
+      "index": 90,
+      "question": "What is strong_parameters?",
+      "answer": "Ensures only permitted params are passed to models."
+    },
+    {
+      "index": 91,
+      "question": "What is render?",
+      "answer": "Renders a view template."
+    },
+    {
+      "index": 92,
+      "question": "What is redirect_to?",
+      "answer": "Redirects to another action or URL."
+    },
+    {
+      "index": 93,
+      "question": "What is flash?",
+      "answer": "Temporary message storage (e.g., flash[:notice])."
+    },
+    {
+      "index": 94,
+      "question": "What is session?",
+      "answer": "Persistent storage across requests."
+    },
+    {
+      "index": 95,
+      "question": "What is cookies?",
+      "answer": "Client-side storage."
+    },
+    {
+      "index": 96,
+      "question": "What is params?",
+      "answer": "Contains request parameters (form data, URL params)."
+    },
+    {
+      "index": 97,
+      "question": "What is before_action?",
+      "answer": "Runs code before controller actions."
+    },
+    {
+      "index": 98,
+      "question": "What is after_action?",
+      "answer": "Runs code after controller actions."
+    },
+    {
+      "index": 99,
+      "question": "What is around_action?",
+      "answer": "Wraps controller actions with custom logic."
+    },
+    {
+      "index": 100,
+      "question": "What is respond_to?",
+      "answer": "Handles different response formats (HTML, JSON)."
+    },
+
+    {
+      "index": 101,
+      "question": "What is delegate?",
+      "answer": "Forwards methods to an associated object."
+    },
+    {
+      "index": 102,
+      "question": "What is polymorphic associations?",
+      "answer": "A model can belong to multiple other models."
+    },
+    {
+      "index": 103,
+      "question": "What is STI (Single Table Inheritance)?",
+      "answer": "Multiple classes share a single database table."
+    },
+    {
+      "index": 104,
+      "question": "What is concerns?",
+      "answer": "Reusable modules for models/controllers."
+    },
+    {
+      "index": 105,
+      "question": "What is service objects?",
+      "answer": "Encapsulates business logic outside models/controllers."
+    },
+    {
+      "index": 106,
+      "question": "What is form_with?",
+      "answer": "Rails' modern form helper."
+    },
+    {
+      "index": 107,
+      "question": "What is link_to?",
+      "answer": "Generates an HTML link."
+    },
+    {
+      "index": 108,
+      "question": "What is button_to?",
+      "answer": "Generates a form button."
+    },
+    {
+      "index": 109,
+      "question": "What is content_tag?",
+      "answer": "Dynamically generates HTML tags."
+    },
+    {
+      "index": 110,
+      "question": "What is asset pipeline?",
+      "answer": "Manages and compresses CSS/JS assets."
+    },
+    {
+      "index": 111,
+      "question": "What is sprockets?",
+      "answer": "The library behind the asset pipeline."
+    },
+    {
+      "index": 112,
+      "question": "What is yarn in Rails?",
+      "answer": "A package manager for JavaScript dependencies."
+    },
+    {
+      "index": 113,
+      "question": "What is webpacker?",
+      "answer": "Integrates Webpack for JavaScript bundling."
+    },
+    {
+      "index": 114,
+      "question": "What is zeitwerk?",
+      "answer": "Rails' modern code loader (replaces classic autoloader)."
+    },
+    {
+      "index": 115,
+      "question": "What is eager loading?",
+      "answer": "Preloads associations to avoid N+1 queries."
+    },
+    {
+      "index": 116,
+      "question": "What is N+1 query problem?",
+      "answer": "When an app makes unnecessary database queries."
+    },
+    {
+      "index": 117,
+      "question": "How to fix N+1 queries?",
+      "answer": "Use includes, preload, or eager_load."
+    },
+    {
+      "index": 118,
+      "question": "What is counter_cache?",
+      "answer": "Caches the count of associated records."
+    },
+    {
+      "index": 119,
+      "question": "What is touch: true?",
+      "answer": "Updates the parent's timestamp when child updates."
+    },
+    {
+      "index": 120,
+      "question": "What is transaction?",
+      "answer": "Ensures multiple SQL operations succeed or fail together."
+    },
+    {
+      "index": 121,
+      "question": "What is ActiveRecord::Base.transaction?",
+      "answer": "Wraps database operations in a transaction."
+    },
+    {
+      "index": 122,
+      "question": "What is lock?",
+      "answer": "Prevents concurrent edits to a record."
+    },
+    {
+      "index": 123,
+      "question": "What is optimistic locking?",
+      "answer": "Uses a lock_version column to detect conflicts."
+    },
+    {
+      "index": 124,
+      "question": "What is pessimistic locking?",
+      "answer": "Locks a database row during a transaction."
+    },
+    {
+      "index": 125,
+      "question": "What is arel?",
+      "answer": "A SQL AST manager used by ActiveRecord."
+    },
+    {
+      "index": 126,
+      "question": "What is ransack?",
+      "answer": "A gem for advanced search forms."
+    },
+    {
+      "index": 127,
+      "question": "What is devise?",
+      "answer": "A popular authentication gem."
+    },
+    {
+      "index": 128,
+      "question": "What is pundit?",
+      "answer": "An authorization gem."
+    },
+    {
+      "index": 129,
+      "question": "What is cancancan?",
+      "answer": "Another authorization gem."
+    },
+    {
+      "index": 130,
+      "question": "What is sidekiq?",
+      "answer": "A background job processor using Redis."
+    },
+    {
+      "index": 131,
+      "question": "What is resque?",
+      "answer": "Another background job processor."
+    },
+    {
+      "index": 132,
+      "question": "What is carrierwave?",
+      "answer": "A file upload gem."
+    },
+    {
+      "index": 133,
+      "question": "What is shrine?",
+      "answer": "A modern file upload gem."
+    },
+    {
+      "index": 134,
+      "question": "What is kaminari?",
+      "answer": "A pagination gem."
+    },
+    {
+      "index": 135,
+      "question": "What is will_paginate?",
+      "answer": "Another pagination gem."
+    },
+    {
+      "index": 136,
+      "question": "What is jbuilder?",
+      "answer": "A DSL for generating JSON responses."
+    },
+    {
+      "index": 137,
+      "question": "What is active_model_serializers?",
+      "answer": "Serializes models to JSON."
+    },
+    {
+      "index": 138,
+      "question": "What is grape?",
+      "answer": "A micro-framework for APIs."
+    },
+    {
+      "index": 139,
+      "question": "What is rack?",
+      "answer": "A minimal interface between web servers and Ruby apps."
+    },
+    {
+      "index": 140,
+      "question": "What is rack middleware?",
+      "answer": "Code that processes HTTP requests/responses."
+    },
+    {
+      "index": 141,
+      "question": "What is rails engine?",
+      "answer": "A mini-application within Rails."
+    },
+    {
+      "index": 142,
+      "question": "What is zeitwerk mode?",
+      "answer": "Rails 6+ autoloader that reloads code efficiently."
+    },
+    {
+      "index": 143,
+      "question": "What is spring?",
+      "answer": "A Rails preloader to speed up commands."
+    },
+    {
+      "index": 144,
+      "question": "What is bootsnap?",
+      "answer": "Reduces app boot time by caching."
+    },
+    {
+      "index": 145,
+      "question": "What is docker in Rails?",
+      "answer": "Containerization for consistent deployment."
+    },
+    {
+      "index": 146,
+      "question": "What is kubernetes in Rails?",
+      "answer": "Orchestrates containerized apps at scale."
+    },
+    {
+      "index": 147,
+      "question": "What is CI/CD in Rails?",
+      "answer": "Continuous Integration/Deployment (e.g., GitHub Actions, CircleCI)."
+    },
+    {
+      "index": 148,
+      "question": "What is capistrano?",
+      "answer": "A deployment automation tool."
+    },
+    {
+      "index": 149,
+      "question": "What is mina?",
+      "answer": "A faster deployment tool."
+    },
+    {
+      "index": 150,
+      "question": "What is Heroku?",
+      "answer": "A cloud platform for deploying Rails apps."
+    },
+
+    {
+      "index": 151,
+      "question": "What is multi-tenancy?",
+      "answer": "Serving multiple customers (tenants) from one app."
+    },
+    {
+      "index": 152,
+      "question": "What is apartment gem?",
+      "answer": "Implements multi-tenancy with separate databases."
+    },
+    {
+      "index": 153,
+      "question": "What is acts_as_tenant?",
+      "answer": "Implements multi-tenancy with a shared database."
+    },
+    {
+      "index": 154,
+      "question": "What is JWT?",
+      "answer": "JSON Web Tokens for stateless authentication."
+    },
+    {
+      "index": 155,
+      "question": "What is OAuth?",
+      "answer": "An open standard for authorization."
+    },
+    {
+      "index": 156,
+      "question": "What is GraphQL in Rails?",
+      "answer": "A query language for APIs (using graphql-ruby gem)."
+    },
+    {
+      "index": 157,
+      "question": "What is gRPC in Rails?",
+      "answer": "A high-performance RPC framework."
+    },
+    {
+      "index": 158,
+      "question": "What is stimulus?",
+      "answer": "A lightweight JavaScript framework for Rails."
+    },
+    {
+      "index": 159,
+      "question": "What is turbo?",
+      "answer": "The successor to Turbolinks (part of Hotwire)."
+    },
+    {
+      "index": 160,
+      "question": "What is Hotwire?",
+      "answer": "A modern approach to building fast apps with minimal JavaScript."
+    },
+    {
+      "index": 161,
+      "question": "What is view_component?",
+      "answer": "Encapsulates reusable UI components."
+    },
+    {
+      "index": 162,
+      "question": "What is dry-rb?",
+      "answer": "A set of libraries for clean Ruby code."
+    },
+    {
+      "index": 163,
+      "question": "What is trailblazer?",
+      "answer": "A high-level architecture framework."
+    },
+    {
+      "index": 164,
+      "question": "What is hanami?",
+      "answer": "A lightweight Ruby web framework."
+    },
+    {
+      "index": 165,
+      "question": "What is rspec?",
+      "answer": "A testing framework for Ruby."
+    },
+    {
+      "index": 166,
+      "question": "What is capybara?",
+      "answer": "A tool for integration testing."
+    },
+    {
+      "index": 167,
+      "question": "What is factory_bot?",
+      "answer": "A fixtures replacement for testing."
+    },
+    {
+      "index": 168,
+      "question": "What is faker?",
+      "answer": "Generates fake data for tests."
+    },
+    {
+      "index": 169,
+      "question": "What is vcr?",
+      "answer": "Records and replays HTTP requests in tests."
+    },
+    {
+      "index": 170,
+      "question": "What is simplecov?",
+      "answer": "Measures test coverage."
+    },
+    {
+      "index": 171,
+      "question": "What is rubocop?",
+      "answer": "A Ruby static code analyzer."
+    },
+    {
+      "index": 172,
+      "question": "What is brakeman?",
+      "answer": "A security scanner for Rails."
+    },
+    {
+      "index": 173,
+      "question": "What is bullet?",
+      "answer": "Detects N+1 queries and unused eager loading."
+    },
+    {
+      "index": 174,
+      "question": "What is rails credentials?",
+      "answer": "Encrypted storage for secrets."
+    },
+    {
+      "index": 175,
+      "question": "What is dotenv?",
+      "answer": "Loads environment variables from .env."
+    },
+    {
+      "index": 176,
+      "question": "What is docker-compose?",
+      "answer": "Manages multi-container Docker apps."
+    },
+    {
+      "index": 177,
+      "question": "What is kubernetes?",
+      "answer": "Orchestrates containerized apps at scale."
+    },
+    {
+      "index": 178,
+      "question": "What is helm?",
+      "answer": "A package manager for Kubernetes."
+    },
+    {
+      "index": 179,
+      "question": "What is terraform?",
+      "answer": "Infrastructure as code tool."
+    },
+    {
+      "index": 180,
+      "question": "What is AWS in Rails?",
+      "answer": "Cloud services for hosting Rails apps."
+    },
+    {
+      "index": 181,
+      "question": "What is S3?",
+      "answer": "AWS's file storage service."
+    },
+    {
+      "index": 182,
+      "question": "What is RDS?",
+      "answer": "AWS's managed database service."
+    },
+    {
+      "index": 183,
+      "question": "What is Elastic Beanstalk?",
+      "answer": "AWS's PaaS for deploying apps."
+    },
+    {
+      "index": 184,
+      "question": "What is lambda in AWS?",
+      "answer": "Serverless compute service."
+    },
+    {
+      "index": 185,
+      "question": "What is serverless in Rails?",
+      "answer": "Running Rails without managing servers."
+    },
+    {
+      "index": 186,
+      "question": "What is microservices?",
+      "answer": "Breaking an app into small, independent services."
+    },
+    {
+      "index": 187,
+      "question": "What is event sourcing?",
+      "answer": "Storing state changes as a sequence of events."
+    },
+    {
+      "index": 188,
+      "question": "What is CQRS?",
+      "answer": "Command Query Responsibility Segregation."
+    },
+    {
+      "index": 189,
+      "question": "What is DDD?",
+      "answer": "Domain-Driven Design."
+    },
+    {
+      "index": 190,
+      "question": "What is TDD?",
+      "answer": "Test-Driven Development."
+    },
+    {
+      "index": 191,
+      "question": "What is BDD?",
+      "answer": "Behavior-Driven Development."
+    },
+    {
+      "index": 192,
+      "question": "What is SOLID principles?",
+      "answer": "Design principles for maintainable code."
+    },
+    {
+      "index": 193,
+      "question": "What is YAGNI?",
+      "answer": "\"You Aren't Gonna Need It\" (avoid over-engineering)."
+    },
+    {
+      "index": 194,
+      "question": "What is KISS?",
+      "answer": "\"Keep It Simple, Stupid.\""
+    },
+    {
+      "index": 195,
+      "question": "What is DRY?",
+      "answer": "\"Don't Repeat Yourself.\""
+    },
+    {
+      "index": 196,
+      "question": "What is REST?",
+      "answer": "Representational State Transfer (API design)."
+    },
+    {
+      "index": 197,
+      "question": "What is GraphQL?",
+      "answer": "A query language for APIs."
+    },
+    {
+      "index": 198,
+      "question": "What is WebSockets?",
+      "answer": "Real-time communication protocol."
+    },
+    {
+      "index": 199,
+      "question": "What is OOP?",
+      "answer": "Object-Oriented Programming."
+    },
+    {
+      "index": 200,
+      "question": "What is FP?",
+      "answer": "Functional Programming."
+    }
+  ]
+}
