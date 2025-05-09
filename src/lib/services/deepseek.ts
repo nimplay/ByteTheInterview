@@ -6,7 +6,8 @@ const openai = new OpenAI({
   defaultHeaders: {
     "HTTP-Referer": "https://bytetheinterview.netlify.app/",
     "X-Title": "ByteTheInterview"
-  }
+  },
+  timeout: 30000 // 30 segundos
 });
 
 export const getDeepSeekResponse = async (
@@ -15,12 +16,12 @@ export const getDeepSeekResponse = async (
   context?: string
 ): Promise<string> => {
   if (!process.env.DEEPSEEK_API_KEY) {
-    throw new Error("❌ DeepSeek API key not configured in .env.local");
+    throw new Error("❌ DeepSeek API key not configured");
   }
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'deepseek/deepseek-r1:free',
+      model: 'deepseek/deepseek-chat', // Cambiado de deepseek-r1:free
       messages: [
         {
           role: "system",

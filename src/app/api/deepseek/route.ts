@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
@@ -8,15 +7,28 @@ const openai = new OpenAI({
   defaultHeaders: {
     "HTTP-Referer": "https://bytetheinterview.netlify.app/",
     "X-Title": "ByteTheInterview"
-  }
+  },
+  timeout: 30000 // 30 segundos
 })
 
 export async function POST(req: Request) {
+  // Configuración de CORS
+  const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+  }
+
+  // Manejo de preflight OPTIONS
+  if (req.method === 'OPTIONS') {
+    return new NextResponse(null, { headers })
+  }
+
   try {
     if (!process.env.DEEPSEEK_API_KEY) {
       return NextResponse.json(
         { error: 'API key not configured' },
-        { status: 401 }
+        { status: 401, headers }
       )
     }
 
@@ -25,14 +37,16 @@ export async function POST(req: Request) {
     if (!question || !topic) {
       return NextResponse.json(
         { error: 'Question and topic are required' },
-        { status: 400 }
+        { status: 400, headers }
       )
     }
-    const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 20000)
 
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 30000) // 30 segundos
+
+    // Usar el mismo modelo que en el ejemplo de OpenRouter
     const completion = await openai.chat.completions.create({
-      model: 'deepseek/deepseek-r1:free',
+      model: 'deepseek/deepseek-chat', // Cambiado de deepseek-r1:free
       messages: [
         {
           role: 'system',
@@ -55,11 +69,10 @@ export async function POST(req: Request) {
 
     return NextResponse.json({
       explanation: completion.choices[0].message.content
-    })
+    }, { headers })
   } catch (error: any) {
     console.error('[DEEPSEEK_API_ERROR]', error)
 
-    // Manejo específico de diferentes tipos de errores
     const status = error.name === 'AbortError' ? 504 : 500
     const errorMessage = error.name === 'AbortError'
       ? 'Request timeout'
@@ -71,7 +84,7 @@ export async function POST(req: Request) {
         details: errorMessage,
         suggestion: 'Please try again later'
       },
-      { status }
+      { status, headers }
     )
   }
 }
