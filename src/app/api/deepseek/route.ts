@@ -1,14 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
 const openai = new OpenAI({
   baseURL: 'https://openrouter.ai/api/v1',
-  apiKey: process.env.DEEPSEEK_API_KEY
+  apiKey: process.env.DEEPSEEK_API_KEY,
+  defaultHeaders: {
+    "HTTP-Referer": "https://bytetheinterview.netlify.app/",
+    "X-Title": "ByteTheInterview"
+  }
 })
 
 export async function POST(req: Request) {
   try {
-    // Verify API key
     if (!process.env.DEEPSEEK_API_KEY) {
       return NextResponse.json(
         { error: 'API key not configured' },
@@ -16,7 +20,6 @@ export async function POST(req: Request) {
       )
     }
 
-    // Parse request body
     const { question, topic, context } = await req.json()
 
     if (!question || !topic) {
@@ -25,8 +28,9 @@ export async function POST(req: Request) {
         { status: 400 }
       )
     }
+    const controller = new AbortController()
+    const timeout = setTimeout(() => controller.abort(), 20000)
 
-    // Call DeepSeek API
     const completion = await openai.chat.completions.create({
       model: 'deepseek/deepseek-r1:free',
       messages: [
@@ -39,27 +43,35 @@ export async function POST(req: Request) {
           content: `${question}${context ? `\n\nContext: ${context}` : ''}`
         }
       ],
-      max_tokens: 500,  // Increased tokens for more complete responses
+      max_tokens: 500,
       temperature: 0.3
-    })
+    }, { signal: controller.signal })
 
-    // Verify we got a valid response
+    clearTimeout(timeout)
+
     if (!completion.choices?.[0]?.message?.content) {
-      throw new Error('The API did not return a valid response')
+      throw new Error('Empty response from API')
     }
 
     return NextResponse.json({
       explanation: completion.choices[0].message.content
     })
-  } catch (error) {
+  } catch (error: any) {
     console.error('[DEEPSEEK_API_ERROR]', error)
+
+    // Manejo específico de diferentes tipos de errores
+    const status = error.name === 'AbortError' ? 504 : 500
+    const errorMessage = error.name === 'AbortError'
+      ? 'Request timeout'
+      : error.message || 'API service error'
+
     return NextResponse.json(
       {
-        error: 'Failed to get AI explanation',
-        details: error instanceof Error ? error.message : 'Unknown error',
-        suggestion: 'Please try again or check your API key'
+        error: 'AI service unavailable',
+        details: errorMessage,
+        suggestion: 'Please try again later'
       },
-      { status: 500 }
+      { status }
     )
   }
 }
