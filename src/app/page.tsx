@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Footer from './footer/component';
 
-// Importamos directamente los JSON
+// Import JSON
 import javascriptQuestions from "@/lib/data/javascript_questions.json";
 import reactQuestions from "@/lib/data/react_questions.json";
 import typescriptQuestions from "@/lib/data/typescript_questions.json";
@@ -15,7 +15,7 @@ import machineLearningQuestions from "@/lib/data/machine_learning_questions.json
 import acronymsQuestions from "@/lib/data/acronyms_questions.json";
 import { DeepSeekResponse } from "@/lib/types/api-types";
 
-// Definimos los tipos de datos
+// Data definition
 interface Question {
   index: number;
   question: string;
@@ -38,7 +38,7 @@ export default function Home() {
   const [aiError, setAiError] = useState<string | null>(null);
   const [showKofiPopup, setShowKofiPopup] = useState(false);
 
-  // Función para llamar a la API de IA
+  // AI Api
   const fetchAiExplanation = async () => {
     if (!currentQuestion?.question || !selectedButton) return;
 
@@ -173,7 +173,7 @@ export default function Home() {
     },
   ];
 
-  // Cargar preguntas cuando se selecciona un botón
+  // Load questions when a button is selected
   useEffect(() => {
     if (!selectedButton) return;
 
@@ -186,14 +186,14 @@ export default function Home() {
     setQuestionIndex(0);
     setError(null);
 
-    // Limpiar la respuesta de IA al cambiar de tema
+    // Clear AI response and error
     setAiResponse(null);
     setAiError(null);
 
     try {
       setIsLoading(true);
 
-      // Función helper para procesar preguntas
+      // Question data processing
       const processQuestions = (data: QuestionsData | null): Question[] => {
         if (!data) return [];
         return Object.values(data).flatMap((category) =>
@@ -218,7 +218,7 @@ export default function Home() {
         return;
       }
 
-      // Para otros botones
+      // other buttons
       const allQuestions = processQuestions(buttonData.questions);
       setAvailableQuestions(allQuestions);
       if (allQuestions.length > 0) {
@@ -253,7 +253,7 @@ export default function Home() {
       setCurrentQuestion(availableQuestions[randomIndex]);
       setQuestionIndex(randomIndex + 1);
       setShowAnswer(false);
-      // Limpiar la respuesta de IA
+      // clear AI response
       setAiResponse(null);
       setAiError(null);
     }
@@ -269,7 +269,7 @@ export default function Home() {
     <div className="w-full min-h-screen flex flex-col gap-6 items-center justify-center p-4 dark:bg-gray-900">
       <main className="bg-gray-800 rounded-lg shadow-xl/30 p-4 md:p-8 w-full max-w-6xl">
         <div className="flex flex-col p-4 md:p-8 shadow-xl/30 gap-6 items-center justify-center bg-gray-700 rounded-lg relative">
-          {/* Botón de Ko-fi con ajuste para móvil */}
+          {/* ko-fi button */}
           <button
             onClick={() => setShowKofiPopup(true)}
             className="absolute right-2 top-2 md:right-4 md:top-4 flex items-center gap-1 bg-yellow-600 hover:bg-yellow-700 text-white px-2 py-1 md:px-3 md:py-1 rounded-full shadow-lg transition-all transform hover:scale-105 z-10"
@@ -284,7 +284,7 @@ export default function Home() {
             <span className="text-xs font-bold ">Tip me!</span>
           </button>
 
-          {/* Popup de Ko-fi */}
+          {/* Ko-fi popup */}
           {showKofiPopup && (
             <div className="fixed inset-0 bg-opacity-0 flex items-center justify-center z-50 p-4 backdrop-blur-[2px]">
               <div className="relative bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full">
@@ -317,7 +317,7 @@ export default function Home() {
             </div>
           )}
 
-          {/* Título con margen superior ajustado para móvil */}
+          {/* Title */}
           <h1 className="text-2xl md:text-3xl font-bold text-white mt-4 md:mt-0">
             ByteTheInterview
           </h1>
@@ -364,7 +364,7 @@ export default function Home() {
         </div>
 
         <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6 mt-6">
-          {/* Contenedor principal con la carta - Ajustes para móvil */}
+          {/* Card Container */}
           <div className="w-full h-auto min-h-[20rem] md:h-[32rem] shadow-xl/30 flex flex-col p-2 md:p-6 items-center justify-center bg-gray-700 rounded-lg">
             {isLoading ? (
               <div className="flex flex-col items-center gap-4">
@@ -426,17 +426,17 @@ export default function Home() {
               </div>
             ) : (
               <div className="relative w-full h-full flex items-center justify-center">
-                {/* Carta tipo Pokémon */}
+                {/* Pokemon Card */}
                 <div
                   className={`relative w-full md:w-2/4 h-3/4 max-w-md aspect-[2/3] rounded-xl shadow-xl/30 ${selectedButtonData?.color} ${selectedButtonData?.borderColor} flex flex-col`}
                 >
-                  {/* Índice en círculo */}
+                  {/* Index */}
                   <div className="absolute top-1 left-1 w-10 h-10 rounded-full bg-white border-2 border-gray-800 flex items-center justify-center">
                     <span className="font-bold text-gray-800">
                       {questionIndex}
                     </span>
                   </div>
-                  {/* Logo del lenguaje */}
+                  {/* Languaje Logo*/}
                   <div className="flex justify-center py-4 bg-white rounded-t-xl mb-2 p-4">
                     <Image
                       src={selectedButtonData?.icon || ""}
@@ -447,7 +447,7 @@ export default function Home() {
                     />
                   </div>
 
-                  {/* Pregunta */}
+                  {/* Question */}
                   <div className="flex items-center justify-center mt-4 px-2">
                     <p
                       className={`text-center text-lg md:text-xl font-medium ${selectedButtonData?.textColor}`}
@@ -455,7 +455,7 @@ export default function Home() {
                       {currentQuestion?.question || "No question available"}
                     </p>
                   </div>
-                  {/* Respuesta (oculta/mostrada) - Ahora en la parte inferior */}
+                  {/* Show-Hide answer */}
                   {showAnswer && (
                     <div
                       className={`mt-auto p-4 rounded-b-xl bg-white bg-opacity-20 ${selectedButtonData?.textColor}`}
@@ -468,7 +468,7 @@ export default function Home() {
                 </div>
               </div>
             )}
-            {/* Controles de la carta */}
+            {/* card controls */}
             {gameStarted && (
               <div className="flex justify-between w-full px-4 mt-4">
                 <button
@@ -497,7 +497,7 @@ export default function Home() {
             )}
           </div>
 
-          {/* Segundo contenedor (AI) con scroll interno */}
+          {/* Second container */}
           <div className="w-full h-auto min-h-[20rem] md:h-[32rem] shadow-xl/30 flex flex-col p-2 md:p-6 gap-2 md:gap-4 items-center justify-center bg-gray-700 rounded-lg">
             {!selectedButton ? (
               <div className="flex flex-col items-center gap-4">
@@ -529,7 +529,7 @@ export default function Home() {
                   </h3>
                 </div>
 
-                {/* Contenedor con scroll interno */}
+                {/* Answer container */}
                 <div className="flex-1 w-full overflow-y-auto my-2 md:my-4 max-h-[12rem] md:max-h-none">
                   {aiError ? (
                     <div className="text-red-400 text-center p-2 md:p-4 text-sm md:text-base flex flex-col gap-4 items-center justify-center">
@@ -601,7 +601,6 @@ export default function Home() {
         </div>
         <Footer />
       </main>
-
     </div>
   );
 }
