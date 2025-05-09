@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![](https://img.shields.io/badge/Nimplay-blueviolet)
 
-## Getting Started
+# ByteTheInterview
 
-First, run the development server:
+This is a practical application designed to improve your performance in programming job interviews, especially the theoretical part.
+
+It's a Flaskcards application that allows you to memorize short and concise answers to the most common industry questions in languages ​​like JavaScript, Python, Ruby, Machine Learning, Databases, and those deadly acronyms we always forget.
+
+It also has AI integration in case you want to delve a little deeper into a specific question.
+
+## Built With
+
+![](https://img.shields.io/badge/-React-green)
+![](https://img.shields.io/badge/-TypeScript-red)
+![](https://img.shields.io/badge/-VSCode-blue)
+![](https://img.shields.io/badge/Nextjs-brightgreen)
+![](https://img.shields.io/badge/Tailwind-red)
+![](https://img.shields.io/badge/Netlify-blue)
+
+## 🛠️ Technologies Used
+
+- **Frontend**: Next.js, TypeScript, Tailwind CSS, React
+- **AI Provider**: OpenRouter (DeepSeek models)
+- **Hosting**: Netlify
+
+## live
+
+https://bytetheinterview.netlify.app/
+
+# ByteTheInterview - AI-Powered Technical Interview Prep
+
+<div align="center">
+  <img src="public/images/bytetheinterview.png" alt="ByteTheInterview Interface" width="800" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
+  <p><em>AI-powered platform for technical interview preparation</em></p>
+</div>
+
+## ✨ Features
+
+- 🚀 **DeepSeek AI Integration**: Get accurate technical answers powered by DeepSeek's advanced models
+- 💡 **Expert-Level Explanations**: Clear, concise responses tailored for technical interviews
+- 🔍 **Topic-Focused**: Search by specific technologies and concepts
+- ⚡ **Fast & Intuitive**: Clean interface optimized for quick learning
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+- OpenRouter API key
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yourusername/bytetheinterview.git
+cd bytetheinterview
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Author
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+👤 ** Nimrod Acosta **
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- GitHub: [nimplay](https://github.com/nimplay)
 
-## Learn More
+- LinkedIn: [nimrod-acosta](https://www.linkedin.com/in/nimrod-acosta)
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues/).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Show your support
 
-## Deploy on Vercel
+Give a ⭐️ if you like this project!
+<a href='https://ko-fi.com/Y8Y8WZR9' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi6.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📝 License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is [MIT](./LICENSE) licensed.# README
+
