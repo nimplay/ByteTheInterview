@@ -308,7 +308,13 @@ export default function Footer() {
               </section>
 
               {/* Thank you section */}
-              <div className="text-center py-4">
+              <div className="text-center">
+                 <a
+                    href="https://github.com/nimplay/ByteTheInterview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-110 transition-transform text-indigo-400 italic"
+                  >Github Repository</a>
                 <p className="text-gray-400 italic">
                   Made with ❤️ using these amazing technologies and resources
                 </p>

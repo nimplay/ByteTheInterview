@@ -380,6 +380,7 @@ export default function Home() {
                   height={48}
                 />
                 <p>{error}</p>
+                <p>Try Again</p>
                 <button
                   onClick={() => setError(null)}
                   className="px-4 py-2 bg-blue-500 text-white rounded-md"
