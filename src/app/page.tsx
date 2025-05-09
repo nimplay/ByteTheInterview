@@ -272,14 +272,14 @@ export default function Home() {
           {/* ko-fi button */}
           <button
             onClick={() => setShowKofiPopup(true)}
-            className="absolute right-2 top-2 md:right-4 md:top-4 flex items-center gap-1 bg-yellow-600 hover:bg-yellow-700 text-white px-2 py-1 md:px-3 md:py-1 rounded-full shadow-lg transition-all transform hover:scale-105 z-10"
+            className="cursor-pointer absolute right-2 top-2 md:right-4 md:top-4 flex items-center gap-1 bg-yellow-600 hover:bg-yellow-700 text-white px-2 py-1 md:px-3 md:py-1 rounded-full shadow-lg transition-all transform hover:scale-105 z-10"
           >
             <Image
               src="/images/coffee-svgrepo-com.svg"
               alt="Coffee icon"
-              width={20}
-              height={20}
-              className="w-4 h-4 md:w-5 md:h-5"
+              width={40}
+              height={40}
+              className="w-8 h-8 md:w-10 md:h-8"
             />
             <span className="text-xs font-bold ">Tip me!</span>
           </button>
@@ -318,7 +318,7 @@ export default function Home() {
           )}
 
           {/* Title */}
-          <h1 className="text-2xl md:text-3xl font-bold text-white mt-4 md:mt-0">
+          <h1 className="text-2xl md:text-3xl font-bold text-white mt-8 md:mt-0">
             ByteTheInterview
           </h1>
           <p className="text-lg text-gray-200">Select a Topic.</p>
@@ -331,7 +331,7 @@ export default function Home() {
                   onClick={() => handleButtonClick(btn.name)}
                   aria-label={btn.label}
                   className={`
-                    p-2 rounded-md transition-all duration-300 ease-in-out
+                    cursor-pointer p-2 rounded-md transition-all duration-300 ease-in-out
                     ${
                       selectedButton === btn.name
                         ? "bg-gray-600 scale-105 shadow-lg ring-2 ring-blue-500"
@@ -414,7 +414,7 @@ export default function Home() {
                 <button
                   onClick={startGame}
                   disabled={availableQuestions.length === 0}
-                  className={`px-6 py-2 ${
+                  className={`px-6 py-2 cursor-pointer ${
                     availableQuestions.length === 0
                       ? "bg-gray-500 cursor-not-allowed"
                       : "bg-green-500 hover:bg-green-600"
@@ -475,7 +475,7 @@ export default function Home() {
                 <button
                   onClick={toggleAnswer}
                   disabled={!currentQuestion}
-                  className={`px-4 py-2 ${
+                  className={`px-4 py-2 cursor-pointer ${
                     !currentQuestion
                       ? "bg-gray-500 cursor-not-allowed"
                       : "bg-blue-500 hover:bg-blue-600"
@@ -486,7 +486,7 @@ export default function Home() {
                 <button
                   onClick={nextCard}
                   disabled={availableQuestions.length === 0}
-                  className={`px-4 py-2 ${
+                  className={`px-4 py-2 cursor-pointer ${
                     availableQuestions.length === 0
                       ? "bg-gray-500 cursor-not-allowed"
                       : "bg-purple-500 hover:bg-purple-600"
@@ -580,7 +580,7 @@ export default function Home() {
                   <button
                     onClick={handleAiExplanation}
                     disabled={!currentQuestion || isAiLoading}
-                    className={`mt-auto px-3 py-1 md:px-4 md:py-2 rounded-md text-sm md:text-base ${
+                    className={`cursor-pointer mt-auto px-3 py-1 md:px-4 md:py-2 rounded-md text-sm md:text-base ${
                       !currentQuestion || isAiLoading
                         ? "bg-gray-600 cursor-not-allowed"
                         : "bg-blue-600 hover:bg-blue-700"

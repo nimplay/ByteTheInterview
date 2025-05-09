@@ -14,14 +14,14 @@ export default function Footer() {
       {/* About me button */}
       <button
         onClick={() => setIsAboutOpen(true)}
-        className="hover:text-gray-600 transition-colors"
+        className="cursor-pointer hover:text-indigo-600 transition-colors"
       >
         About me
       </button>
       {/* Sources button */}
       <button
         onClick={() => setIsSourcesOpen(true)}
-        className="hover:text-gray-600 transition-colors"
+        className="cursor-pointer hover:text-indigo-600 transition-colors"
       >
         Sources
       </button>
@@ -43,7 +43,7 @@ export default function Footer() {
             {/* Styled close button */}
             <button
               onClick={() => setIsAboutOpen(false)}
-              className="absolute right-4 top-4 z-10 bg-red-500/90 hover:bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-all duration-200"
+              className="cursor-pointer absolute right-4 top-4 z-10 bg-red-500/90 hover:bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-all duration-200"
             >
               &times;
             </button>
@@ -165,7 +165,7 @@ export default function Footer() {
             <div className="bg-gray-100 p-4 border-t border-gray-200 text-center">
               <button
                 onClick={() => setIsAboutOpen(false)}
-                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full hover:from-blue-600 hover:to-cyan-600 transition-all shadow-md"
+                className="cursor-pointer px-6 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full hover:from-blue-600 hover:to-cyan-600 transition-all shadow-md"
               >
                 Close
               </button>
@@ -313,7 +313,7 @@ export default function Footer() {
                     href="https://github.com/nimplay/ByteTheInterview"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:scale-110 transition-transform text-indigo-400 italic"
+                    className="hover:scale-110 cursor-pointer transition-transform text-indigo-400 italic"
                   >Github Repository</a>
                 <p className="text-gray-400 italic">
                   Made with ❤️ using these amazing technologies and resources
