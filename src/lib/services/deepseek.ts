@@ -1,42 +1,51 @@
-import { DeepSeekRequest, DeepSeekResponse } from '@/lib/types/api-types'
+import OpenAI from "openai";
+
+const openai = new OpenAI({
+  baseURL: "https://openrouter.ai/api/v1",
+  apiKey: process.env.DEEPSEEK_API_KEY,
+});
 
 export const getDeepSeekResponse = async (
   question: string,
-  topic: string
+  topic: string,
+  context?: string
 ): Promise<string> => {
-  // En producción, reemplazar con llamada real a la API
-  if (process.env.NODE_ENV === 'development') {
-    // Mock para desarrollo
-    return `Esta sería la respuesta de DeepSeek para la pregunta sobre ${topic}: "${question}". En producción se conectaría a la API real.`
+  if (!process.env.DEEPSEEK_API_KEY) {
+    throw new Error("❌ DeepSeek API key no configurada en .env.local");
   }
 
-  const response = await fetch('https://api.deepseek.com/v1/chat/completions', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${process.env.DEEPSEEK_API_KEY}`
-    },
-    body: JSON.stringify({
-      model: 'deepseek-chat',
+  try {
+    const completion = await openai.chat.completions.create({
+      model: 'deepseek/deepseek-r1:free',
       messages: [
         {
-          role: 'system',
-          content: `Eres un experto en ${topic}. Responde de manera concisa (máx 300 caracteres) para entrevistas técnicas.`
+          role: "system",
+          content: `Eres un experto en ${topic}. Responde de forma concisa para una entrevista técnica.`,
         },
         {
-          role: 'user',
-          content: question
-        }
+          role: "user",
+          content: context
+            ? `Pregunta: ${question}\nContexto: ${context}`
+            : question,
+        },
       ],
-      max_tokens: 150,
-      temperature: 0.7
-    })
-  })
+      max_tokens: 500,
+      temperature: 0.3,
+    });
 
-  if (!response.ok) {
-    throw new Error('Failed to fetch DeepSeek response')
+    const response = completion.choices[0]?.message?.content;
+
+    if (!response) {
+      throw new Error("La API no devolvió una respuesta válida");
+    }
+
+    return response;
+  } catch (error) {
+    console.error("Error en la API de DeepSeek:", error);
+    throw new Error(
+      error instanceof Error
+        ? error.message
+        : "Error al conectar con DeepSeek. Intenta nuevamente."
+    );
   }
-
-  const data: DeepSeekResponse = await response.json()
-  return data.choices[0].message.content
-}
+};

@@ -1,12 +1,9 @@
 export interface DeepSeekRequest {
-    question: string
-    topic: string
-  }
+  question: string
+  topic: string
+  context?: string
+}
 
-  export interface DeepSeekResponse {
-    choices: {
-      message: {
-        content: string
-      }
-    }[]
-  }
+export interface DeepSeekResponse {
+  explanation: string
+}

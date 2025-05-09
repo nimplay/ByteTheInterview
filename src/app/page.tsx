@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -12,6 +12,7 @@ import rubyQuestions from "@/lib/data/ruby_questions.json";
 import databaseQuestions from "@/lib/data/data_base_questions.json";
 import machineLearningQuestions from "@/lib/data/machine_learning_questions.json";
 import acronymsQuestions from "@/lib/data/acronyms_questions.json";
+import { DeepSeekResponse } from "@/lib/types/api-types";
 
 // Definimos los tipos de datos
 interface Question {
@@ -34,6 +35,7 @@ export default function Home() {
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [aiResponse, setAiResponse] = useState<string | null>(null);
   const [aiError, setAiError] = useState<string | null>(null);
+  const [showKofiPopup, setShowKofiPopup] = useState(false);
 
   // Función para llamar a la API de IA
   const fetchAiExplanation = async () => {
@@ -57,14 +59,26 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(
+          errorData.error || `HTTP error! status: ${response.status}`
+        );
       }
 
-      const data = await response.json();
+      const data: DeepSeekResponse = await response.json();
+
+      if (!data.explanation) {
+        throw new Error("La respuesta de la API no contiene una explicación");
+      }
+
       setAiResponse(data.explanation);
     } catch (err) {
       console.error("Error fetching AI explanation:", err);
-      setAiError("Failed to get AI explanation. Please try again.");
+      setAiError(
+        err instanceof Error
+          ? err.message
+          : "Ocurrió un error inesperado. Por favor intenta nuevamente."
+      );
     } finally {
       setIsAiLoading(false);
     }
@@ -171,6 +185,10 @@ export default function Home() {
     setQuestionIndex(0);
     setError(null);
 
+    // Limpiar la respuesta de IA al cambiar de tema
+    setAiResponse(null);
+    setAiError(null);
+
     try {
       setIsLoading(true);
 
@@ -234,6 +252,9 @@ export default function Home() {
       setCurrentQuestion(availableQuestions[randomIndex]);
       setQuestionIndex(randomIndex + 1);
       setShowAnswer(false);
+      // Limpiar la respuesta de IA
+      setAiResponse(null);
+      setAiError(null);
     }
   };
 
@@ -246,8 +267,57 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col gap-6 items-center justify-center p-4 dark:bg-gray-900">
       <main className="bg-gray-800 rounded-lg shadow-xl/30 p-4 md:p-8 w-full max-w-6xl">
-        <div className="flex flex-col p-4 md:p-8 shadow-xl/30 gap-6 items-center justify-center bg-gray-700 rounded-lg">
-          <h1 className="text-2xl md:text-3xl font-bold text-white">
+        <div className="flex flex-col p-4 md:p-8 shadow-xl/30 gap-6 items-center justify-center bg-gray-700 rounded-lg relative">
+          {/* Botón de Ko-fi con ajuste para móvil */}
+          <button
+            onClick={() => setShowKofiPopup(true)}
+            className="absolute right-2 top-2 md:right-4 md:top-4 flex items-center gap-1 bg-yellow-600 hover:bg-yellow-700 text-white px-2 py-1 md:px-3 md:py-1 rounded-full shadow-lg transition-all transform hover:scale-105 z-10"
+          >
+            <Image
+              src="/images/coffee-svgrepo-com.svg"
+              alt="Coffee icon"
+              width={20}
+              height={20}
+              className="w-4 h-4 md:w-5 md:h-5"
+            />
+            <span className="text-xs font-bold ">Tip me!</span>
+          </button>
+
+          {/* Popup de Ko-fi */}
+          {showKofiPopup && (
+            <div className="fixed inset-0 bg-opacity-0 flex items-center justify-center z-50 p-4 backdrop-blur-[2px]">
+              <div className="relative bg-gray-800 rounded-lg shadow-xl max-w-2xl w-full">
+                <button
+                  onClick={() => setShowKofiPopup(false)}
+                  className="absolute -right-2 -top-2 bg-black text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-red-600 z-10"
+                >
+                  X
+                </button>
+
+                <div className="p-4 rounded-lg bg-gradient-to-r from-yellow-500 to-pink-500">
+                  <div className="bg-gray-100 p-1 rounded-lg">
+                    <iframe
+                      id="kofiframe"
+                      src="https://ko-fi.com/nimplay/?hidefeed=true&widget=true&embed=true&preview=true"
+                      className="w-full border-0 rounded-md p-8 bg-white"
+                      style={{ height: "712px" }}
+                      title="Support me on Ko-fi"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <div className="p-4 bg-gray-800 rounded-b-lg text-center">
+                  <p className="text-gray-300">
+                    Thank you for your support! ❤️
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Título con margen superior ajustado para móvil */}
+          <h1 className="text-2xl md:text-3xl font-bold text-white mt-4 md:mt-0">
             ByteTheInterview
           </h1>
           <p className="text-lg text-gray-200">Select a Topic.</p>
@@ -293,8 +363,8 @@ export default function Home() {
         </div>
 
         <div className="w-full flex flex-col md:flex-row gap-4 md:gap-6 mt-6">
-          {/* Contenedor principal con la carta */}
-          <div className="w-full h-96 md:h-[32rem] shadow-xl/30 flex flex-col p-4 md:p-6 items-center justify-center bg-gray-700 rounded-lg">
+          {/* Contenedor principal con la carta - Ajustes para móvil */}
+          <div className="w-full h-auto min-h-[20rem] md:h-[32rem] shadow-xl/30 flex flex-col p-2 md:p-6 items-center justify-center bg-gray-700 rounded-lg">
             {isLoading ? (
               <div className="flex flex-col items-center gap-4">
                 <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
@@ -357,7 +427,7 @@ export default function Home() {
               <div className="relative w-full h-full flex items-center justify-center">
                 {/* Carta tipo Pokémon */}
                 <div
-                  className={`relative w-2/4 h-3/4 max-w-md aspect-[2/3] rounded-xl shadow-xl/30 ${selectedButtonData?.color} ${selectedButtonData?.borderColor} flex flex-col `}
+                  className={`relative w-full md:w-2/4 h-3/4 max-w-md aspect-[2/3] rounded-xl shadow-xl/30 ${selectedButtonData?.color} ${selectedButtonData?.borderColor} flex flex-col`}
                 >
                   {/* Índice en círculo */}
                   <div className="absolute top-1 left-1 w-10 h-10 rounded-full bg-white border-2 border-gray-800 flex items-center justify-center">
@@ -377,7 +447,7 @@ export default function Home() {
                   </div>
 
                   {/* Pregunta */}
-                  <div className="flex items-center justify-center mt-4">
+                  <div className="flex items-center justify-center mt-4 px-2">
                     <p
                       className={`text-center text-lg md:text-xl font-medium ${selectedButtonData?.textColor}`}
                     >
@@ -426,56 +496,80 @@ export default function Home() {
             )}
           </div>
 
-          {/* Segundo contenedor (placeholder) */}
-          <div className="w-full h-96 md:h-[32rem] shadow-xl/30 flex flex-col p-4 md:p-6 gap-4 items-center justify-center bg-gray-700 rounded-lg">
+          {/* Segundo contenedor (AI) con scroll interno */}
+          <div className="w-full h-auto min-h-[20rem] md:h-[32rem] shadow-xl/30 flex flex-col p-2 md:p-6 gap-2 md:gap-4 items-center justify-center bg-gray-700 rounded-lg">
             {!selectedButton ? (
               <div className="flex flex-col items-center gap-4">
                 <Image
                   src="/images/icons8-deepseek-480.svg"
                   alt="Deepseek logo"
-                  width={120}
-                  height={120}
+                  width={80}
+                  height={80}
                   className="opacity-70"
                 />
-                <p className="text-gray-400 text-lg text-center">
+                <p className="text-gray-400 text-sm md:text-lg text-center">
                   Select a topic to start
                 </p>
               </div>
             ) : (
               <div className="w-full h-full flex flex-col">
-                <div className="flex flex-col items-center gap-4">
+                <div className="flex flex-col items-center gap-2 md:gap-4">
                   <Image
                     src="/images/icons8-deepseek-480.svg"
                     alt="Deepseek logo"
-                    width={80}
-                    height={80}
+                    width={60}
+                    height={60}
                     className={`opacity-90 ${
                       isAiLoading ? "animate-pulse" : ""
                     }`}
                   />
-                  <h3 className="text-xl font-semibold text-gray-200">
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-200">
                     AI Assistant
                   </h3>
                 </div>
 
-                <div className="flex-1 overflow-y-auto my-4">
+                {/* Contenedor con scroll interno */}
+                <div className="flex-1 w-full overflow-y-auto my-2 md:my-4 max-h-[12rem] md:max-h-none">
                   {aiError ? (
-                    <div className="text-red-400 text-center p-4">
-                      {aiError}
+                    <div className="text-red-400 text-center p-2 md:p-4 text-sm md:text-base flex flex-col gap-4 items-center justify-center">
+                      <Image
+                        src="/images/crying-face-svgrepo-com.svg"
+                        alt="Error icon"
+                        width={80}
+                        height={80}
+                      />
+                      <p>{aiError}</p>
                     </div>
                   ) : aiResponse ? (
-                    <div className="bg-gray-800 rounded-lg p-4 h-full">
-                      <p className="text-gray-200 whitespace-pre-wrap">
+                    <div className="bg-gray-800 rounded-lg p-3 md:p-4 h-full overflow-auto">
+                      <p className="text-gray-200 whitespace-pre-wrap text-sm md:text-base">
                         {aiResponse}
                       </p>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-center h-full">
-                      <p className="text-gray-400 text-center">
-                        {gameStarted
-                          ? "Get AI-powered insights about this question"
-                          : "Start the game to use AI assistant"}
-                      </p>
+                    <div className="flex flex-col gap-8 items-center justify-center h-full p-4">
+                      {gameStarted ? (
+                        <>
+                          {isAiLoading ? (
+                            <Image
+                              src="/images/cogwheel-svgrepo-com.svg"
+                              alt="Deepseek logo"
+                              width={50}
+                              height={50}
+                              className="opacity-50 animate-spin"
+                            />
+                          ) : (
+                            <></>
+                          )}
+                          <p className="text-gray-400 text-center text-sm md:text-base">
+                            Go deeper into the answer
+                          </p>
+                        </>
+                      ) : (
+                        <p className="text-gray-400 text-center text-sm md:text-base">
+                          Start the game to use AI assistant
+                        </p>
+                      )}
                     </div>
                   )}
                 </div>
@@ -484,13 +578,20 @@ export default function Home() {
                   <button
                     onClick={handleAiExplanation}
                     disabled={!currentQuestion || isAiLoading}
-                    className={`mt-auto px-4 py-2 rounded-md ${
+                    className={`mt-auto px-3 py-1 md:px-4 md:py-2 rounded-md text-sm md:text-base ${
                       !currentQuestion || isAiLoading
                         ? "bg-gray-600 cursor-not-allowed"
                         : "bg-blue-600 hover:bg-blue-700"
                     } text-white transition-colors`}
                   >
-                    {isAiLoading ? "Generating..." : "Explain with AI"}
+                    {isAiLoading ? (
+                      <div className="flex items-center justify-center gap-2">
+                        <span>Generating</span>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    ) : (
+                      "Dive Deeper"
+                    )}
                   </button>
                 )}
               </div>
@@ -498,7 +599,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="flex gap-4 flex-wrap items-center justify-center mt-6 text-gray-400">
+      <footer className="flex gap-4 flex-wrap items-center justify-center mt-4 text-gray-400 text-sm md:text-base">
         <p>By Nimrod Acosta 2025</p>
       </footer>
     </div>
