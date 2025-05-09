@@ -21,7 +21,7 @@ export const getDeepSeekResponse = async (
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'deepseek/deepseek-chat', // Cambiado de deepseek-r1:free
+      model: 'deepseek/deepseek-chat-v3-0324', // Cambiado de deepseek-r1:free
       messages: [
         {
           role: "system",
