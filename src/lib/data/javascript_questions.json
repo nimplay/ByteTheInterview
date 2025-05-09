@@ -279,7 +279,7 @@
     {
       "index": 56,
       "question": "How to prevent default behavior?",
-      "answer": "event.preventDefault()."
+      "answer": "To prevent the default behavior of an event in JavaScript, use `event.preventDefault()` within your event handler. This method stops the browser's default action associated with the event."
     },
     {
       "index": 57,

@@ -20,7 +20,7 @@
       "answer": "Application Programming Interface"
     },
     { "index": 12, "question": "SQL", "answer": "Structured Query Language" },
-    { "index": 13, "question": "NoSQL", "answer": "Not Only SQL" },
+    { "index": 13, "question": "NoSQL", "answer": "Not Only Structured Query Language" },
     { "index": 14, "question": "SaaS", "answer": "Software as a Service" },
     { "index": 15, "question": "PaaS", "answer": "Platform as a Service" },
     {
@@ -148,10 +148,10 @@
     },
     {
       "index": 79,
-      "question": "NoSQL DB",
+      "question": "NoSQL (DB)",
       "answer": "Non-Relational Database"
     },
-    { "index": 80, "question": "SQL DB", "answer": "Relational Database" },
+    { "index": 80, "question": "SQL (DB)", "answer": "Relational Database" },
     {
       "index": 81,
       "question": "ACID",
@@ -237,36 +237,13 @@
     { "index": 119, "question": "CDC", "answer": "Change Data Capture" },
     { "index": 120, "question": "SQL", "answer": "Structured Query Language" },
     { "index": 121, "question": "NoSQL", "answer": "Not Only SQL" },
-    {
-      "index": 122,
-      "question": "MongoDB",
-      "answer": "Document-Based NoSQL Database"
-    },
-    {
-      "index": 123,
-      "question": "PostgreSQL",
-      "answer": "Advanced Open-Source RDBMS"
-    },
-    {
-      "index": 124,
-      "question": "MySQL",
-      "answer": "Popular Open-Source RDBMS"
-    },
-    {
-      "index": 125,
-      "question": "SQLite",
-      "answer": "Lightweight Embedded Database"
-    },
+
     {
       "index": 126,
       "question": "Redis",
       "answer": "In-Memory Key-Value Store"
     },
-    {
-      "index": 127,
-      "question": "Cassandra",
-      "answer": "Distributed NoSQL Database"
-    },
+
     { "index": 128, "question": "Neo4j", "answer": "Graph Database" },
     {
       "index": 129,

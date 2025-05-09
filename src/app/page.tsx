@@ -2,6 +2,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Footer from './footer/component';
 
 // Importamos directamente los JSON
 import javascriptQuestions from "@/lib/data/javascript_questions.json";
@@ -598,10 +599,9 @@ export default function Home() {
             )}
           </div>
         </div>
+        <Footer />
       </main>
-      <footer className="flex gap-4 flex-wrap items-center justify-center mt-4 text-gray-400 text-sm md:text-base">
-        <p>By Nimrod Acosta 2025</p>
-      </footer>
+
     </div>
   );
 }

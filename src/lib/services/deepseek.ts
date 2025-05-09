@@ -11,7 +11,7 @@ export const getDeepSeekResponse = async (
   context?: string
 ): Promise<string> => {
   if (!process.env.DEEPSEEK_API_KEY) {
-    throw new Error("❌ DeepSeek API key no configurada en .env.local");
+    throw new Error("❌ DeepSeek API key not configured in .env.local");
   }
 
   try {
@@ -20,12 +20,12 @@ export const getDeepSeekResponse = async (
       messages: [
         {
           role: "system",
-          content: `Eres un experto en ${topic}. Responde de forma concisa para una entrevista técnica.`,
+          content: `You are an expert in ${topic}. Provide concise answers for a technical interview.`,
         },
         {
           role: "user",
           content: context
-            ? `Pregunta: ${question}\nContexto: ${context}`
+            ? `Question: ${question}\nContext: ${context}`
             : question,
         },
       ],
@@ -36,16 +36,16 @@ export const getDeepSeekResponse = async (
     const response = completion.choices[0]?.message?.content;
 
     if (!response) {
-      throw new Error("La API no devolvió una respuesta válida");
+      throw new Error("The API did not return a valid response");
     }
 
     return response;
   } catch (error) {
-    console.error("Error en la API de DeepSeek:", error);
+    console.error("DeepSeek API error:", error);
     throw new Error(
       error instanceof Error
         ? error.message
-        : "Error al conectar con DeepSeek. Intenta nuevamente."
+        : "Error connecting to DeepSeek. Please try again."
     );
   }
 };

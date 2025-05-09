@@ -8,15 +8,15 @@ const openai = new OpenAI({
 
 export async function POST(req: Request) {
   try {
-    // Verificar la API key
+    // Verify API key
     if (!process.env.DEEPSEEK_API_KEY) {
       return NextResponse.json(
-        { error: 'API key no configurada' },
+        { error: 'API key not configured' },
         { status: 401 }
       )
     }
 
-    // Parsear el cuerpo de la solicitud
+    // Parse request body
     const { question, topic, context } = await req.json()
 
     if (!question || !topic) {
@@ -26,7 +26,7 @@ export async function POST(req: Request) {
       )
     }
 
-    // Llamar a la API de DeepSeek
+    // Call DeepSeek API
     const completion = await openai.chat.completions.create({
       model: 'deepseek/deepseek-r1:free',
       messages: [
@@ -39,13 +39,13 @@ export async function POST(req: Request) {
           content: `${question}${context ? `\n\nContext: ${context}` : ''}`
         }
       ],
-      max_tokens: 500,  // Aumentamos los tokens para respuestas más completas
+      max_tokens: 500,  // Increased tokens for more complete responses
       temperature: 0.3
     })
 
-    // Verificar que tenemos una respuesta válida
+    // Verify we got a valid response
     if (!completion.choices?.[0]?.message?.content) {
-      throw new Error('La API no devolvió una respuesta válida')
+      throw new Error('The API did not return a valid response')
     }
 
     return NextResponse.json({
