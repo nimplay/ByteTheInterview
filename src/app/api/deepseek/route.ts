@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 import OpenAI from 'openai'
 
 const openai = new OpenAI({
-  baseURL: 'https://openrouter.ai/api/v1',
+  baseURL: 'https://openrouter.ai/api/v1/chat/completions',
   apiKey: process.env.DEEPSEEK_API_KEY,
   defaultHeaders: {
     "HTTP-Referer": "https://bytetheinterview.netlify.app/",
