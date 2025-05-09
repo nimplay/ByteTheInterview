@@ -13,14 +13,14 @@ const openai = new OpenAI({
 })
 
 export async function POST(req: Request) {
-  // Configuración de CORS
+  
   const headers = {
     'Access-Control-Allow-Origin': '*',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, Authorization'
   }
 
-  // Manejo de preflight OPTIONS
+
   if (req.method === 'OPTIONS') {
     return new NextResponse(null, { headers })
   }
@@ -43,11 +43,11 @@ export async function POST(req: Request) {
     }
 
     const controller = new AbortController()
-    const timeout = setTimeout(() => controller.abort(), 30000) // 30 segundos
+    const timeout = setTimeout(() => controller.abort(), 30000)
 
-    // Usar el mismo modelo que en el ejemplo de OpenRouter
+
     const completion = await openai.chat.completions.create({
-      model: 'deepseek/deepseek-chat-v3-0324', // Cambiado de deepseek-r1:free
+      model: 'deepseek/deepseek-chat-v3-0324',
       messages: [
         {
           role: 'system',

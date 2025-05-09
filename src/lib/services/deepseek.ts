@@ -7,7 +7,7 @@ const openai = new OpenAI({
     "HTTP-Referer": "https://bytetheinterview.netlify.app/",
     "X-Title": "ByteTheInterview"
   },
-  timeout: 30000 // 30 segundos
+  timeout: 30000 
 });
 
 export const getDeepSeekResponse = async (
@@ -21,7 +21,7 @@ export const getDeepSeekResponse = async (
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'deepseek/deepseek-chat-v3-0324', // Cambiado de deepseek-r1:free
+      model: 'deepseek/deepseek-chat-v3-0324',
       messages: [
         {
           role: "system",
