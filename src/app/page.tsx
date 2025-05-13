@@ -426,7 +426,7 @@ export default function Home() {
                 </button>
               </div>
             ) : (
-              <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-full h-full flex pt-4 items-start justify-center">
                 {/* Pokemon Card */}
                 <div
                   className={`relative w-full md:w-2/4 h-3/4 max-w-md aspect-[2/3] rounded-xl shadow-xl/30 ${selectedButtonData?.color} ${selectedButtonData?.borderColor} flex flex-col`}
@@ -451,7 +451,7 @@ export default function Home() {
                   {/* Question */}
                   <div className="flex items-center justify-center mt-4 px-2">
                     <p
-                      className={`text-center text-lg md:text-xl font-medium ${selectedButtonData?.textColor}`}
+                      className={`text-center text-base md:text-base font-bold ${selectedButtonData?.textColor}`}
                     >
                       {currentQuestion?.question || "No question available"}
                     </p>
